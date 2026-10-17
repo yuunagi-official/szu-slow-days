@@ -18,26 +18,24 @@
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-image" src="assets/photos/bay-theatre.jpg" alt="深圳湾公园日出剧场一带，草地与海湾之间的人们" fetchpriority="high">
-      <div class="hero-shade"></div>
-      <div class="hero-copy wrap">
-        <p class="eyebrow light"><span></span> 从深圳大学 · 粤海校区出发</p>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> 粤海出发 · 日常出走手册</p>
         <h1 id="hero-title">把今天，<br>过慢一点。</h1>
-        <p class="hero-subtitle">走进树荫，等一阵海风。<br>不用赶路，也有值得出门的理由。</p>
-        <a class="hero-link" href="#recommendations">找一处，慢慢待一会儿 <span aria-hidden="true">↗</span></a>
+        <p class="hero-subtitle">走进树荫，等一阵海风。<br>从课后的片刻，到完整的一天。</p>
+        <div class="hero-actions"><a class="hero-link" href="#recommendations">挑个去处 <span aria-hidden="true">↗</span></a><span>自然为主，低消费优先</span></div>
       </div>
-      <div class="hero-note"><span>22.5° N · 113.9° E</span><button type="button" data-credits>深圳湾日出剧场 · 图片来源 ↗</button></div>
+      <div class="hero-visual"><img class="hero-image" src="assets/photos/bay-theatre.jpg" alt="深圳湾公园日出剧场一带，草地与海湾之间的人们" fetchpriority="high"><div class="hero-shade"></div><div class="hero-photo-note"><span>此刻的风景</span><p>去海边，把时间还给自己。</p></div><button class="hero-credit" type="button" data-credits>深圳湾日出剧场 · 图片来源 ↗</button></div>
     </section>
 
     <section class="chooser wrap" aria-labelledby="chooser-title">
-      <div class="chooser-head"><h2 id="chooser-title">今天，想怎样度过？</h2><span>随意选几项，剩下的交给风景</span></div>
+      <div class="chooser-head"><h2 id="chooser-title">今天，想怎样度过？</h2><span>选几项，就能出发</span></div>
       <form id="filters">
         <div class="filter-row"><span class="filter-label" id="band-label">空闲时间</span><div class="chips" role="group" aria-labelledby="band-label" id="band-filters">
           <button type="button" class="chip active" data-band="all" aria-pressed="true">都看看</button>
-          <button type="button" class="chip" data-band="daily" aria-pressed="false">日常休闲 <small>课后的空白</small></button>
-          <button type="button" class="chip" data-band="half" aria-pressed="false">半天 <small>慢慢走一走</small></button>
-          <button type="button" class="chip" data-band="day" aria-pressed="false">全天 <small>把时间留给远处</small></button>
+          <button type="button" class="chip" data-band="daily" aria-pressed="false">日常休闲</button>
+          <button type="button" class="chip" data-band="half" aria-pressed="false">半天</button>
+          <button type="button" class="chip" data-band="day" aria-pressed="false">全天</button>
         </div></div>
         <div class="filter-row mood-row"><span class="filter-label" id="mood-label">想看什么</span><div class="chips" role="group" aria-labelledby="mood-label" id="mood-filters">
           <button type="button" class="chip active" data-mood="all" aria-pressed="true">随心一点</button>
@@ -64,15 +62,15 @@
     </section>
 
     <section class="recommendation-section wrap" id="recommendations" aria-labelledby="recommend-title">
-      <div class="section-heading"><div><p class="eyebrow">A LITTLE ESCAPE</p><h2 id="recommend-title">这次，去这里待一会儿</h2><p id="recommend-summary">先看看这些不必着急的地方。</p></div><button class="shuffle-button" id="shuffle" type="button"><span aria-hidden="true">↻</span> 换一批</button></div>
+      <div class="section-heading"><div><p class="eyebrow">01 / 给今天的提案</p><h2 id="recommend-title">去这里，待一会儿</h2><p id="recommend-summary">先看看这些不必着急的地方。</p></div><button class="shuffle-button" id="shuffle" type="button"><span aria-hidden="true">↻</span> 换一批</button></div>
       <div class="card-grid recommendations" id="recommend-grid" aria-live="polite"></div>
       <p class="estimate-note">从粤海校区校门出发 · 交通为公共交通＋步行的单程估算 · 花费含往返交通及主要体验，额外消费见详情</p>
     </section>
 
-    <section class="slow-note wrap"><div class="note-illustration" aria-hidden="true">〰</div><p>不用把一天填满。<br><strong>一棵树、一张长椅，也可以是出走的目的地。</strong></p><span>WANDER, AT YOUR OWN PACE.</span></section>
+    <aside class="slow-note wrap"><span aria-hidden="true">↳</span><p>不用把一天填满，一张长椅也可以是目的地。</p><a href="#explore">再找一点灵感 ↓</a></aside>
 
     <section class="explore-section wrap" id="explore" aria-labelledby="explore-title">
-      <div class="section-heading explore-heading"><div><p class="eyebrow">YOUR EVERYDAY FIELD GUIDE</p><h2 id="explore-title">总有一处，合今天的心情</h2><p>熟悉的地方照常在这里，新玩法也值得再去一次。</p></div><label class="search-field"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="搜索区域、校园、市场…" aria-label="搜索所有去处"></label></div>
+      <div class="section-heading explore-heading"><div><p class="eyebrow">02 / 随身目的地清单</p><h2 id="explore-title">总有一处，合你的心情</h2><p>熟悉的风景，也有新的停留方式。</p></div><label class="search-field"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input type="search" id="search" placeholder="区域、校园、市场…" aria-label="搜索所有去处"></label></div>
       <div class="catalog-toolbar"><div class="view-tabs" role="group" aria-label="内容范围"><button class="active" type="button" data-view="all" aria-pressed="true">所有去处 <span id="total-count">60</span></button><button type="button" data-view="saved" aria-pressed="false">我的想去 <span id="tab-saved-count">0</span></button></div><div><label class="sort-label">排序 <select id="sort"><option value="fit">按这次条件</option><option value="near">交通更近</option><option value="cheap">花费更少</option></select></label><span class="result-count" id="result-count"></span></div></div>
       <div class="active-conditions" id="active-conditions"></div>
       <div class="card-grid" id="catalog-grid"></div>

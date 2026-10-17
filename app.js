@@ -52,7 +52,7 @@
     if (state.commute !== 'any' && p.travel[1] > +state.commute) return false;
     if (!state.allowReserve && p.access.kind !== 'open') return false;
     if (state.directOnly && !dayStatus(p).actionable) return false;
-    if (state.search && ![p.name,p.district,p.lead,p.description,...p.spots.map(x => x.name)].join(' ').toLowerCase().includes(state.search.toLowerCase())) return false;
+    if (state.search && ![p.name,p.district,types[p.type],bands[p.band],p.lead,p.description,...p.spots.map(x => x.name)].join(' ').toLowerCase().includes(state.search.toLowerCase())) return false;
     return true;
   }
   function score(p) { return (p.type === 'nature' ? 120 : p.type === 'campus' ? 90 : 60) - p.travel[1] * .32 - p.cost[1] * .05 + (p.moods.includes('green') ? 8 : 0) + ({'lixiang-shade':8,'talent-liuhua':18,'xili-lake-section':9}[p.id]||0); }
@@ -143,7 +143,7 @@
     const {photo,caption,reference}=photoInfo(p), status=dayStatus(p), pics=selectedPhotos(p).slice(1,3);
     const map=`https://uri.amap.com/search?keyword=${encodeURIComponent(p.entrance)}&city=${encodeURIComponent('深圳')}&view=map`;
     const special=status.actionable ? p.access.text : `${status.label}。${p.access.text}`;
-    return `<div class="guide-hero"><img src="${esc(photo?.file)}" alt="${esc(caption)}"><span class="guide-hero-caption">${esc(caption)}${reference?' · 目的地精确照片待补':''}</span><button class="dialog-close" type="button" data-close="guide" aria-label="关闭指南">×</button></div>
+    return `<div class="guide-close-row"><button class="dialog-close" type="button" data-close="guide" aria-label="关闭指南">×</button></div><div class="guide-hero"><img src="${esc(photo?.file)}" alt="${esc(caption)}"><span class="guide-hero-caption">${esc(caption)}${reference?' · 目的地精确照片待补':''}</span></div>
       <div class="guide-main"><p class="guide-kicker">${esc(p.district)} · ${esc(types[p.type])} <span>／</span> ${bands[p.band]}</p><h2>${esc(p.name)}</h2><p class="guide-lead">${esc(p.lead)}</p>
       <div class="guide-actions"><a href="${safeUrl(map)}" target="_blank" rel="noopener noreferrer" data-map>导航到入口 ↗</a><button data-save="${esc(p.id)}" type="button" aria-pressed="${bookmarks.has(p.id)}" aria-label="${bookmarks.has(p.id)?'取消想去：':'收藏想去：'}${esc(p.name)}">${bookmarks.has(p.id)?'♥':'♡'} 加入想去</button><button type="button" data-share="${esc(p.id)}">复制这份指南</button></div>
       <div class="guide-summary"><div><small>单程交通 · 估算</small><strong>${duration(p.travel)}</strong><p>${p.travel[1]>90?'通勤较长，请预留往返余量':'从粤海校区校门到入口，含末段步行'}</p></div><div><small>现场建议停留</small><strong>${duration(p.stay)}</strong><p>不含往返交通，随心缩短或延长</p></div><div><small>人均花费 · 估算</small><strong>${p.costPending?'费用待核':fare(p.cost)}</strong><p>${esc(p.costNote)}</p></div></div>
