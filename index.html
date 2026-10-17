@@ -7,8 +7,8 @@
   <meta name="description" content="从深圳大学粤海校区出发，找一处风景，慢慢散步、放空，享受日常生活。">
   <title>深大出走 · 今天去哪儿慢慢待一会儿</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261017-mobile-jog">
-  <script src="app.js?v=20261017-mobile-jog" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261017-simple-random">
+  <script src="app.js?v=20261017-simple-random" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#recommendations">跳到推荐去处</a>
@@ -21,16 +21,16 @@
   <main>
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="live-dot"></span> 粤海出发 · 日常出走手册</p>
+        <p class="eyebrow"><span class="live-dot"></span> 从粤海出发</p>
         <h1 id="hero-title">把今天，<br>过慢一点。</h1>
-        <p class="hero-subtitle">走进树荫，等一阵海风。<br>从课后的片刻，到完整的一天。</p>
+        <p class="hero-subtitle">散散步，跑一段，随心出门。</p>
         <div class="hero-actions"><a class="hero-link" href="#recommendations">挑个去处 <span aria-hidden="true">↗</span></a><span>自然为主，低消费优先</span></div>
       </div>
       <div class="hero-visual"><img class="hero-image" src="assets/photos/bay-theatre.jpg" alt="深圳湾公园日出剧场一带，草地与海湾之间的人们" fetchpriority="high"><div class="hero-shade"></div><div class="hero-photo-note"><span>此刻的风景</span><p>去海边，把时间还给自己。</p></div><button class="hero-credit" type="button" data-credits>深圳湾日出剧场 · 图片来源 ↗</button></div>
     </section>
 
     <section class="chooser wrap" aria-labelledby="chooser-title">
-      <div class="chooser-head"><h2 id="chooser-title" tabindex="-1">今天，想怎样度过？</h2><span>从粤海校区出发</span></div>
+      <div class="chooser-head"><h2 id="chooser-title" tabindex="-1">留一点时间给自己</h2><span>从粤海校区出发</span></div>
       <form id="filters">
         <div class="activity-switch" role="group" aria-label="出门方式"><button type="button" data-activity="all" aria-pressed="true" class="active">随心看看</button><button type="button" data-activity="walk" aria-pressed="false">散步 · 生活</button><button type="button" data-activity="run" aria-pressed="false">轻松慢跑</button></div>
         <div class="filter-row"><span class="filter-label" id="band-label">空闲时间</span><div class="chips" role="group" aria-labelledby="band-label" id="band-filters">
@@ -39,7 +39,7 @@
           <button type="button" class="chip" data-band="half" aria-pressed="false">半天</button>
           <button type="button" class="chip" data-band="day" aria-pressed="false">全天</button>
         </div></div>
-        <div class="filter-row mood-row"><span class="filter-label" id="mood-label">想看什么</span><div class="chips" role="group" aria-labelledby="mood-label" id="mood-filters">
+        <details class="filter-refine" id="filter-refine"><summary><span>主题与筛选</span><span id="filter-summary">预算与交通不限</span><span class="refine-plus" aria-hidden="true">＋</span></summary><div class="refine-content">        <div class="filter-row mood-row"><span class="filter-label" id="mood-label">想看什么</span><div class="chips" role="group" aria-labelledby="mood-label" id="mood-filters">
           <button type="button" class="chip active" data-mood="all" aria-pressed="true">随心一点</button>
           <button type="button" class="chip" data-mood="sea" aria-pressed="false">海风与落日</button>
           <button type="button" class="chip" data-mood="green" aria-pressed="false">树荫与绿意</button>
@@ -47,8 +47,7 @@
           <button type="button" class="chip" data-mood="campus" aria-pressed="false">换个校园</button>
           <button type="button" class="chip" data-mood="food" aria-pressed="false">逛逛吃吃</button>
           <button type="button" class="chip" data-mood="art" aria-pressed="false">文化与灵感</button>
-        </div></div>
-        <details class="filter-refine" id="filter-refine" open><summary><span>更多条件</span><span id="filter-summary">预算与交通不限</span><span class="refine-plus" aria-hidden="true">＋</span></summary><div class="refine-content"><div class="filter-bottom">
+        </div></div><div class="filter-bottom">
           <label class="select-field"><span>人均预算</span><select id="budget"><option value="any">不限定</option><option value="30">¥30 以内</option><option value="60">¥60 以内</option><option value="120">¥120 以内</option></select></label>
           <label class="select-field"><span>单程交通</span><select id="commute"><option value="90">90 分钟以内</option><option value="45">45 分钟以内</option><option value="60">60 分钟以内</option><option value="120">120 分钟以内</option><option value="any">值得就去</option></select></label>
         </div>
@@ -56,22 +55,22 @@
           <label class="select-field"><span>打算哪天去</span><input id="trip-date" type="date" required></label>
           <label class="check-field"><input type="checkbox" id="allow-reserve" checked><span>可以提前预约或报名</span></label>
           <label class="check-field"><input type="checkbox" id="direct-only"><span>只看已有明确开放信息的去处</span></label>
-          <p>一个人或和朋友都可以。少数需邀请、成团的体验，会在详情里单独说明。</p>
+
         </div></div></details><div class="filter-reset-row"><button class="text-button reset-button" type="reset">重置条件</button><span id="filter-match-count"></span></div>
       </form>
     </section>
 
     <section class="recommendation-section wrap" id="recommendations" aria-labelledby="recommend-title">
-      <div class="section-heading"><div><p class="eyebrow">01 / 给今天的提案</p><h2 id="recommend-title">去这里，待一会儿</h2><p id="recommend-summary">先看看这些不必着急的地方。</p></div><button class="shuffle-button" id="shuffle" type="button"><span aria-hidden="true">↻</span> 换一批</button></div>
-      <p class="run-selection-note" id="run-selection-note" hidden>先选舒服、能退出的路：近校短跑、塑胶小环、水岸折返。公里数是建议累计跑量，详情写明依据；没有把整条长绿道当作必须跑完的一圈。</p>
+      <div class="section-heading"><div><p class="eyebrow">随手挑三个</p><h2 id="recommend-title">今天，去这里？</h2><p id="recommend-summary">每次打开，遇见新的去处。</p></div><button class="shuffle-button" id="shuffle" type="button"><span aria-hidden="true">↻</span> 换一批</button></div>
+      <p class="run-selection-note" id="run-selection-note" hidden>按自己的节奏，随时折返。</p>
       <div class="card-grid recommendations" id="recommend-grid" aria-live="polite"></div>
-      <p class="estimate-note">从粤海校区校门出发 · 交通为公共交通＋步行的单程估算 · 花费含往返交通及主要体验，额外消费见详情</p>
+      <p class="estimate-note">粤海校门出发 · 单程含公交与步行 · 人均含往返交通与主要体验</p>
     </section>
 
     <aside class="slow-note wrap"><span aria-hidden="true">↳</span><p>不用把一天填满，一张长椅也可以是目的地。</p><a href="#explore">再找一点灵感 ↓</a></aside>
 
     <section class="explore-section wrap" id="explore" aria-labelledby="explore-title">
-      <div class="section-heading explore-heading"><div><p class="eyebrow">02 / 随身目的地清单</p><h2 id="explore-title">总有一处，合你的心情</h2><p>熟悉的风景，也有新的停留方式。</p></div><label class="search-field"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input type="search" id="search" placeholder="区域、校园、市场…" aria-label="搜索所有去处"></label></div>
+      <div class="section-heading explore-heading"><div><p class="eyebrow">慢慢挑</p><h2 id="explore-title">全部去处</h2></div><label class="search-field"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input type="search" id="search" placeholder="区域、校园、市场…" aria-label="搜索所有去处"></label></div>
       <div class="catalog-toolbar"><div class="view-tabs" role="group" aria-label="内容范围"><button class="active" type="button" data-view="all" aria-pressed="true"><span id="all-tab-label">所有去处</span> <span id="total-count">70</span></button><button type="button" data-view="saved" aria-pressed="false">我的想去 <span id="tab-saved-count">0</span></button></div><div><label class="sort-label">排序 <select id="sort"><option value="fit">按这次条件</option><option value="near">交通更近</option><option value="cheap">花费更少</option></select></label><span class="result-count" id="result-count"></span></div></div>
       <div class="active-conditions" id="active-conditions"></div>
       <div class="card-grid" id="catalog-grid"></div>
@@ -79,8 +78,7 @@
       <button class="load-more" id="load-more" type="button" hidden>再看看更多去处 <span>↓</span></button>
     </section>
 
-    <section class="about-section wrap" id="about"><div><p class="eyebrow">MADE FOR SZU DAYS</p><h2>从学校出发，<br>走进生活里。</h2></div><div class="about-copy"><p>这是一本给深大学生的日常出走小册子。熟悉的公园、安静的湖边、别人的校园、一家超市，都可以让普通的一天变得松一点。</p><p>不用照单全走。每份指南只留下两三个值得待着的位置，吃饭和邻近去处由你自己决定。</p><details><summary>怎么理解时间、费用和资料核验？</summary><p>日常休闲以近校、小段空闲为主；半天需要留出往返和停留；全天多为更远的绿地与生活片区。单程交通从粤海校区校门到实际入口，含换乘、候车和末段步行，均为区间估算，出门前用地图看实时路线。</p><p>费用按每人往返公共交通＋必要门票／主要体验估算；逛吃项目计入一份简单餐饮，购物和额外正餐另计。筛选预算按区间上限，交通按上限，不用最低值制造“刚好够”的错觉。</p><p>资料核验于2026年10月17日。来源优先管理方，并参考中文公开报道。部分条目尚缺独立实访交叉记录，详情附资料边界。场地临时关闭、票额和门店营业仍以当日公告为准。日期活动到期后退出可参与推荐，待排期项目只作灵感收藏。</p></details><button class="text-button" type="button" data-credits>查看实景照片与授权说明 ↗</button></div></section>
-    <section class="running-method wrap"><details><summary>这组慢跑路线，怎么选出来的？</summary><p>本轮先选 10 条，原有 60 项散步与生活探索照常保留。先核地点全称、公开入口与路面，再看中文跑友记录、记者实访和运营方资料；旧记录不当作今天路面完好的保证。10 条共保留 42 个不同来源链接，逐条附核验日期与资料边界。</p><p>荔香适合近校反复用，前海运动公园提供塑胶小环，新洲河能从社区跑向湿地。远一点的西丽湖、立新湖、石岩湖只选能原路折返的短段，把往返交通也算进去。公里数是建议累计跑量；有明确官方分段时单独说明，没有 GPS 实测就不画成精确赛道。</p><p>梅林石板山径没有直接从徒步推荐改成轻松慢跑；松坪山近期独立实跑证据不足，先保留散步用途。南海公园已有跑道破损的报道，本轮未取得修复核验，暂未收进慢跑组。</p><p><a href="https://www.szns.gov.cn/mlns/stns/lc/ldbd/content/post_12599272.html" target="_blank" rel="noopener noreferrer">西丽湖官方短段与全长依据 ↗</a> <a href="https://www.sznews.com/news/content/2026-01/12/content_31900589.htm" target="_blank" rel="noopener noreferrer">南海公园跑道实访报道 ↗</a></p></details></section>
+    <section class="site-notes wrap"><details><summary>关于这份小册子 · 时间、费用与照片</summary><p>面向深大学生，散步、慢跑和日常生活探索。熟悉的地方也照常展示。</p><p>交通从粤海校门到入口，含公交、候车及步行。费用按每人往返公共交通＋必要门票／主要体验估算；逛吃含一份简单餐饮，购物与额外消费另计。筛选均按区间上限。</p><p>资料核验于2026年10月17日，逐项保留中文来源与开放条件；日期活动到期退出可参与推荐。临时关闭与票额请以当天公告为准。慢跑公里数为建议累计跑量，可随时折返。</p><p>只使用有许可且能确认地点的实景。同片区参考图标明拍摄位置，无合适照片则留白。</p><button class="text-button" type="button" data-credits>照片与授权 ↗</button></details></section>
   </main>
 
   <footer class="wrap"><a class="footer-brand" href="#top">深大出走 <span>·</span> 慢慢走，好好生活。</a><span>偏好与收藏只保存在当前浏览器</span><a href="#top">回到顶部 ↑</a></footer>
@@ -91,7 +89,7 @@
     <button type="button" data-mobile-nav="saved" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 5.8c-2-2.1-5.3-1.6-8 1.3-2.7-2.9-6-3.4-8-1.3-4.5 4.7 3.1 10.9 8 14.2 4.9-3.3 12.5-9.5 8-14.2Z"/></svg><span>我的想去 <i id="mobile-saved-count">0</i></span></button>
   </nav>
   <dialog id="guide-dialog" class="guide-dialog" aria-labelledby="guide-title"><div id="guide-content"></div></dialog>
-  <dialog id="credits-dialog" class="credits-dialog"><div class="credits-inner"><button type="button" class="dialog-close" data-close="credits" aria-label="关闭图片说明">×</button><p class="eyebrow">REAL PLACES, REAL MOMENTS</p><h2>关于这些照片</h2><p>实景照片来自 Wikimedia Commons 的开放许可作品，保留作者与原图链接。缩放、压缩及版式裁切已标注；相关照片继续遵循原许可。未取得精确点位照片时，卡片会注明实际拍摄地点，仅作片区参考。</p><div id="photo-credits"></div></div></dialog>
+  <dialog id="credits-dialog" class="credits-dialog"><div class="credits-inner"><button type="button" class="dialog-close" data-close="credits" aria-label="关闭图片说明">×</button><p class="eyebrow">REAL PLACES, REAL MOMENTS</p><h2>关于这些照片</h2><p>实景照片保留作者、原图及开放许可。片区参考图会注明，未取得对应照片时使用文字封面。</p><div id="photo-credits"></div></div></dialog>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <noscript><p class="noscript">请启用 JavaScript，以浏览去处、筛选与收藏。</p></noscript>
 </body>

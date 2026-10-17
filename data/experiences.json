@@ -73,7 +73,8 @@
     "placeOverrides": {
       "entrance": "荔香公园西门（南光路侧）",
       "transport": "从粤海校区按所在校门选择步行或短程公交，导航至荔香公园西门；官方公共交通另列桃园站A口步行约700米。含校门至入口末段，非实时导航。"
-    }
+    },
+    "photoReference": false
   },
   {
     "type": "nature",
@@ -212,7 +213,8 @@
     "activity": "walk",
     "officialName": "松坪山公园",
     "playTitle": "小湖与荔枝林",
-    "nameStatus": "正式地点"
+    "nameStatus": "正式地点",
+    "photoReference": false
   },
   {
     "type": "nature",
@@ -273,7 +275,8 @@
     "activity": "walk",
     "officialName": "四海公园",
     "playTitle": "湖边慢走，顺路逛荔园路",
-    "nameStatus": "正式地点"
+    "nameStatus": "正式地点",
+    "photoReference": false
   },
   {
     "type": "nature",
@@ -652,9 +655,7 @@
       }
     ],
     "photoIds": [
-      "talents",
-      "bay-theatre",
-      "bay-panorama"
+      "talents"
     ],
     "availability": "open",
     "costPending": false,
@@ -671,7 +672,9 @@
         "note": "页面正式标题为深圳人才公园。",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "photoReference": false,
+    "photoNote": "深圳人才公园实景"
   },
   {
     "type": "culture",
@@ -818,7 +821,9 @@
         "note": "正式标题环西丽湖绿道（碧道），观光短段3.4公里。",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "photoReference": true,
+    "photoNote": "西丽水库实景参考（非新建绿道具体起点）"
   },
   {
     "type": "nature",
@@ -945,7 +950,7 @@
     ],
     "photoIds": [
       "tanglang",
-      "tanglang-view"
+      "tanglang-path-one-v3"
     ],
     "availability": "open",
     "costPending": false,
@@ -953,7 +958,9 @@
     "activity": "walk",
     "officialName": "塘朗山郊野公园（深云谷入口）",
     "playTitle": "不登顶，山林前段就很好",
-    "nameStatus": "地点与入口"
+    "nameStatus": "地点与入口",
+    "photoReference": true,
+    "photoNote": "塘朗山实景参考（非深云谷入口）"
   },
   {
     "type": "nature",
@@ -1188,7 +1195,8 @@
     "activity": "walk",
     "officialName": "立新湖公园",
     "playTitle": "湖岸挑一段慢坐",
-    "nameStatus": "正式地点"
+    "nameStatus": "正式地点",
+    "photoReference": false
   },
   {
     "type": "culture",
@@ -1512,6 +1520,7 @@
       }
     ],
     "photoIds": [
+      "shuiwei-01",
       "shuiwei-street"
     ],
     "availability": "open",
@@ -1520,7 +1529,9 @@
     "activity": "walk",
     "officialName": "皇岗锦绣园、水围村",
     "playTitle": "老园林与街巷生活",
-    "nameStatus": "多个独立地点"
+    "nameStatus": "多个独立地点",
+    "photoReference": false,
+    "photoNote": "水围夜市小吃摊（2023年历史实景，非当期菜单与价格）"
   },
   {
     "type": "culture",
@@ -1697,7 +1708,7 @@
     ],
     "photoIds": [
       "meilin-lake",
-      "meilin"
+      "meilin-greenway-v3"
     ],
     "availability": "open",
     "costPending": false,
@@ -1714,7 +1725,9 @@
         "note": "正式步道名称梅林绿道；水库是所选入口/路段而不是整条绿道正式名。",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "photoReference": false,
+    "photoNote": "梅林水库实景"
   },
   {
     "type": "nature",
@@ -2705,6 +2718,7 @@
       }
     ],
     "photoIds": [
+      "sustech-dusk",
       "sustech"
     ],
     "availability": "open",
@@ -2722,7 +2736,9 @@
         "note": "校名、参观登记入口。",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "photoReference": false,
+    "photoNote": "南方科技大学湖畔生活区晚霞（2018年实景）"
   },
   {
     "checked": "2026-10-17",
@@ -2866,7 +2882,9 @@
       }
     ],
     "photoIds": [
-      "university-town"
+      "university-library",
+      "university-town",
+      "university-gate"
     ],
     "availability": "open",
     "costPending": false,
@@ -2883,7 +2901,9 @@
         "note": "官方页明确图书馆位于深圳大学城内，名称与丽水路2239号一致；不把深圳大学城说成一所大学。",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "photoReference": false,
+    "photoNote": "深圳大学城图书馆外观（2016年实景）"
   },
   {
     "checked": "2026-10-17",
@@ -2948,6 +2968,7 @@
       }
     ],
     "photoIds": [
+      "cuhksz-mall",
       "cuhk-shenzhen"
     ],
     "availability": "open",
@@ -2965,7 +2986,9 @@
         "note": "中文全称括号深圳不可省略，和香港本校不同。",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "photoReference": false,
+    "photoNote": "香港中文大学（深圳）中央大道（2023年实景）"
   },
   {
     "checked": "2026-10-17",
@@ -3294,6 +3317,8 @@
       }
     ],
     "photoIds": [
+      "ikea-2025",
+      "ikea-interior-2023",
       "ikea-food"
     ],
     "availability": "open",
@@ -3302,7 +3327,9 @@
     "activity": "walk",
     "officialName": "宜家家居深圳商场",
     "playTitle": "慢逛样板间，顺路看看欧洲城",
-    "nameStatus": "商户名称"
+    "nameStatus": "商户名称",
+    "photoReference": false,
+    "photoNote": "深圳宜家家居样板间（2025年实景，非当期陈列）"
   },
   {
     "checked": "2026-10-17",
@@ -3855,14 +3882,18 @@
         "url": "https://www.chinawriter.com.cn/n1/2021/0831/c403994-32213448.html"
       }
     ],
-    "photoIds": [],
+    "photoIds": [
+      "ninejin-shop"
+    ],
     "availability": "verify",
     "costPending": false,
     "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
     "activity": "walk",
     "officialName": "九斤书店",
     "playTitle": "在旧书堆里慢慢找",
-    "nameStatus": "商户名称"
+    "nameStatus": "商户名称",
+    "photoReference": false,
+    "photoNote": "九斤书店门面（2025年11月实景）"
   },
   {
     "checked": "2026-10-17",
@@ -4226,7 +4257,8 @@
       "priority": 20,
       "recommendFirst": 1
     },
-    "mapKeyword": "荔香公园西门"
+    "mapKeyword": "荔香公园西门",
+    "photoReference": false
   },
   {
     "id": "jog-dashahe-lower",
@@ -4616,7 +4648,8 @@
       "priority": 14,
       "recommendFirst": 0
     },
-    "mapKeyword": "四海公园 公园路"
+    "mapKeyword": "四海公园 公园路",
+    "photoReference": false
   },
   {
     "id": "jog-qianhai-sports",
@@ -5009,7 +5042,8 @@
       "priority": 8,
       "recommendFirst": 0
     },
-    "mapKeyword": "立新湖 雨林迎宾"
+    "mapKeyword": "立新湖 雨林迎宾",
+    "photoReference": false
   },
   {
     "id": "jog-shiyan-lake",
@@ -5417,6 +5451,7 @@
       "priority": 2,
       "recommendFirst": 0
     },
-    "mapKeyword": "香蜜公园 农园路"
+    "mapKeyword": "香蜜公园 农园路",
+    "photoReference": false
   }
 ]

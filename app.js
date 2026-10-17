@@ -19,6 +19,8 @@
   const familiar = new Set(Array.isArray(stored.familiar) ? stored.familiar : []);
   const tried = new Set(Array.isArray(stored.tried) ? stored.tried : []);
   let places = [], photos = [], photoMap = new Map(), guideId = null, returnFocus = null, toastTimer;
+  let recommendationCache = {key:'',ids:[]};
+  const recommendationKey = 'szu-slow-days:last-recommendation';
 
   function persist() {
     const filters = Object.fromEntries(Object.keys(defaults).map(k => [k,state[k]]));
@@ -73,29 +75,42 @@
   function photoInfo(p) {
     const exact = selectedPhotos(p);
     if (exact.length) return {photo:exact[0],reference:!!p.photoReference,caption:p.photoNote||exact[0].caption};
-    const districtIds = {南山:'bay-theatre',福田:'concert-hall',罗湖:'concert-hall',宝安:'bay-panorama',光明:'bay-panorama',龙华:'guanlan',龙岗:'cuhk-shenzhen',坪山:'msu-bit',盐田:'bay-park'};
-    const fallback = photoMap.get(districtIds[p.district]) || photos[0];
-    return {photo:fallback,reference:true,caption:`城市实景参考 · ${fallback?.caption || '深圳'}（非该点位）`};
+    return {photo:null,reference:false,caption:'实景待补'};
   }
-  function reason(p) {
-    const status = dayStatus(p);
-    if (!status.actionable || status.code !== 'open') return `<span class="status-tag">${esc(status.label)}</span>`;
-    if (p.travel[1] > 90) return '<span class="travel-warning">远一点 · 留足往返时间</span>';
-    if (tried.has(p.id)) return '体验过，也可以再去';
-    if (p.activity==='run') return '按自己的节奏，可随时折返';
-    if (familiar.has(p.areaId)) return '熟悉的地方 · 换个停留点';
-    return state.mood !== 'all' ? esc(moods[state.mood] || '合这次的心情') : p.type === 'nature' ? '给自己一段自然里的时间' : p.type === 'campus' ? '去别人的日常里走走' : '换一种方式享受生活';
+  function shortIntro(p) {
+    const text=String(p.lead||p.playTitle||'').trim();
+    const first=text.match(/^[^。！？]+[。！？]?/)?.[0]||text;
+    return first.length<=52?first:first.slice(0,51).replace(/[，、；：]$/,'')+'…';
+  }
+  function amapLinks(p, platform) {
+    if (!platform) {
+      const ua=navigator.userAgent||'';
+      platform=/iPhone|iPad|iPod/i.test(ua)||(/Macintosh/i.test(ua)&&navigator.maxTouchPoints>1)?'ios':/Android/i.test(ua)?'android':'web';
+    }
+    const raw=String(p.mapKeyword||p.entrance||nameOf(p)).trim();
+    const destination=/深圳/.test(raw)?raw:'深圳 '+raw;
+    const source=encodeURIComponent('深大出走'), name=encodeURIComponent(destination);
+    const web='https://uri.amap.com/search?keyword='+name+'&city='+encodeURIComponent('深圳')+'&view=map&callnative=0';
+    const primary=platform==='ios'?'iosamap://path?sourceApplication='+source+'&dname='+name+'&dev=0&t=1&m=0':platform==='android'?'androidamap://poi?sourceApplication='+source+'&keywords='+name+'&dev=0':web;
+    return {primary,web,native:platform==='ios'||platform==='android',destination};
+  }
+  function media(p, {guide=false,eager=false}={}) {
+    const {photo,reference,caption}=photoInfo(p);
+    if(!photo) return '<div class="place-placeholder tone-'+esc(p.type)+'" role="img" aria-label="'+esc(nameOf(p))+'，实景照片待补"><span class="placeholder-symbol" aria-hidden="true">'+(p.type==='nature'?'〰':p.type==='campus'?'⌂':p.type==='culture'?'✳':'◒')+'</span><span>'+esc(p.district)+' / '+esc(types[p.type])+'</span><strong>'+esc(nameOf(p))+'</strong><small>实景待补</small></div>';
+    return '<img src="'+esc(photo.file)+'" alt="'+esc(caption)+'" loading="'+(eager?'eager':'lazy')+'" decoding="async"><span class="'+(guide?'guide-hero-caption':'image-caption')+(reference?' reference':'')+'">'+esc(caption)+'</span>';
   }
   function card(p,index,recommend=false) {
-    const {photo,reference,caption} = photoInfo(p), saved = bookmarks.has(p.id);
+    const saved=bookmarks.has(p.id), map=amapLinks(p), status=dayStatus(p);
     return `<article class="place-card" data-place="${esc(p.id)}">
-      <button class="bookmark" type="button" data-save="${esc(p.id)}" aria-label="${saved?'取消想去：':'收藏想去：'}${esc(labelOf(p))}" aria-pressed="${saved}">${saved?'♥':'♡'}</button>
-      <a class="card-image-link" href="#place=${encodeURIComponent(p.id)}" data-guide="${esc(p.id)}" tabindex="-1" aria-hidden="true"><img src="${esc(photo?.file || '')}" alt="${esc(caption)}" loading="${recommend && index === 0?'eager':'lazy'}" decoding="async"><span class="image-caption ${reference?'reference':''}">${esc(caption)}</span></a>
-      <div class="card-body"><div class="card-kicker"><span>${esc(p.district)}</span><span class="dot"></span><span>${p.activity==='run'?'慢跑路线':esc(types[p.type])}</span><span class="band-tag">${bands[p.band]}</span></div>
-      <h3><a class="card-title-link" href="#place=${encodeURIComponent(p.id)}" data-guide="${esc(p.id)}">${esc(nameOf(p))}</a></h3>${p.playTitle?`<p class="card-play-title">${esc(p.playTitle)}</p>`:''}${p.runInfo?`<p class="run-card-meta"><strong>建议 ${runDistance(p)}</strong><span>${esc(p.runInfo.routeType)}</span></p>`:''}<p class="card-lead">${esc(p.lead)}</p>
-      <div class="card-stats"><div><span>单程交通 · 估算</span><strong>${duration(p.travel)}</strong></div><div><span>建议停留</span><strong>${duration(p.stay)}</strong></div><div><span>人均花费</span><strong>${p.costPending?'费用待核':fare(p.cost)}</strong></div></div>
-      <div class="card-bottom"><span class="match-reason">${reason(p)}</span><a class="guide-link" href="#place=${encodeURIComponent(p.id)}" data-guide="${esc(p.id)}">${p.activity==='run'?'看慢跑路线':'看看指南'} <span aria-hidden="true">↗</span></a></div></div></article>`;
+      <button class="bookmark" type="button" data-save="${esc(p.id)}" aria-label="${saved?'取消想去：':'收藏想去：'}${esc(nameOf(p))}" aria-pressed="${saved}">${saved?'♥':'♡'}</button>
+      <a class="card-image-link" href="#place=${encodeURIComponent(p.id)}" data-guide="${esc(p.id)}" tabindex="-1" aria-hidden="true">${media(p,{eager:recommend&&index===0})}</a>
+      <div class="card-body"><div class="card-kicker"><span>${esc(p.district)}</span><span class="dot"></span><span>${p.activity==='run'?'慢跑 · '+runDistance(p):esc(types[p.type])}</span><span class="band-tag">${bands[p.band]}</span></div>
+      <h3><a class="card-title-link" href="#place=${encodeURIComponent(p.id)}" data-guide="${esc(p.id)}">${esc(nameOf(p))}</a></h3><p class="card-lead">${esc(shortIntro(p))}</p>
+      <div class="card-stats"><div><span>单程 · 约</span><strong>${duration(p.travel)}</strong></div><div><span>停留</span><strong>${duration(p.stay)}</strong></div><div><span>人均 · 约</span><strong>${p.costPending?'待核':fare(p.cost)}</strong></div></div>
+      ${status.code!=='open'?'<p class="card-condition">'+esc(status.label)+'</p>':p.travel[1]>90?'<p class="card-condition">较远，留足往返时间</p>':''}
+      <div class="card-bottom"><a class="guide-link" href="#place=${encodeURIComponent(p.id)}" data-guide="${esc(p.id)}">看看详情 <span aria-hidden="true">↗</span></a><a class="map-button" href="${esc(map.primary)}" data-map aria-label="高德导航到${esc(p.entrance)}"><svg viewBox="0 0 20 20" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m17 3-5 14-3-6-6-3 14-5Z"/></svg>高德导航</a></div></div></article>`;
   }
+
   function syncControls() {
     $$('[data-activity]').forEach(el => {el.classList.toggle('active',el.dataset.activity===state.activity);el.setAttribute('aria-pressed',String(el.dataset.activity===state.activity));});
     $$('[data-mobile-nav]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.mobileNav===state.mobileTab)));
@@ -108,34 +123,50 @@
     $('#all-tab-label').textContent=state.activity==='run'?'全部跑线':state.activity==='walk'?'散步与生活':'所有去处';
     $('#filter-summary').textContent=[state.budget==='any'?'预算不限':`¥${state.budget}以内`,state.commute==='any'?'通勤不限':`${state.commute}分钟内`,(!state.allowReserve||state.directOnly||state.date!==today)&&'含参与条件'].filter(Boolean).join(' · ');
   }
-  function recommendations(items) {
-    let pool = sorted(items.filter(p => dayStatus(p).actionable && dayStatus(p).code !== 'expired'));
-    if (!pool.length) { $('#shuffle').disabled = true; return []; }
-    const n = Math.min(3,pool.length), start = state.batch * 3;
-    if(state.activity==='run') {
-      const first=pool.filter(p=>p.runInfo.recommendFirst).sort((a,b)=>a.runInfo.recommendFirst-b.runInfo.recommendFirst);
-      pool=[...first,...pool.filter(p=>!first.includes(p))];
+  function shuffled(items) {
+    const out=[...items];
+    for(let i=out.length-1;i>0;i--) {
+      let j;
+      if(globalThis.crypto?.getRandomValues) {
+        const limit=Math.floor(4294967296/(i+1))*(i+1), value=new Uint32Array(1);
+        do { crypto.getRandomValues(value); } while(value[0]>=limit);
+        j=value[0]%(i+1);
+      } else j=Math.floor(Math.random()*(i+1));
+      [out[i],out[j]]=[out[j],out[i]];
     }
-    if (state.mood === 'all' && state.activity!=='run') {
-      const first = pool.filter(p => p.type === 'nature' && p.activity!=='run').slice(0,2);
-      const lifestyle = pool.find(p => p.type !== 'nature' && p.activity!=='run');
-      if (lifestyle) first.push(lifestyle);
-      pool = [...first,...pool.filter(p => !first.includes(p))];
-    }
-    const out = Array.from({length:n},(_,i) => pool[(start+i)%pool.length]);
-    $('#shuffle').disabled = pool.length <= n;
     return out;
   }
+  function recommendations(items) {
+    const pool=items.filter(p=>dayStatus(p).actionable), n=Math.min(3,pool.length);
+    $('#shuffle').disabled=pool.length<=n;
+    const key=JSON.stringify([Object.keys(defaults).map(k=>state[k]),state.date,state.search,state.batch,pool.map(p=>p.id)]);
+    if(key===recommendationCache.key) return recommendationCache.ids.map(id=>pool.find(p=>p.id===id)).filter(Boolean);
+    let previous=recommendationCache.ids;
+    if(!previous.length) {try{const ids=JSON.parse(localStorage.getItem(recommendationKey)||'[]');if(Array.isArray(ids))previous=ids;}catch{}}
+    const old=new Set(previous), fresh=shuffled(pool.filter(p=>!old.has(p.id))), repeated=shuffled(pool.filter(p=>old.has(p.id)));
+    const available=fresh.length>=n?fresh:[...fresh,...repeated], out=[];
+    // Random people and places, with the original preference for nature plus a little everyday life.
+    if(state.mood==='all'&&state.activity!=='run'&&fresh.length>=n) {
+      out.push(...available.filter(p=>p.type==='nature').slice(0,2));
+      const life=available.find(p=>p.type!=='nature');if(life)out.push(life);
+    }
+    for(const p of available)if(out.length<n&&!out.includes(p))out.push(p);
+    const result=shuffled(out.slice(0,n));
+    recommendationCache={key,ids:result.map(p=>p.id)};
+    try{localStorage.setItem(recommendationKey,JSON.stringify(recommendationCache.ids));}catch{}
+    return result;
+  }
+
   function render() {
     syncControls();
     const matches = places.filter(match);
     $('#filter-match-count').textContent=`${matches.length} 项符合条件`;
-    $('#recommend-title').textContent=state.activity==='run'?'轻松，跑一段':'去这里，待一会儿';
-    $('#explore-title').textContent=state.activity==='run'?'挑一条，按自己的节奏跑':'总有一处，合你的心情';
+    $('#recommend-title').textContent=state.activity==='run'?'今天，跑这一段？':'今天，去这里？';
+    $('#explore-title').textContent=state.activity==='run'?'全部慢跑路线':'全部去处';
     $('#run-selection-note').hidden=state.activity!=='run';
     const recs = recommendations(matches);
     $('#recommend-grid').innerHTML = recs.length ? recs.map((p,i) => card(p,i,true)).join('') : '<div class="empty-state" style="grid-column:1/-1"><h3>这一天，暂时没有合适的可参与推荐</h3><p>调整交通、主题或日期，也可以在下方收藏待排期的灵感。</p><button class="primary-button" type="button" data-show-all>放宽条件看看</button></div>';
-    $('#recommend-summary').textContent = recs.length ? state.activity==='run'?'先选舒服的路，再决定今天跑多远。':`${state.band==='all'?'不赶路的日常':bands[state.band]} · ${state.mood==='all'?'自然优先，也留一点生活的惊喜':moods[state.mood]}${state.commute==='any'?'':` · 单程不超过${state.commute}分钟`}` : '预约不代表有余票，出发前记得查看当天信息。';
+    $('#recommend-summary').textContent=recs.length?'随机选了 '+recs.length+' 处，喜欢就出发。':'放宽一点条件，再看看。';
     const catalog = sorted(matches.filter(p => state.view !== 'saved' || bookmarks.has(p.id)));
     $('#catalog-grid').innerHTML = catalog.slice(0,state.page).map((p,i) => card(p,i)).join('');
     $('#result-count').textContent = `${catalog.length} 处`; $('#empty-state').hidden = catalog.length > 0; $('#load-more').hidden = catalog.length <= state.page;
@@ -144,7 +175,7 @@
       $('#empty-state p').textContent = state.view === 'saved' && !bookmarks.size ? '点卡片上的爱心，把喜欢的去处留给下一次空闲。' : '试试更长的交通时间，或换一种想看的风景。';
     }
     const conditions = [state.activity!=='all'&&(state.activity==='run'?'轻松慢跑':'散步与生活'),state.band!=='all'&&bands[state.band],state.mood!=='all'&&moods[state.mood],state.budget!=='any'&&`人均上限 ¥${state.budget}`,state.commute!=='any'&&`单程上限 ${state.commute} 分钟`,!state.allowReserve&&'无需预约',state.directOnly&&'明确可去',state.search&&`搜索“${state.search}”`].filter(Boolean);
-    $('#active-conditions').innerHTML = conditions.length ? `${esc(conditions.join(' / '))} <button class="text-button" data-show-all type="button" style="margin-left:10px">查看完整 ${places.length} 项</button>` : `完整 ${places.length} 项 · 常见与新去处都在这里，按本次条件排序`;
+    $('#active-conditions').innerHTML = conditions.length ? `${esc(conditions.join(' / '))} <button class="text-button" data-show-all type="button" style="margin-left:10px">查看完整 ${places.length} 项</button>` : `全部 ${places.length} 项 · 熟悉的、新发现的，都在这里`;
     persist();
   }
   function changed() {state.batch=0;state.page=12;state.mobileTab=state.view==='saved'?'saved':state.activity==='run'?'run':'recommend';render();}
@@ -165,26 +196,28 @@
   }
   function runGuide(p) {
     const r=p.runInfo;if(!r)return '';
-    return `<section class="run-guide"><div class="run-guide-heading"><h3>这段怎么跑</h3><strong>建议 ${runDistance(p)}</strong></div><p class="run-start-end">${esc(r.startEnd)}</p><ol class="run-waypoints">${r.turnPoints.map(t=>`<li>${esc(typeof t==='string'?t:t.name)}</li>`).join('')}</ol><p class="run-distance-note">${esc(r.distanceNote)}</p><dl class="run-facts">${Object.entries({routeType:'路线形式',surface:'路面',grade:'坡度',shade:'遮阴',crossings:'人车与路口',crowd:'人流',bestTime:'适合时段',support:'补水与厕所'}).filter(([k])=>r[k]).map(([k,title])=>`<div><dt>${title}</dt><dd>${esc(r[k])}</dd></div>`).join('')}</dl><p class="run-evidence-note">${esc(r.evidenceLimits)}</p></section>`;
+    return `<section class="run-guide"><div class="run-guide-heading"><h3>这段怎么跑</h3><strong>${runDistance(p)}</strong></div><p class="run-start-end">${esc(r.startEnd)}</p><p class="run-compact-note">${esc(r.routeType)} · 建议累计跑量，可随时折返</p></section>`;
   }
   function guide(p) {
-    const {photo,caption,reference}=photoInfo(p), status=dayStatus(p), pics=selectedPhotos(p).slice(1,3);
-    const map=`https://uri.amap.com/search?keyword=${encodeURIComponent(p.mapKeyword||p.entrance)}&city=${encodeURIComponent('深圳')}&view=map`;
-    const special=status.actionable ? p.access.text : `${status.label}。${p.access.text}`;
-    return `<div class="guide-close-row"><button class="dialog-close" type="button" data-close="guide" aria-label="关闭指南">×</button></div><div class="guide-hero"><img src="${esc(photo?.file)}" alt="${esc(caption)}"><span class="guide-hero-caption">${esc(caption)}${reference?' · 目的地精确照片待补':''}</span></div>
-      <div class="guide-main"><p class="guide-kicker">${esc(p.district)} · ${p.activity==='run'?'慢跑路线':esc(types[p.type])} <span>／</span> ${bands[p.band]}</p><p class="place-name-label">${esc(p.nameStatus||'地点 / 路段')}</p><h2 id="guide-title">${esc(nameOf(p))}</h2>${p.playTitle?`<p class="guide-play-title">${esc(p.playTitle)}</p>`:''}<p class="guide-lead">${esc(p.lead)}</p>
-      <div class="guide-actions"><a href="${safeUrl(map)}" target="_blank" rel="noopener noreferrer" data-map>${p.runInfo?'导航到起跑接入点':'导航到入口'} ↗</a><button data-save="${esc(p.id)}" type="button" aria-pressed="${bookmarks.has(p.id)}" aria-label="${bookmarks.has(p.id)?'取消想去：':'收藏想去：'}${esc(labelOf(p))}">${bookmarks.has(p.id)?'♥ 已加入想去':'♡ 加入想去'}</button><button type="button" data-share="${esc(p.id)}">复制这份指南</button></div>
-      <div class="guide-summary"><div><small>单程交通 · 估算</small><strong>${duration(p.travel)}</strong><p>${p.travel[1]>90?'通勤较长，请预留往返余量':'从粤海校区校门到入口，含末段步行'}</p></div><div><small>现场建议停留</small><strong>${duration(p.stay)}</strong><p>不含往返交通，随心缩短或延长</p></div><div><small>人均花费 · 估算</small><strong>${p.costPending?'费用待核':fare(p.cost)}</strong><p>${esc(p.costNote)}</p></div></div>
-      <p class="guide-description">${esc(p.description)}</p>${runGuide(p)}<section class="guide-section"><h3>${p.runInfo?'途中，留两处缓一缓':'两三个地方，就值得慢慢待着'}</h3><div class="spots">${p.spots.map((s,i)=>`<div class="spot"><span>0${i+1}</span><h4>${esc(s.name)}</h4><p>${esc(s.text)}</p></div>`).join('')}</div></section>
-      ${p.runInfo?'':`<section class="guide-section"><h3>这里待着舒服吗</h3><div class="comfort-grid">${Object.entries({shade:'遮阴',seats:'可坐',crowd:'人流',terrain:'地面与坡度'}).map(([k,label])=>`<p><strong>${label}</strong><span>${esc(p.comfort[k])}</span></p>`).join('')}</div></section>`}
-      <section class="guide-section"><h3>怎么到这里</h3><p class="guide-transport"><strong>导航入口：${esc(p.entrance)}</strong><br>${esc(p.transport)}</p></section>
-      <section class="guide-section"><h3>出发前看一眼</h3><div class="access-note"><p><strong>${esc(status.label)}</strong> · ${esc(special)}</p>${p.schedule.start?`<p>场次：${esc(dateTime(p.schedule.start))}${p.schedule.end?' — '+esc(dateTime(p.schedule.end)):''}</p>`:''}${p.schedule.deadline?`<p>报名截止：${esc(dateTime(p.schedule.deadline))}</p>`:''}<p>${esc(p.schedule.note)}</p>${p.access.url?`<a href="${safeUrl(p.access.url)}" target="_blank" rel="noopener noreferrer">查看官方信息／报名入口 ↗</a>`:''}</div></section>
-      <section class="guide-section"><h3>这些情况，可能会扫兴</h3><ul>${p.tips.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></section>
-      ${p.nearby.length?`<section class="guide-section"><h3>还想多逛一会儿，再顺路选</h3><div class="nearby-list">${p.nearby.map(n=>`<div class="nearby-item"><strong>${esc(n.name)}</strong>${esc(n.text)}</div>`).join('')}</div></section>`:''}
-      ${pics.length?`<div class="guide-photo-strip">${pics.map(ph=>`<figure><img src="${esc(ph.file)}" alt="${esc(ph.caption)}" loading="lazy"><figcaption>${esc(ph.caption)} · ${esc(ph.author)}</figcaption></figure>`).join('')}</div>`:''}
-      <div class="experience-history"><label><input type="checkbox" data-familiar="${esc(p.areaId)}" ${familiar.has(p.areaId)?'checked':''}>我熟悉这个地方</label><label><input type="checkbox" data-tried="${esc(p.id)}" ${tried.has(p.id)?'checked':''}>我体验过这个玩法</label><p>分开记录：熟悉地点仍可遇见新的停留点和活动，不会因此被隐藏。</p></div>
-      <details class="source-details"><summary>资料来源与照片 · 核验 ${esc(p.checked)}</summary>${p.sources.map(s=>`<div class="source-item"><a href="${safeUrl(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)} ↗</a>${s.evidence?`<p>${esc(s.kind||'公开资料')}：${esc(s.evidence)}</p>`:''}</div>`).join('')}<p>开放和参与条件参考管理方；环境描述结合中文公开记录。${esc(p.sourceEvidence)}交通及花费是编辑估算，不是实时导航或票务报价。</p>${(selectedPhotos(p).length?selectedPhotos(p):[photo]).filter(Boolean).map(ph=>`<p>照片：${esc(ph.caption)} · ${esc(ph.author)} · <a href="${safeUrl(ph.licenseUrl)}" target="_blank" rel="noopener noreferrer" style="display:inline">${esc(ph.license)}</a> · <a href="${safeUrl(ph.sourceUrl)}" target="_blank" rel="noopener noreferrer" style="display:inline">原图</a>。${esc(ph.changes||'展示有缩放与裁切')}</p>`).join('')}</details></div>`;
+    const status=dayStatus(p), map=amapLinks(p), r=p.runInfo;
+    const needsCheck=status.code!=='open';
+    return `<div class="guide-close-row"><button class="dialog-close" type="button" data-close="guide" aria-label="关闭指南">×</button></div><div class="guide-hero">${media(p,{guide:true,eager:true})}</div>
+      <div class="guide-main"><p class="guide-kicker">${esc(p.district)} · ${p.activity==='run'?'慢跑路线':esc(types[p.type])} · ${bands[p.band]}</p><h2 id="guide-title">${esc(nameOf(p))}</h2><p class="guide-lead">${esc(shortIntro(p))}</p>
+      <div class="guide-actions"><a href="${esc(map.primary)}" data-map>高德导航 ↗</a><button data-save="${esc(p.id)}" type="button" aria-pressed="${bookmarks.has(p.id)}" aria-label="${bookmarks.has(p.id)?'取消想去：':'收藏想去：'}${esc(nameOf(p))}">${bookmarks.has(p.id)?'♥ 已收藏':'♡ 收藏'}</button></div>
+      <div class="guide-summary"><div><small>单程 · 约</small><strong>${duration(p.travel)}</strong></div><div><small>停留</small><strong>${duration(p.stay)}</strong></div><div><small>人均 · 约</small><strong>${p.costPending?'费用待核':fare(p.cost)}</strong></div></div>
+      <div class="guide-entry"><span>${r?'起跑接入点':'导航入口'}</span><strong>${esc(p.entrance)}</strong><a href="${safeUrl(map.web)}" target="_blank" rel="noopener noreferrer">用网页版 ↗</a></div>
+      ${r?runGuide(p):'<div class="guide-stops"><span>值得停一停</span>'+p.spots.slice(0,3).map(s=>'<strong>'+esc(s.name)+'</strong>').join('')+'</div>'}
+      ${needsCheck?'<div class="guide-prerequisite"><strong>'+esc(status.label)+'</strong><span>'+esc(p.type==='campus'?'先确认入校、图书馆及餐饮权限':status.code==='expired'?'本场已结束，留作下次灵感':status.code==='future'?'留意场次日期与报名名额':'出发前请核实当天条件')+'</span>'+(p.access.url?'<a href="'+safeUrl(p.access.url)+'" target="_blank" rel="noopener noreferrer">官方信息 ↗</a>':'')+'</div>':''}
+      <details class="practical-details"><summary>出发信息 · 路况、开放与费用</summary>
+        <p><strong>交通</strong>${esc(p.transport)}</p><p><strong>费用</strong>${esc(p.costNote)}</p><p><strong>开放</strong>${esc(p.access.text)}</p>
+        ${p.schedule.start?'<p>场次：'+esc(dateTime(p.schedule.start))+(p.schedule.end?' — '+esc(dateTime(p.schedule.end)):'')+'</p>':''}${p.schedule.deadline?'<p>报名截止：'+esc(dateTime(p.schedule.deadline))+'</p>':''}${p.schedule.note?'<p>'+esc(p.schedule.note)+'</p>':''}
+        ${r?'<p><strong>跑法</strong>'+r.turnPoints.map(t=>esc(typeof t==='string'?t:t.name)).join(' → ')+'</p><p>'+esc(r.distanceNote)+'</p>'+Object.entries({surface:'路面',grade:'坡度',shade:'遮阴',crossings:'路口',crowd:'人流',bestTime:'时段',support:'补水与厕所'}).filter(([k])=>r[k]).map(([k,label])=>'<p><strong>'+label+'</strong>'+esc(r[k])+'</p>').join('')+'<p>'+esc(r.evidenceLimits)+'</p>':Object.entries({shade:'遮阴',seats:'可坐',crowd:'人流',terrain:'坡度'}).map(([k,label])=>'<p><strong>'+label+'</strong>'+esc(p.comfort[k])+'</p>').join('')}
+        ${p.tips.length?'<p><strong>留意</strong>'+p.tips.map(t=>esc(t)).join(' ')+'</p>':''}${p.nearby.length?'<p><strong>顺路</strong>'+p.nearby.map(n=>esc(n.name)).join(' · ')+'</p>':''}
+        <div class="experience-history"><label><input type="checkbox" data-familiar="${esc(p.areaId)}" ${familiar.has(p.areaId)?'checked':''}>熟悉这个地方</label><label><input type="checkbox" data-tried="${esc(p.id)}" ${tried.has(p.id)?'checked':''}>体验过这个玩法</label></div><button class="text-button" type="button" data-share="${esc(p.id)}">复制指南链接 ↗</button>
+      </details>
+      <details class="source-details"><summary>来源与照片 · ${esc(p.checked)}</summary>${selectedPhotos(p).length>1?'<div class="guide-photo-strip">'+selectedPhotos(p).slice(1,3).map(ph=>'<figure><img src="'+esc(ph.file)+'" alt="'+esc(ph.caption)+'" loading="lazy"><figcaption>'+esc(ph.caption)+'</figcaption></figure>').join('')+'</div>':''}${p.sources.map(s=>'<div class="source-item"><a href="'+safeUrl(s.url)+'" target="_blank" rel="noopener noreferrer">'+esc(s.title)+' ↗</a>'+(s.evidence?'<p>'+esc(s.evidence)+'</p>':'')+'</div>').join('')}<p>${esc(p.sourceEvidence)}交通与费用为估算，以当日实际信息为准。</p>${selectedPhotos(p).map(ph=>'<p>照片：'+esc(ph.caption)+' · '+esc(ph.author)+' · <a href="'+safeUrl(ph.licenseUrl)+'" target="_blank" rel="noopener noreferrer">'+esc(ph.license)+'</a> · <a href="'+safeUrl(ph.sourceUrl)+'" target="_blank" rel="noopener noreferrer">原图</a>。'+esc(ph.changes||'缩放与裁切')+'</p>').join('')}${!selectedPhotos(p).length?'<p>未取得对应点位的可用实景，封面为文字占位。</p>':''}</details></div>`;
   }
+
   function openGuide(id,updateHash=true) {
     const p=places.find(p=>p.id===id);if(!p)return;
     returnFocus=document.activeElement; guideId=id; $('#guide-content').innerHTML=guide(p);
@@ -209,7 +242,7 @@
     for(const [id,key] of [['allow-reserve','allowReserve'],['direct-only','directOnly']]) $(`#${id}`).addEventListener('change',e=>{state[key]=e.target.checked;changed();});
     $('#trip-date').min=today;
     $('#trip-date').addEventListener('change',e=>{if(e.target.value&&e.target.validity.valid){state.date=e.target.value;changed();}});
-    const phoneLayout=matchMedia('(max-width:760px)');$('#filter-refine').open=!phoneLayout.matches;phoneLayout.addEventListener('change',e=>{$('#filter-refine').open=!e.matches;});
+    $('#filter-refine').open=false;
     $('#shuffle').addEventListener('click',()=>{state.batch++;render();toast('换了一批，筛选条件已保留');});
     $('#search').addEventListener('input',e=>{state.search=e.target.value.trim();state.page=12;render();$('#search').focus({preventScroll:true});});
     $('#sort').addEventListener('change',e=>{state.sort=e.target.value;render();});
@@ -243,6 +276,8 @@
       const areaMap=new Map(areas.map(a=>[a.id,a]));photos=images;photoMap=new Map(photos.map(p=>[p.id,p]));
       places=experiences.map(e=>({...areaMap.get(e.areaId),activity:'walk',...e,...(e.placeOverrides||{})}));
       const validIds=new Set(places.map(p=>p.id));for(const id of bookmarks)if(!validIds.has(id))bookmarks.delete(id);
+      if(location.hash==='#running')Object.assign(state,{activity:'run',mood:'all',mobileTab:'run'});
+      else if(location.hash==='#saved')Object.assign(state,{view:'saved',mobileTab:'saved'});
       initEvents();render();
       if(location.hash.startsWith('#place='))openGuide(decodeURIComponent(location.hash.slice(7)),false);
       else if(location.hash==='#running')navigate('run');
