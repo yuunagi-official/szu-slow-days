@@ -1,0 +1,830 @@
+[
+  {
+    "id": "bay-panorama",
+    "file": "assets/photos/bay-panorama.jpg",
+    "caption": "深圳湾公园林荫步道全景",
+    "author": "Wishds",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Somewhere_in_Shenzhen_Bay_Park.jpg",
+    "matchIds": [],
+    "keywords": [
+      "深圳湾",
+      "海岸",
+      "主图"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 469
+  },
+  {
+    "id": "bay-park",
+    "file": "assets/photos/bay-park.jpg",
+    "caption": "深圳湾公园公共艺术与草坪",
+    "author": "Mx. Granger",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shenzhen_Bay_Park_-_2019-12-09_-_1.jpg",
+    "matchIds": [],
+    "keywords": [
+      "深圳湾",
+      "海岸"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "bay-theatre",
+    "file": "assets/photos/bay-theatre.jpg",
+    "caption": "深圳湾公园日出剧场草坪与海面",
+    "author": "歪歪",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shenzhen_Bay_Park_Sunrise_Theatre_20210904.jpg",
+    "matchIds": [],
+    "keywords": [
+      "深圳湾",
+      "日出剧场"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 1068
+  },
+  {
+    "id": "lixiang",
+    "file": "assets/photos/lixiang.jpg",
+    "caption": "荔香公园入口一带（历史影像）",
+    "author": "Wishva de Silva",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lixiang_Park.jpg",
+    "matchIds": [],
+    "keywords": [
+      "荔香公园"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "lixiang-center",
+    "file": "assets/photos/lixiang-center.jpg",
+    "caption": "荔香公园内的南山书房",
+    "author": "LAUDM Hausdb RIWAMo",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E5%8D%97%E5%B1%B1_Nanshan_%E5%8D%97%E5%85%89%E8%B7%AF_Nangang_Road_LiXiang_Park_center_May_2024_R12S_01.jpg",
+    "matchIds": [],
+    "keywords": [
+      "荔香公园"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "dasha",
+    "file": "assets/photos/dasha.jpg",
+    "caption": "南山大沙河沿岸",
+    "author": "Charlie fong",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shahe_in_Nanshan_Shenzhen2020.jpg",
+    "matchIds": [],
+    "keywords": [
+      "大沙河"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "tanglang",
+    "file": "assets/photos/tanglang.jpg",
+    "caption": "塘朗山山林与城市远景",
+    "author": "Dinkun Chen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:TANGLANG_MOUNTAIN,_SHENZHEN_(2).jpg",
+    "matchIds": [],
+    "keywords": [
+      "塘朗山",
+      "深云谷"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 1118
+  },
+  {
+    "id": "tanglang-view",
+    "file": "assets/photos/tanglang-view.jpg",
+    "caption": "塘朗山远景",
+    "author": "Dinkun Chen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:TANGLANG_MOUNTAIN,_SHENZHEN.jpg",
+    "matchIds": [],
+    "keywords": [
+      "塘朗山"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 1068
+  },
+  {
+    "id": "meilin",
+    "file": "assets/photos/meilin.jpg",
+    "caption": "梅林水库坝体侧坡",
+    "author": "Dinkun Chen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:MEILIN_RESERVOIR_SHENZHEN_(60).jpg",
+    "matchIds": [],
+    "keywords": [
+      "梅林水库"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 809
+  },
+  {
+    "id": "sihai",
+    "file": "assets/photos/sihai.jpg",
+    "caption": "四海公园牛雕塑与园景",
+    "author": "Kaap bij Sneeuw",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Great_Ox_Statue_in_Sihai_Park,_Nanshan,_Shenzhen_(2020)_China.jpg",
+    "matchIds": [],
+    "keywords": [
+      "四海公园"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 1393
+  },
+  {
+    "id": "sihai-night",
+    "file": "assets/photos/sihai-night.jpg",
+    "caption": "四海公园夜景",
+    "author": "GEIMENos GEAWC 200",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E5%8D%97%E5%B1%B1%E5%8D%80_Nanshan_%E5%9B%9B%E6%B5%B7%E5%85%AC%E5%9C%92_Sihai_Park_night_November_2023_R12S_10.jpg",
+    "matchIds": [],
+    "keywords": [
+      "四海公园"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "nantou",
+    "file": "assets/photos/nantou.jpg",
+    "caption": "南头古城南门（2022年影像）",
+    "author": "Iswzo",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%8D%97%E5%A4%B4%E5%8F%A4%E5%9F%8E%E5%8D%97%E9%97%A82022.jpg",
+    "matchIds": [],
+    "keywords": [
+      "南头古城"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 1067
+  },
+  {
+    "id": "shekou",
+    "file": "assets/photos/shekou.jpg",
+    "caption": "蛇口海上世界公共广场",
+    "author": "Charlie fong",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sea_World_in_Shekou_Shenzhen2021.jpg",
+    "matchIds": [],
+    "keywords": [
+      "蛇口",
+      "海上世界"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "chiwan",
+    "file": "assets/photos/chiwan.jpg",
+    "caption": "赤湾片区实景",
+    "author": "Dinkun Chen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:CHIWAN,_SHENZHEN_(4).jpg",
+    "matchIds": [],
+    "keywords": [
+      "赤湾"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 1067
+  },
+  {
+    "id": "oct-loft",
+    "file": "assets/photos/oct-loft.jpg",
+    "caption": "华侨城创意文化园公共空间",
+    "author": "Dinkun Chen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:OCT_LOFT,_SHENZHEN_(41).jpg",
+    "matchIds": [],
+    "keywords": [
+      "华侨城",
+      "旧天堂",
+      "燕晗山"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 972
+  },
+  {
+    "id": "guanlan",
+    "file": "assets/photos/guanlan.jpg",
+    "caption": "观澜古墟公共街巷",
+    "author": "Hha Ting Tong",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:SZ_Shenzhen_Longhua_Guanlan_Ancient_Fair_n_village_March_2025_R12S_117.jpg",
+    "matchIds": [],
+    "keywords": [
+      "观澜古墟"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "sustech",
+    "file": "assets/photos/sustech.jpg",
+    "caption": "南方科技大学校园远眺",
+    "author": "Dinkun Chen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shenzhen_Southern_University_of_Science_and_Technology_Campus_(17).jpg",
+    "matchIds": [
+      "campus-sustech"
+    ],
+    "keywords": [
+      "南方科技大学",
+      "南科大"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 1068
+  },
+  {
+    "id": "university-town",
+    "file": "assets/photos/university-town.jpg",
+    "caption": "深圳大学城，从深圳大学城图书馆眺望",
+    "author": "Sparktour",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:PANO_of_University_Town_Shenzhen_on_Shenzhen_Science_and_Technology_Library.jpg",
+    "matchIds": [
+      "campus-university-town"
+    ],
+    "keywords": [
+      "深圳大学城",
+      "大学城图书馆"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 522
+  },
+  {
+    "id": "lixiang-garden",
+    "file": "assets/photos/lixiang-garden.jpg",
+    "caption": "荔香公园内景",
+    "author": "LAUDM Hausdb RIWAMo",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E5%8D%97%E5%B1%B1_Nanshan_%E5%8D%97%E5%85%89%E8%B7%AF_Nangang_Road_LiXiang_Park_May_2024_R12S_18.jpg",
+    "matchIds": [],
+    "keywords": [
+      "荔香公园"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "cuhk-shenzhen",
+    "file": "assets/photos/cuhk-shenzhen.jpg",
+    "caption": "香港中文大学（深圳）莲池",
+    "author": "鹿苑",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lotus_pond_-_CUHKSZ_-_20240811.jpg",
+    "matchIds": [
+      "campus-cuhksz"
+    ],
+    "keywords": [
+      "香港中文大学深圳",
+      "港中深"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 1089
+  },
+  {
+    "id": "sysu-shenzhen",
+    "file": "assets/photos/sysu-shenzhen.jpg",
+    "caption": "中山大学深圳校区正门",
+    "author": "H2NCH2COOH",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:SYSU_Shenzhen_Main_Entrance_20221208.jpg",
+    "matchIds": [
+      "campus-sysu"
+    ],
+    "keywords": [
+      "中山大学深圳校区"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "msu-bit",
+    "file": "assets/photos/msu-bit.jpg",
+    "caption": "深圳北理莫斯科大学校园全景",
+    "author": "Sparktour",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:PANO_of_the_Campus_of_Shenzhen_MSU-BIT_University.jpg",
+    "matchIds": [
+      "campus-smbu"
+    ],
+    "keywords": [
+      "深圳北理莫斯科大学",
+      "深北莫"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "width": 1600,
+    "height": 413
+  },
+  {
+    "id": "meilin-lake",
+    "file": "assets/photos/meilin-lake.jpg",
+    "caption": "日落时分的梅林水库（2016年影像）",
+    "author": "Huangdan2060",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Meilin_Reservoir7.jpg",
+    "matchIds": [],
+    "keywords": [
+      "梅林水库"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "",
+    "width": 1280,
+    "height": 853
+  },
+  {
+    "id": "concert-hall",
+    "file": "assets/photos/concert-hall.jpg",
+    "caption": "深圳音乐厅建筑外观",
+    "author": "Huangdan2060",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shenzhen_Concert_Hall_(2).jpg",
+    "matchIds": [
+      "culture-concert-hall"
+    ],
+    "keywords": [
+      "深圳音乐厅"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "2016-10-01 15:11:57",
+    "width": 1600,
+    "height": 1067
+  },
+  {
+    "id": "lianhuashan",
+    "file": "assets/photos/lianhuashan.jpg",
+    "caption": "深圳莲花山公园园景",
+    "author": "Ermell",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lianhuashan_Park_Shenzen_China_1310769.jpg",
+    "matchIds": [],
+    "keywords": [
+      "莲花山公园"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "2010-12-31 14:42:34",
+    "width": 1600,
+    "height": 1186
+  },
+  {
+    "id": "ikea-food",
+    "file": "assets/photos/ikea-food.jpg",
+    "caption": "深圳宜家餐厅餐食（历史实景，不代表当期菜单）",
+    "author": "Dinkun Chen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:SHENZHEN_IKEA_FOOD_(2).jpg",
+    "matchIds": [
+      "market-european-city"
+    ],
+    "keywords": [
+      "欧洲城宜家",
+      "宜家"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "2020-10-25 11:22:43",
+    "width": 1600,
+    "height": 1067
+  },
+  {
+    "id": "shenzhen-museum",
+    "file": "assets/photos/shenzhen-museum.jpg",
+    "caption": "深圳博物馆建筑实景",
+    "author": "Nishino Asuka",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shenzhen_Museum.jpg",
+    "matchIds": [
+      "culture-museum-joinery"
+    ],
+    "keywords": [
+      "深圳博物馆"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "2024-12-24 11:32:35",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "he-xiangning",
+    "file": "assets/photos/he-xiangning.jpg",
+    "caption": "何香凝美术馆外观",
+    "author": "Huangdan2060",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:He_Xiangning_Art_Museum1.jpg",
+    "matchIds": [],
+    "keywords": [
+      "何香凝美术馆",
+      "华侨城"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "2016-10-02 16:05:16",
+    "width": 1600,
+    "height": 1067
+  },
+  {
+    "id": "talents",
+    "file": "assets/photos/talents.jpg",
+    "caption": "深圳人才公园实景",
+    "author": "Dinkun Chen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:SHENZHEN_TALENTS_PARK_(10).jpg",
+    "matchIds": [],
+    "keywords": [
+      "人才公园",
+      "流花山"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "2024-12-01 13:26:37",
+    "width": 1600,
+    "height": 1068
+  },
+  {
+    "id": "lixinhu",
+    "file": "assets/photos/lixinhu.jpg",
+    "caption": "深圳立新湖湖岸实景",
+    "author": "Auongkinghe",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%AB%8B%E6%96%B0%E6%B9%96_20251214_145745.jpg",
+    "matchIds": [],
+    "keywords": [
+      "立新湖"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "2025-12-14 14:57:45",
+    "width": 1600,
+    "height": 1067
+  },
+  {
+    "id": "xili",
+    "file": "assets/photos/xili.jpg",
+    "caption": "深圳西丽水库实景（2021年影像）",
+    "author": "Charlie fong",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Xili_Reservoir_in_Shenzhen2021.jpg",
+    "matchIds": [],
+    "keywords": [
+      "环西丽湖",
+      "西丽湖",
+      "西丽水库"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "2021-02-02 10:11:41",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "polytechnic",
+    "file": "assets/photos/polytechnic.jpg",
+    "caption": "深圳职业技术大学留仙洞校区（历史实景）",
+    "author": "Chunwai yau",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:SZPT%E6%B7%B1%E5%9C%B3%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%EF%BC%88%E7%95%99%E4%BB%99%E6%B4%9E%E6%A0%A1%E5%8C%BA%EF%BC%89.jpg",
+    "matchIds": [
+      "campus-szpu"
+    ],
+    "keywords": [
+      "深圳职业技术大学",
+      "深职大",
+      "留仙洞校区"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "2023-03-15",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "nanshan-museum",
+    "file": "assets/photos/nanshan-museum.jpg",
+    "caption": "南山博物馆实景（2023年影像）",
+    "author": "KWUNGAM Haueng Chanem",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:SZ_Shenzhen_%E5%8D%97%E5%B1%B1_Nanshan_%E5%8D%97%E9%A0%AD%E8%A1%97_Nantou_Street_%E6%B7%B1%E5%9C%B3%E5%8D%97%E5%B1%B1%E5%8D%9A%E7%89%A9%E9%A4%A8_Nanshan_Museum_October_2023_R12S_01.jpg",
+    "matchIds": [],
+    "keywords": [
+      "南山博物馆"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "2023-10-17 14:26:15",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "id": "fairylake-gate",
+    "file": "assets/photos/fairylake-gate.jpg",
+    "caption": "深圳仙湖植物园正门",
+    "author": "Dinkun Chen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:FAIRYLAKE_BOTANICAL_GARDEN_MAIN_GATE.jpg",
+    "matchIds": [],
+    "keywords": [
+      "仙湖植物园",
+      "仙湖导赏"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "2023-05-18 11:37:35",
+    "width": 1600,
+    "height": 769
+  },
+  {
+    "id": "fairylake-garden",
+    "file": "assets/photos/fairylake-garden.jpg",
+    "caption": "深圳仙湖植物园山林与弘法寺远景",
+    "author": "Dinkun Chen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:FAIRYLAKE_BOTANICAL_GARDEN_(3).jpg",
+    "matchIds": [],
+    "keywords": [
+      "仙湖植物园",
+      "仙湖导赏",
+      "仙湖夜游"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "2023-05-18 11:58:35",
+    "width": 1600,
+    "height": 1068
+  },
+  {
+    "id": "songping-lake",
+    "file": "assets/photos/songping-lake.jpg",
+    "caption": "松坪山公园园内实景",
+    "author": "Dinkun Chen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:SONGPINGSHAN_PARK,_SHENZHEN_(4).jpg",
+    "matchIds": [
+      "songping-lake"
+    ],
+    "keywords": [
+      "松坪山公园"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "",
+    "width": 1280,
+    "height": 854
+  },
+  {
+    "id": "hongqiao-walk",
+    "file": "assets/photos/hongqiao-walk.jpg",
+    "caption": "光明虹桥步道入口实景（非大顶岭北侧线路）",
+    "author": "重庆轨交18",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E8%99%B9%E6%A1%A5%E6%AD%A5%E9%81%93.jpg",
+    "matchIds": [],
+    "keywords": [
+      "虹桥公园",
+      "光明虹桥步道"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "",
+    "width": 1280,
+    "height": 960
+  },
+  {
+    "id": "qiankeng-tower",
+    "file": "assets/photos/qiankeng-tower.jpg",
+    "caption": "茜坑老村北碉楼（2024年影像）",
+    "author": "BMSBridge",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:20240203-%E8%8C%9C%E5%9D%91%E8%80%81%E6%9D%91%E5%8C%97%E7%A2%89%E6%A5%BC.jpg",
+    "matchIds": [
+      "qiankeng-old-village"
+    ],
+    "keywords": [
+      "茜坑老村"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "shangwei-tower",
+    "file": "assets/photos/shangwei-tower.jpg",
+    "caption": "上围村东区48号碉楼（2023年影像）",
+    "author": "BMSBridge",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:20230929-%E4%B8%8A%E5%9B%B4%E6%9D%91%E4%B8%9C%E5%8C%BA48%E5%8F%B7%E7%A2%89%E6%A5%BC.jpg",
+    "matchIds": [
+      "shangwei-village"
+    ],
+    "keywords": [
+      "上围艺术村",
+      "上围村"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "edixia-shrine",
+    "file": "assets/photos/edixia-shrine.jpg",
+    "caption": "俄地吓村陈氏家祠（2026年影像）",
+    "author": "BMSBridge",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:20260606-%E4%BF%84%E5%9C%B0%E5%90%93%E6%9D%91%E9%99%88%E6%B0%8F%E5%AE%B6%E7%A5%A0.jpg",
+    "matchIds": [
+      "aohu-art-village"
+    ],
+    "keywords": [
+      "鳌湖",
+      "俄地吓村"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "",
+    "width": 1280,
+    "height": 960
+  },
+  {
+    "id": "shuiwei-street",
+    "file": "assets/photos/shuiwei-street.jpg",
+    "caption": "水围村街巷（2013年历史影像）",
+    "author": "wanghongliu",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%B0%B4%E5%9B%B4%E6%9D%91_shui_wei_cun_-_panoramio.jpg",
+    "matchIds": [
+      "huanggang-shuiwei"
+    ],
+    "keywords": [
+      "水围",
+      "皇岗"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "aeon-donghu",
+    "file": "assets/photos/aeon-donghu.jpg",
+    "caption": "永旺东湖店（2023年历史实景）",
+    "author": "Dinkun Chen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:AEON_STYLE_DONGHU_IN_SHENZHEN_(5).jpg",
+    "matchIds": [
+      "market-aeon-donghu"
+    ],
+    "keywords": [
+      "永旺东湖",
+      "喜荟城"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "",
+    "width": 1280,
+    "height": 854
+  },
+  {
+    "id": "qingshuihe-train",
+    "file": "assets/photos/qingshuihe-train.jpg",
+    "caption": "清水河深圳工业站（2026年实景）",
+    "author": "Lhzss8",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%B7%B1%E5%9C%B3%E5%B7%A5%E4%B8%9A%E7%AB%99.jpg",
+    "matchIds": [
+      "qingshuihe-train"
+    ],
+    "keywords": [
+      "清水河工业站",
+      "深圳工业站"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "",
+    "width": 1280,
+    "height": 960
+  },
+  {
+    "id": "shangbu-green",
+    "file": "assets/photos/shangbu-green.jpg",
+    "caption": "上步路与振兴路附近的林荫街道（2024年影像）",
+    "author": "Himleion Waong Ning",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E7%A6%8F%E7%94%B0_Futian_%E6%8C%AF%E8%88%88%E8%B7%AF_ZhenXing_Road_%E4%B8%8A%E6%AD%A5%E8%B7%AF_Shangbu_Road_green_lane_March_2024_R12S.jpg",
+    "matchIds": [
+      "yuanling-shangbu"
+    ],
+    "keywords": [
+      "园岭",
+      "上步绿廊"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "",
+    "width": 1280,
+    "height": 960
+  },
+  {
+    "id": "qingshuihe-platform",
+    "file": "assets/photos/qingshuihe-platform.jpg",
+    "caption": "清水河深圳工业站公共区域（2026年影像）",
+    "author": "Lhzss8",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%B7%B1%E5%9C%B3%E5%B7%A5%E4%B8%9A%E7%AB%99_4.jpg",
+    "matchIds": [
+      "qingshuihe-train"
+    ],
+    "keywords": [
+      "清水河工业站",
+      "深圳工业站"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "",
+    "width": 1280,
+    "height": 960
+  },
+  {
+    "id": "xili-yitian",
+    "file": "assets/photos/xili-yitian.jpg",
+    "caption": "西丽益田假日里商场外观（2023年，非新开超市内部）",
+    "author": "KAMYAN HONGWING",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E5%8D%97%E5%B1%B1_Nanshan_%E7%95%99%E4%BB%99%E5%A4%A7%E9%81%93_Liuxian_Blvd_Lishan_Road_Yitian_Holiday_Village_Shopping_mall_August_2023_Px3.jpg",
+    "matchIds": [
+      "market-space-xili"
+    ],
+    "keywords": [
+      "西丽益田假日里"
+    ],
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "taken": "",
+    "width": 1280,
+    "height": 960
+  }
+]

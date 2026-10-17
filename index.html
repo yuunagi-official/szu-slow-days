@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#244b40">
+  <meta name="description" content="从深圳大学粤海校区出发，找一处风景，慢慢散步、放空，享受日常生活。">
+  <title>深大出走 · 今天去哪儿慢慢待一会儿</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#recommendations">跳到推荐去处</a>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="深大出走首页"><img src="assets/mark.svg" alt="" width="34" height="34"><span>深大出走<small>给生活留点空白</small></span></a>
+    <nav aria-label="主导航"><a href="#recommendations">挑个去处</a><a href="#explore">全部去处</a><button id="saved-nav" type="button"><span class="heart-outline" aria-hidden="true">♡</span> 我的想去 <span id="saved-count">0</span></button></nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-image" src="assets/photos/bay-theatre.jpg" alt="深圳湾公园日出剧场一带，草地与海湾之间的人们" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="hero-copy wrap">
+        <p class="eyebrow light"><span></span> 从深圳大学 · 粤海校区出发</p>
+        <h1 id="hero-title">把今天，<br>过慢一点。</h1>
+        <p class="hero-subtitle">走进树荫，等一阵海风。<br>不用赶路，也有值得出门的理由。</p>
+        <a class="hero-link" href="#recommendations">找一处，慢慢待一会儿 <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-note"><span>22.5° N · 113.9° E</span><button type="button" data-credits>深圳湾日出剧场 · 图片来源 ↗</button></div>
+    </section>
+
+    <section class="chooser wrap" aria-labelledby="chooser-title">
+      <div class="chooser-head"><h2 id="chooser-title">今天，想怎样度过？</h2><span>随意选几项，剩下的交给风景</span></div>
+      <form id="filters">
+        <div class="filter-row"><span class="filter-label" id="band-label">空闲时间</span><div class="chips" role="group" aria-labelledby="band-label" id="band-filters">
+          <button type="button" class="chip active" data-band="all" aria-pressed="true">都看看</button>
+          <button type="button" class="chip" data-band="daily" aria-pressed="false">日常休闲 <small>课后的空白</small></button>
+          <button type="button" class="chip" data-band="half" aria-pressed="false">半天 <small>慢慢走一走</small></button>
+          <button type="button" class="chip" data-band="day" aria-pressed="false">全天 <small>把时间留给远处</small></button>
+        </div></div>
+        <div class="filter-row mood-row"><span class="filter-label" id="mood-label">想看什么</span><div class="chips" role="group" aria-labelledby="mood-label" id="mood-filters">
+          <button type="button" class="chip active" data-mood="all" aria-pressed="true">随心一点</button>
+          <button type="button" class="chip" data-mood="sea" aria-pressed="false">海风与落日</button>
+          <button type="button" class="chip" data-mood="green" aria-pressed="false">树荫与绿意</button>
+          <button type="button" class="chip" data-mood="lake" aria-pressed="false">湖畔发呆</button>
+          <button type="button" class="chip" data-mood="campus" aria-pressed="false">换个校园</button>
+          <button type="button" class="chip" data-mood="food" aria-pressed="false">逛逛吃吃</button>
+          <button type="button" class="chip" data-mood="art" aria-pressed="false">文化与灵感</button>
+        </div></div>
+        <div class="filter-bottom">
+          <label class="select-field"><span>人均预算</span><select id="budget"><option value="any">不限定</option><option value="30">¥30 以内</option><option value="60">¥60 以内</option><option value="120">¥120 以内</option></select></label>
+          <label class="select-field"><span>单程交通</span><select id="commute"><option value="90">90 分钟以内</option><option value="45">45 分钟以内</option><option value="60">60 分钟以内</option><option value="120">120 分钟以内</option><option value="any">值得就去</option></select></label>
+          <button class="more-button" id="more-filters" type="button" aria-expanded="false" aria-controls="extra-filters">出发日期与参与条件 <span>＋</span></button>
+          <button class="text-button reset-button" type="reset">重置条件</button>
+        </div>
+        <div id="extra-filters" class="extra-filters" hidden>
+          <label class="select-field"><span>打算哪天去</span><input id="trip-date" type="date" required></label>
+          <label class="check-field"><input type="checkbox" id="allow-reserve" checked><span>可以提前预约或报名</span></label>
+          <label class="check-field"><input type="checkbox" id="direct-only"><span>只看已有明确开放信息的去处</span></label>
+          <p>一个人或和朋友都可以。少数需邀请、成团的体验，会在详情里单独说明。</p>
+        </div>
+      </form>
+    </section>
+
+    <section class="recommendation-section wrap" id="recommendations" aria-labelledby="recommend-title">
+      <div class="section-heading"><div><p class="eyebrow">A LITTLE ESCAPE</p><h2 id="recommend-title">这次，去这里待一会儿</h2><p id="recommend-summary">先看看这些不必着急的地方。</p></div><button class="shuffle-button" id="shuffle" type="button"><span aria-hidden="true">↻</span> 换一批</button></div>
+      <div class="card-grid recommendations" id="recommend-grid" aria-live="polite"></div>
+      <p class="estimate-note">从粤海校区校门出发 · 交通为公共交通＋步行的单程估算 · 花费含往返交通及主要体验，额外消费见详情</p>
+    </section>
+
+    <section class="slow-note wrap"><div class="note-illustration" aria-hidden="true">〰</div><p>不用把一天填满。<br><strong>一棵树、一张长椅，也可以是出走的目的地。</strong></p><span>WANDER, AT YOUR OWN PACE.</span></section>
+
+    <section class="explore-section wrap" id="explore" aria-labelledby="explore-title">
+      <div class="section-heading explore-heading"><div><p class="eyebrow">YOUR EVERYDAY FIELD GUIDE</p><h2 id="explore-title">总有一处，合今天的心情</h2><p>熟悉的地方照常在这里，新玩法也值得再去一次。</p></div><label class="search-field"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="搜索区域、校园、市场…" aria-label="搜索所有去处"></label></div>
+      <div class="catalog-toolbar"><div class="view-tabs" role="group" aria-label="内容范围"><button class="active" type="button" data-view="all" aria-pressed="true">所有去处 <span id="total-count">60</span></button><button type="button" data-view="saved" aria-pressed="false">我的想去 <span id="tab-saved-count">0</span></button></div><div><label class="sort-label">排序 <select id="sort"><option value="fit">按这次条件</option><option value="near">交通更近</option><option value="cheap">花费更少</option></select></label><span class="result-count" id="result-count"></span></div></div>
+      <div class="active-conditions" id="active-conditions"></div>
+      <div class="card-grid" id="catalog-grid"></div>
+      <div class="empty-state" id="empty-state" hidden><span aria-hidden="true">🍃</span><h3>给条件留一点余地</h3><p>试试更长的交通时间，或换一种想看的风景。</p><button class="primary-button" id="empty-reset" type="button">看看所有去处</button></div>
+      <button class="load-more" id="load-more" type="button" hidden>再看看更多去处 <span>↓</span></button>
+    </section>
+
+    <section class="about-section wrap" id="about"><div><p class="eyebrow">MADE FOR SZU DAYS</p><h2>从学校出发，<br>走进生活里。</h2></div><div class="about-copy"><p>这是一本给深大学生的日常出走小册子。熟悉的公园、安静的湖边、别人的校园、一家超市，都可以让普通的一天变得松一点。</p><p>不用照单全走。每份指南只留下两三个值得待着的位置，吃饭和邻近去处由你自己决定。</p><details><summary>怎么理解时间、费用和资料核验？</summary><p>日常休闲以近校、小段空闲为主；半天需要留出往返和停留；全天多为更远的绿地与生活片区。单程交通从粤海校区校门到实际入口，含换乘、候车和末段步行，均为区间估算，出门前用地图看实时路线。</p><p>费用按每人往返公共交通＋必要门票／主要体验估算；逛吃项目计入一份简单餐饮，购物和额外正餐另计。筛选预算按区间上限，交通按上限，不用最低值制造“刚好够”的错觉。</p><p>资料核验于2026年10月17日。来源优先管理方，并参考中文公开报道。部分条目尚缺独立实访交叉记录，详情附资料边界。场地临时关闭、票额和门店营业仍以当日公告为准。日期活动到期后退出可参与推荐，待排期项目只作灵感收藏。</p></details><button class="text-button" type="button" data-credits>查看实景照片与授权说明 ↗</button></div></section>
+  </main>
+
+  <footer class="wrap"><a class="footer-brand" href="#top">深大出走 <span>·</span> 慢慢走，好好生活。</a><span>偏好与收藏只保存在当前浏览器</span><a href="#top">回到顶部 ↑</a></footer>
+  <dialog id="guide-dialog" class="guide-dialog"><div id="guide-content"></div></dialog>
+  <dialog id="credits-dialog" class="credits-dialog"><div class="credits-inner"><button type="button" class="dialog-close" data-close="credits" aria-label="关闭图片说明">×</button><p class="eyebrow">REAL PLACES, REAL MOMENTS</p><h2>关于这些照片</h2><p>实景照片来自 Wikimedia Commons 的开放许可作品，保留作者与原图链接。缩放、压缩及版式裁切已标注；相关照片继续遵循原许可。未取得精确点位照片时，卡片会注明实际拍摄地点，仅作片区参考。</p><div id="photo-credits"></div></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="noscript">请启用 JavaScript，以浏览去处、筛选与收藏。</p></noscript>
+</body>
+</html>
