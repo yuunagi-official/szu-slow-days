@@ -32,4 +32,6 @@
 @media(min-width:561px) and (max-width:760px){.recommendations .place-card:last-child:first-child{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.hero{grid-template-columns:64% 36%}h1{font-size:32px}.hero-photo-note p{font-size:15px}.card-image-link{aspect-ratio:auto}#band-filters .chip{white-space:nowrap;min-width:0;padding-inline:6px}.card-body{padding-top:13px;padding-bottom:10px}}
 @media(max-width:370px){h1{font-size:28px}.hero-photo-note p{font-size:14px}.card-body{padding-top:14px;padding-bottom:11px}}
+.spots{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+@media(max-width:760px){.spots{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important}}
