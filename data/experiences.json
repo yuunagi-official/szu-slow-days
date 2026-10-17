@@ -43,8 +43,10 @@
     ],
     "sources": [
       {
-        "title": "荔香公园｜南山区公园指南",
-        "url": "https://www.szns.gov.cn/mlns/stns/lc/csgy/content/post_12600691.html"
+        "title": "南山区官方2026荔香公园介绍",
+        "url": "https://www.szns.gov.cn/mlns/stns/lc/csgy/content/post_12600691.html",
+        "kind": "本轮名称核验",
+        "evidence": "页面说明边界东南海大道、西南光路，交通指引明确西门；旧资料有麒麟路称呼冲突，采用新页明确西门。"
       }
     ],
     "photoIds": [
@@ -54,7 +56,24 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。"
+    "sourceEvidence": "环境与玩法仍缺独立中文实走交叉记录。本轮另核对地点名称；这不代表已重验全部开放、票务与餐饮条件。",
+    "activity": "walk",
+    "officialName": "荔香公园",
+    "playTitle": "古荔树下慢慢待",
+    "nameStatus": "正式地点",
+    "nameChecked": "2026-10-17",
+    "nameSources": [
+      {
+        "title": "南山区官方2026荔香公园介绍",
+        "url": "https://www.szns.gov.cn/mlns/stns/lc/csgy/content/post_12600691.html",
+        "note": "页面说明边界东南海大道、西南光路，交通指引明确西门；旧资料有麒麟路称呼冲突，采用新页明确西门。",
+        "checked": "2026-10-17"
+      }
+    ],
+    "placeOverrides": {
+      "entrance": "荔香公园西门（南光路侧）",
+      "transport": "从粤海校区按所在校门选择步行或短程公交，导航至荔香公园西门；官方公共交通另列桃园站A口步行约700米。含校门至入口末段，非实时导航。"
+    }
   },
   {
     "type": "nature",
@@ -100,18 +119,41 @@
     ],
     "sources": [
       {
-        "title": "科技公园｜深圳官方公园指南",
-        "url": "https://www.sz.gov.cn/szzt2010/gysz/csgy/content/post_10788337.html"
+        "title": "深圳政府在线：科技公园",
+        "url": "https://www.sz.gov.cn/szzt2010/gysz/csgy/content/post_10788337.html",
+        "kind": "本轮名称核验",
+        "evidence": "科技公园为独立公园。"
       },
       {
-        "title": "云之园｜南山区城管局",
-        "url": "https://www.szns.gov.cn/mlns/stns/gyzq/content/post_11199259.html"
+        "title": "南山区城管：云之园",
+        "url": "https://www.szns.gov.cn/mlns/stns/gyzq/content/post_11199259.html",
+        "kind": "本轮名称核验",
+        "evidence": "云之园在白石路与科技南路路口西南侧；不是科技公园别名。"
       }
     ],
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。本轮另核对地点名称；这不代表已重验全部开放、票务与餐饮条件。",
+    "activity": "walk",
+    "officialName": "科技公园、云之园",
+    "playTitle": "两处近校绿地，今天二选一",
+    "nameStatus": "多个独立地点",
+    "nameChecked": "2026-10-17",
+    "nameSources": [
+      {
+        "title": "深圳政府在线：科技公园",
+        "url": "https://www.sz.gov.cn/szzt2010/gysz/csgy/content/post_10788337.html",
+        "note": "科技公园为独立公园。",
+        "checked": "2026-10-17"
+      },
+      {
+        "title": "南山区城管：云之园",
+        "url": "https://www.szns.gov.cn/mlns/stns/gyzq/content/post_11199259.html",
+        "note": "云之园在白石路与科技南路路口西南侧；不是科技公园别名。",
+        "checked": "2026-10-17"
+      }
+    ]
   },
   {
     "type": "nature",
@@ -166,7 +208,11 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。"
+    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "松坪山公园",
+    "playTitle": "小湖与荔枝林",
+    "nameStatus": "正式地点"
   },
   {
     "type": "nature",
@@ -223,7 +269,11 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。"
+    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "四海公园",
+    "playTitle": "湖边慢走，顺路逛荔园路",
+    "nameStatus": "正式地点"
   },
   {
     "type": "nature",
@@ -281,7 +331,11 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "中心河公园（后海段）",
+    "playTitle": "沿河随走随返",
+    "nameStatus": "地点与路段"
   },
   {
     "type": "nature",
@@ -334,7 +388,11 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。"
+    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "南海公园",
+    "playTitle": "在南油找一小片绿荫",
+    "nameStatus": "正式地点"
   },
   {
     "type": "nature",
@@ -385,12 +443,31 @@
       {
         "title": "深圳官方公园地图与临时公告",
         "url": "https://smartum.sz.gov.cn/upip/m/parkonline/citypark/home"
+      },
+      {
+        "title": "南山区城管2025工程公告",
+        "url": "https://www.szns.gov.cn/xxgk/bmxxgk/qcgj/qtgk_157931/xxxm/zbgg/content/post_12259127.html",
+        "kind": "本轮名称核验",
+        "evidence": "正式工程名称与正文均使用本草公园，无需人为加南山前缀。"
       }
     ],
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。本轮另核对地点名称；这不代表已重验全部开放、票务与餐饮条件。",
+    "activity": "walk",
+    "officialName": "本草公园",
+    "playTitle": "林下认几片叶子",
+    "nameStatus": "正式地点",
+    "nameChecked": "2026-10-17",
+    "nameSources": [
+      {
+        "title": "南山区城管2025工程公告",
+        "url": "https://www.szns.gov.cn/xxgk/bmxxgk/qcgj/qtgk_157931/xxxm/zbgg/content/post_12259127.html",
+        "note": "正式工程名称与正文均使用本草公园，无需人为加南山前缀。",
+        "checked": "2026-10-17"
+      }
+    ]
   },
   {
     "type": "nature",
@@ -448,7 +525,11 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "文心公园、深圳书城南山城",
+    "playTitle": "先散步，再翻几页书",
+    "nameStatus": "多个独立地点"
   },
   {
     "type": "culture",
@@ -509,7 +590,11 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "南山博物馆",
+    "playTitle": "只认真看一个展",
+    "nameStatus": "正式地点"
   },
   {
     "type": "nature",
@@ -556,8 +641,10 @@
     ],
     "sources": [
       {
-        "title": "人才公园｜南山区公园指南",
-        "url": "https://www.szns.gov.cn/mlns/stns/lc/csgy/content/post_12595660.html"
+        "title": "南山区2026公园介绍：深圳人才公园",
+        "url": "https://www.szns.gov.cn/mlns/stns/lc/csgy/content/post_12595660.html",
+        "kind": "本轮名称核验",
+        "evidence": "页面正式标题为深圳人才公园。"
       },
       {
         "title": "深圳官方公园地图与临时公告",
@@ -571,7 +658,20 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。本轮另核对地点名称；这不代表已重验全部开放、票务与餐饮条件。",
+    "activity": "walk",
+    "officialName": "深圳人才公园",
+    "playTitle": "内湖慢走，可延伸流花山海岸",
+    "nameStatus": "正式地点",
+    "nameChecked": "2026-10-17",
+    "nameSources": [
+      {
+        "title": "南山区2026公园介绍：深圳人才公园",
+        "url": "https://www.szns.gov.cn/mlns/stns/lc/csgy/content/post_12595660.html",
+        "note": "页面正式标题为深圳人才公园。",
+        "checked": "2026-10-17"
+      }
+    ]
   },
   {
     "type": "culture",
@@ -623,12 +723,31 @@
       {
         "title": "城南古巷中文实走记录",
         "url": "https://www.sina.cn/news/detail/5174099311592785.html"
+      },
+      {
+        "title": "南山街道2025总结及2026计划",
+        "url": "https://www.szns.gov.cn/xxgk/jdxxgk/nsjdb/xxgk/ghjh/gzjhjzj/content/post_12630450.html",
+        "kind": "本轮名称核验",
+        "evidence": "使用城南古巷文化街区品牌，覆盖四古村，不是单一公园。"
       }
     ],
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。本轮另核对地点名称；这不代表已重验全部开放、票务与餐饮条件。",
+    "activity": "walk",
+    "officialName": "城南古巷文化街区",
+    "playTitle": "在四个古村之间看老南山",
+    "nameStatus": "街区品牌",
+    "nameChecked": "2026-10-17",
+    "nameSources": [
+      {
+        "title": "南山街道2025总结及2026计划",
+        "url": "https://www.szns.gov.cn/xxgk/jdxxgk/nsjdb/xxgk/ghjh/gzjhjzj/content/post_12630450.html",
+        "note": "使用城南古巷文化街区品牌，覆盖四古村，不是单一公园。",
+        "checked": "2026-10-17"
+      }
+    ]
   },
   {
     "type": "nature",
@@ -675,8 +794,10 @@
     ],
     "sources": [
       {
-        "title": "环西丽湖绿道分段指南｜南山区",
-        "url": "https://www.szns.gov.cn/mlns/stns/lc/ldbd/content/post_12599272.html"
+        "title": "南山区2026绿道介绍",
+        "url": "https://www.szns.gov.cn/mlns/stns/lc/ldbd/content/post_12599272.html",
+        "kind": "本轮名称核验",
+        "evidence": "正式标题环西丽湖绿道（碧道），观光短段3.4公里。"
       }
     ],
     "photoIds": [
@@ -684,7 +805,20 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。"
+    "sourceEvidence": "环境与玩法仍缺独立中文实走交叉记录。本轮另核对地点名称；这不代表已重验全部开放、票务与餐饮条件。",
+    "activity": "walk",
+    "officialName": "环西丽湖绿道（碧道）",
+    "playTitle": "白芒拓印至写意三河短段",
+    "nameStatus": "正式步道",
+    "nameChecked": "2026-10-17",
+    "nameSources": [
+      {
+        "title": "南山区2026绿道介绍",
+        "url": "https://www.szns.gov.cn/mlns/stns/lc/ldbd/content/post_12599272.html",
+        "note": "正式标题环西丽湖绿道（碧道），观光短段3.4公里。",
+        "checked": "2026-10-17"
+      }
+    ]
   },
   {
     "type": "nature",
@@ -730,8 +864,10 @@
     ],
     "sources": [
       {
-        "title": "科教城步道已开放示范段｜南山区",
-        "url": "https://www.szns.gov.cn/xxgk/qzfxxgkml/bmdt/content/post_12541574.html"
+        "title": "南山区2025三条特色步道介绍",
+        "url": "https://www.szns.gov.cn/xxgk/qzfxxgkml/bmdt/content/post_12541574.html",
+        "kind": "本轮名称核验",
+        "evidence": "正式名西丽湖国际科教城步道；公告说2公里示范段开放，其余建设中。"
       },
       {
         "title": "长岭陂步道中文实访",
@@ -741,7 +877,20 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。本轮另核对地点名称；这不代表已重验全部开放、票务与餐饮条件。",
+    "activity": "walk",
+    "officialName": "西丽湖国际科教城步道",
+    "playTitle": "长岭陂已开放示范段",
+    "nameStatus": "正式步道",
+    "nameChecked": "2026-10-17",
+    "nameSources": [
+      {
+        "title": "南山区2025三条特色步道介绍",
+        "url": "https://www.szns.gov.cn/xxgk/qzfxxgkml/bmdt/content/post_12541574.html",
+        "note": "正式名西丽湖国际科教城步道；公告说2公里示范段开放，其余建设中。",
+        "checked": "2026-10-17"
+      }
+    ]
   },
   {
     "type": "nature",
@@ -800,7 +949,11 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "塘朗山郊野公园（深云谷入口）",
+    "playTitle": "不登顶，山林前段就很好",
+    "nameStatus": "地点与入口"
   },
   {
     "type": "nature",
@@ -858,7 +1011,11 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "前海紫荆园、桂湾公园",
+    "playTitle": "挑一处园路与水岸慢待",
+    "nameStatus": "多个独立地点"
   },
   {
     "type": "nature",
@@ -911,7 +1068,11 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。"
+    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "平峦山公园",
+    "playTitle": "林荫短返",
+    "nameStatus": "正式地点"
   },
   {
     "type": "nature",
@@ -964,7 +1125,11 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。"
+    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "尖岗山公园",
+    "playTitle": "休闲廊道与小山景",
+    "nameStatus": "正式地点"
   },
   {
     "type": "nature",
@@ -1019,7 +1184,11 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。"
+    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "立新湖公园",
+    "playTitle": "湖岸挑一段慢坐",
+    "nameStatus": "正式地点"
   },
   {
     "type": "culture",
@@ -1072,7 +1241,11 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。"
+    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "蛇口老街、南水路",
+    "playTitle": "看看街坊的日常",
+    "nameStatus": "街道与片区"
   },
   {
     "type": "culture",
@@ -1140,7 +1313,11 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "赤湾左炮台、文天祥纪念公园",
+    "playTitle": "海防遗迹与山脚古树",
+    "nameStatus": "多个独立地点"
   },
   {
     "type": "culture",
@@ -1200,7 +1377,11 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "华侨城生态广场及周边",
+    "playTitle": "树荫与旧建筑",
+    "nameStatus": "地点与片区"
   },
   {
     "type": "culture",
@@ -1252,6 +1433,12 @@
       {
         "title": "三趟快车与铁路公共空间｜深圳市委统战部",
         "url": "https://tzb.sz.gov.cn/xwzx/gzdt/gqgz/content/post_1133379.html"
+      },
+      {
+        "title": "深圳市委统战部2026实访",
+        "url": "https://tzb.sz.gov.cn/xwzx/gzdt/tzsx/tzgz/content/post_1972047.html",
+        "kind": "本轮名称核验",
+        "evidence": "2026-09-14官方报道使用深圳工业站·深港文化创艺街名称。"
       }
     ],
     "photoIds": [
@@ -1260,7 +1447,20 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。本轮另核对地点名称；这不代表已重验全部开放、票务与餐饮条件。",
+    "activity": "walk",
+    "officialName": "深圳工业站·深港文化创艺街",
+    "playTitle": "旧火车旁慢走",
+    "nameStatus": "正式街区",
+    "nameChecked": "2026-10-17",
+    "nameSources": [
+      {
+        "title": "深圳市委统战部2026实访",
+        "url": "https://tzb.sz.gov.cn/xwzx/gzdt/tzsx/tzgz/content/post_1972047.html",
+        "note": "2026-09-14官方报道使用深圳工业站·深港文化创艺街名称。",
+        "checked": "2026-10-17"
+      }
+    ]
   },
   {
     "type": "culture",
@@ -1316,7 +1516,11 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。"
+    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "皇岗锦绣园、水围村",
+    "playTitle": "老园林与街巷生活",
+    "nameStatus": "多个独立地点"
   },
   {
     "type": "culture",
@@ -1375,7 +1579,11 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "上步绿廊光岛园、园岭街区",
+    "playTitle": "从绿廊慢慢走进老社区",
+    "nameStatus": "地点与片区"
   },
   {
     "type": "nature",
@@ -1431,7 +1639,11 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "阳台山碧道（陶吓入口）",
+    "playTitle": "山脚林荫短返",
+    "nameStatus": "地点与入口"
   },
   {
     "type": "nature",
@@ -1477,8 +1689,10 @@
     ],
     "sources": [
       {
-        "title": "梅林绿道官方交通与景观指南",
-        "url": "https://www.sz.gov.cn/szzt2010/gysz/szld/content/post_10775673.html"
+        "title": "深圳政府在线：梅林绿道",
+        "url": "https://www.sz.gov.cn/szzt2010/gysz/szld/content/post_10775673.html",
+        "kind": "本轮名称核验",
+        "evidence": "正式步道名称梅林绿道；水库是所选入口/路段而不是整条绿道正式名。"
       }
     ],
     "photoIds": [
@@ -1487,7 +1701,20 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。"
+    "sourceEvidence": "环境与玩法仍缺独立中文实走交叉记录。本轮另核对地点名称；这不代表已重验全部开放、票务与餐饮条件。",
+    "activity": "walk",
+    "officialName": "梅林绿道（梅林水库段）",
+    "playTitle": "沿绿道慢走，坝边远望",
+    "nameStatus": "正式步道",
+    "nameChecked": "2026-10-17",
+    "nameSources": [
+      {
+        "title": "深圳政府在线：梅林绿道",
+        "url": "https://www.sz.gov.cn/szzt2010/gysz/szld/content/post_10775673.html",
+        "note": "正式步道名称梅林绿道；水库是所选入口/路段而不是整条绿道正式名。",
+        "checked": "2026-10-17"
+      }
+    ]
   },
   {
     "type": "nature",
@@ -1548,7 +1775,11 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "华侨城湿地公园",
+    "playTitle": "安静看一池水",
+    "nameStatus": "正式地点"
   },
   {
     "type": "culture",
@@ -1598,6 +1829,12 @@
       {
         "title": "深圳文旅局博物馆一览及开放时间",
         "url": "https://wtl.sz.gov.cn/ggfw/whl/bwgylb/"
+      },
+      {
+        "title": "深圳市文广旅体局博物馆名录",
+        "url": "https://wtl.sz.gov.cn/ggfw/whl/bwgylb/content/post_11719299.html",
+        "kind": "本轮名称核验",
+        "evidence": "明确名称为深圳中国钢结构博物馆，地址中心路3331号中建科工大厦西侧。"
       }
     ],
     "placeOverrides": {
@@ -1630,7 +1867,20 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。"
+    "sourceEvidence": "环境与玩法仍缺独立中文实走交叉记录。本轮另核对地点名称；这不代表已重验全部开放、票务与餐饮条件。",
+    "activity": "walk",
+    "officialName": "深圳中国钢结构博物馆",
+    "playTitle": "看城市怎样站起来",
+    "nameStatus": "正式地点",
+    "nameChecked": "2026-10-17",
+    "nameSources": [
+      {
+        "title": "深圳市文广旅体局博物馆名录",
+        "url": "https://wtl.sz.gov.cn/ggfw/whl/bwgylb/content/post_11719299.html",
+        "note": "明确名称为深圳中国钢结构博物馆，地址中心路3331号中建科工大厦西侧。",
+        "checked": "2026-10-17"
+      }
+    ]
   },
   {
     "type": "nature",
@@ -1687,7 +1937,11 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "石岩湖湿地公园",
+    "playTitle": "草地与湖岸的空白一天",
+    "nameStatus": "正式地点"
   },
   {
     "type": "nature",
@@ -1744,7 +1998,11 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "迳口古村",
+    "playTitle": "田边慢生活",
+    "nameStatus": "村落名称"
   },
   {
     "type": "nature",
@@ -1798,7 +2056,11 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。"
+    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "光明湖碧道",
+    "playTitle": "观湖云桥与山水",
+    "nameStatus": "正式步道"
   },
   {
     "type": "nature",
@@ -1855,7 +2117,11 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "大顶岭绿道",
+    "playTitle": "给森林多一点时间",
+    "nameStatus": "正式步道"
   },
   {
     "type": "culture",
@@ -1916,7 +2182,11 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "上围艺术村",
+    "playTitle": "溪边与老屋",
+    "nameStatus": "村落名称"
   },
   {
     "type": "culture",
@@ -1976,7 +2246,11 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "鳌湖艺术村、俄地吓村",
+    "playTitle": "老屋与版画记忆",
+    "nameStatus": "多个独立地点"
   },
   {
     "type": "culture",
@@ -2035,7 +2309,11 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "观澜古墟",
+    "playTitle": "因河而生的街，走到老码头",
+    "nameStatus": "正式街区"
   },
   {
     "type": "nature",
@@ -2094,7 +2372,11 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "茜坑老村",
+    "playTitle": "老村街巷与附近绿道",
+    "nameStatus": "村落名称"
   },
   {
     "type": "nature",
@@ -2140,14 +2422,29 @@
     ],
     "sources": [
       {
-        "title": "淘金山绿道入口及坡度｜深圳城管局",
-        "url": "https://cgj.sz.gov.cn/xsmh/szlh/jpld/content/post_2052975.html"
+        "title": "深圳城管：罗湖淘金山绿道",
+        "url": "https://cgj.sz.gov.cn/xsmh/szlh/jpld/content/post_2052975.html",
+        "kind": "本轮名称核验",
+        "evidence": "官方标题罗湖淘金山绿道；路线由翠荫入口至沙湾路入口。"
       }
     ],
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。"
+    "sourceEvidence": "环境与玩法仍缺独立中文实走交叉记录。本轮另核对地点名称；这不代表已重验全部开放、票务与餐饮条件。",
+    "activity": "walk",
+    "officialName": "罗湖淘金山绿道",
+    "playTitle": "山湖远景慢游",
+    "nameStatus": "正式步道",
+    "nameChecked": "2026-10-17",
+    "nameSources": [
+      {
+        "title": "深圳城管：罗湖淘金山绿道",
+        "url": "https://cgj.sz.gov.cn/xsmh/szlh/jpld/content/post_2052975.html",
+        "note": "官方标题罗湖淘金山绿道；路线由翠荫入口至沙湾路入口。",
+        "checked": "2026-10-17"
+      }
+    ]
   },
   {
     "type": "nature",
@@ -2194,8 +2491,10 @@
     ],
     "sources": [
       {
-        "title": "恩上瀑布至湿地实走｜盐田区",
-        "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/mpost_10391523.html"
+        "title": "盐田区文广旅体局官方实走报道",
+        "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/mpost_10391523.html",
+        "kind": "本轮名称核验",
+        "evidence": "官方活动明确经海山路、恩上瀑布到达恩上湿地公园；作为两个地点的路线组合。"
       },
       {
         "title": "恩上湿地山海空间｜盐田区",
@@ -2209,7 +2508,20 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。本轮另核对地点名称；这不代表已重验全部开放、票务与餐饮条件。",
+    "activity": "walk",
+    "officialName": "恩上湿地公园、恩上瀑布步道",
+    "playTitle": "瀑布与半山风，量力选段",
+    "nameStatus": "多个独立地点",
+    "nameChecked": "2026-10-17",
+    "nameSources": [
+      {
+        "title": "盐田区文广旅体局官方实走报道",
+        "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/mpost_10391523.html",
+        "note": "官方活动明确经海山路、恩上瀑布到达恩上湿地公园；作为两个地点的路线组合。",
+        "checked": "2026-10-17"
+      }
+    ]
   },
   {
     "type": "culture",
@@ -2270,7 +2582,11 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "金龟自然书房、金龟村",
+    "playTitle": "自然书房与树下半日",
+    "nameStatus": "地点与村落"
   },
   {
     "type": "nature",
@@ -2328,7 +2644,11 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "燕罗湿地公园、茅洲河碧道",
+    "playTitle": "挑一段水岸慢一天",
+    "nameStatus": "多个独立地点"
   },
   {
     "checked": "2026-10-17",
@@ -2374,8 +2694,10 @@
     },
     "sources": [
       {
-        "title": "南科大官方访客登记",
-        "url": "https://www.sustech.edu.cn/zh/visit.html"
+        "title": "南方科技大学官方参观页",
+        "url": "https://www.sustech.edu.cn/zh/visit.html",
+        "kind": "本轮名称核验",
+        "evidence": "校名、参观登记入口。"
       },
       {
         "title": "南科大图书馆个人来访规则",
@@ -2387,7 +2709,20 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。本轮另核对地点名称；这不代表已重验全部开放、票务与餐饮条件。",
+    "activity": "walk",
+    "officialName": "南方科技大学",
+    "playTitle": "换一片树荫与湖岸",
+    "nameStatus": "学校全称",
+    "nameChecked": "2026-10-17",
+    "nameSources": [
+      {
+        "title": "南方科技大学官方参观页",
+        "url": "https://www.sustech.edu.cn/zh/visit.html",
+        "note": "校名、参观登记入口。",
+        "checked": "2026-10-17"
+      }
+    ]
   },
   {
     "checked": "2026-10-17",
@@ -2443,6 +2778,12 @@
       {
         "title": "2026校园开放日官方回顾（非当前开放承诺）",
         "url": "https://ic.szpu.edu.cn/info/1037/1183.htm"
+      },
+      {
+        "title": "深圳职业技术大学官网",
+        "url": "https://www.szpu.edu.cn/",
+        "kind": "本轮名称核验",
+        "evidence": "当前主页校园风光明确西丽校区留仙洞园区；旧分页面仍称留仙洞校区，优先当前主页。"
       }
     ],
     "photoIds": [
@@ -2450,7 +2791,20 @@
     ],
     "availability": "verify",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。本轮另核对地点名称；这不代表已重验全部开放、票务与餐饮条件。",
+    "activity": "walk",
+    "officialName": "深圳职业技术大学西丽校区留仙洞园区",
+    "playTitle": "溪湖边换个校园",
+    "nameStatus": "学校及园区全称",
+    "nameChecked": "2026-10-17",
+    "nameSources": [
+      {
+        "title": "深圳职业技术大学官网",
+        "url": "https://www.szpu.edu.cn/",
+        "note": "当前主页校园风光明确西丽校区留仙洞园区；旧分页面仍称留仙洞校区，优先当前主页。",
+        "checked": "2026-10-17"
+      }
+    ]
   },
   {
     "checked": "2026-10-17",
@@ -2503,6 +2857,12 @@
       {
         "title": "清华深圳国际研究生院：个人访客入口",
         "url": "https://www.sigs.tsinghua.edu.cn/en/7489/list.htm"
+      },
+      {
+        "title": "深圳大学城图书馆官网常见问题",
+        "url": "https://utszlib.edu.cn/faq/index.html?locale=zh_CN",
+        "kind": "本轮名称核验",
+        "evidence": "官方页明确图书馆位于深圳大学城内，名称与丽水路2239号一致；不把深圳大学城说成一所大学。"
       }
     ],
     "photoIds": [
@@ -2510,7 +2870,20 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。本轮另核对地点名称；这不代表已重验全部开放、票务与餐饮条件。",
+    "activity": "walk",
+    "officialName": "深圳大学城、深圳大学城图书馆",
+    "playTitle": "湖岸、树影和一本闲书",
+    "nameStatus": "园区及设施名称",
+    "nameChecked": "2026-10-17",
+    "nameSources": [
+      {
+        "title": "深圳大学城图书馆官网常见问题",
+        "url": "https://utszlib.edu.cn/faq/index.html?locale=zh_CN",
+        "note": "官方页明确图书馆位于深圳大学城内，名称与丽水路2239号一致；不把深圳大学城说成一所大学。",
+        "checked": "2026-10-17"
+      }
+    ]
   },
   {
     "checked": "2026-10-17",
@@ -2556,8 +2929,10 @@
     },
     "sources": [
       {
-        "title": "港中深官方访客页",
-        "url": "https://www.cuhk.edu.cn/zh-hans/visitors"
+        "title": "香港中文大学（深圳）官方访客页",
+        "url": "https://www.cuhk.edu.cn/zh-hans/visitors",
+        "kind": "本轮名称核验",
+        "evidence": "中文全称括号深圳不可省略，和香港本校不同。"
       },
       {
         "title": "官方入校小程序说明（招生来访，权限不作普通参观承诺）",
@@ -2577,7 +2952,20 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。本轮另核对地点名称；这不代表已重验全部开放、票务与餐饮条件。",
+    "activity": "walk",
+    "officialName": "香港中文大学（深圳）",
+    "playTitle": "中央大道与山边校园",
+    "nameStatus": "学校全称",
+    "nameChecked": "2026-10-17",
+    "nameSources": [
+      {
+        "title": "香港中文大学（深圳）官方访客页",
+        "url": "https://www.cuhk.edu.cn/zh-hans/visitors",
+        "note": "中文全称括号深圳不可省略，和香港本校不同。",
+        "checked": "2026-10-17"
+      }
+    ]
   },
   {
     "checked": "2026-10-17",
@@ -2630,6 +3018,12 @@
       {
         "title": "中文参观路线资料（权限须再核）",
         "url": "https://travelnews.qunar.com/qa_strategy/shenzhen-zhongshan-university-shenzhen-campus-visit-guide"
+      },
+      {
+        "title": "中山大学深圳校区官方介绍",
+        "url": "https://shenzhen.sysu.edu.cn/node/192",
+        "kind": "本轮名称核验",
+        "evidence": "标题及正文明确中山大学深圳校区，公常路66号。"
       }
     ],
     "photoIds": [
@@ -2637,7 +3031,20 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。本轮另核对地点名称；这不代表已重验全部开放、票务与餐饮条件。",
+    "activity": "walk",
+    "officialName": "中山大学深圳校区",
+    "playTitle": "红砖、仙湖与山坡",
+    "nameStatus": "学校及校区全称",
+    "nameChecked": "2026-10-17",
+    "nameSources": [
+      {
+        "title": "中山大学深圳校区官方介绍",
+        "url": "https://shenzhen.sysu.edu.cn/node/192",
+        "note": "标题及正文明确中山大学深圳校区，公常路66号。",
+        "checked": "2026-10-17"
+      }
+    ]
   },
   {
     "checked": "2026-10-17",
@@ -2684,8 +3091,10 @@
     },
     "sources": [
       {
-        "title": "深北莫官网：参观预约入口",
-        "url": "https://www.smbu.edu.cn/"
+        "title": "深圳北理莫斯科大学官网",
+        "url": "https://www.smbu.edu.cn/",
+        "kind": "本轮名称核验",
+        "evidence": "确认中文全称，首页有参观预约入口。"
       },
       {
         "title": "龙岗发布2026年9月校园实访",
@@ -2697,7 +3106,20 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。本轮另核对地点名称；这不代表已重验全部开放、票务与餐饮条件。",
+    "activity": "walk",
+    "officialName": "深圳北理莫斯科大学",
+    "playTitle": "在主楼前看湖",
+    "nameStatus": "学校全称",
+    "nameChecked": "2026-10-17",
+    "nameSources": [
+      {
+        "title": "深圳北理莫斯科大学官网",
+        "url": "https://www.smbu.edu.cn/",
+        "note": "确认中文全称，首页有参观预约入口。",
+        "checked": "2026-10-17"
+      }
+    ]
   },
   {
     "checked": "2026-10-17",
@@ -2756,7 +3178,11 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "sp@ce天虹超市（西丽益田假日里店）",
+    "playTitle": "给今晚挑一份小食",
+    "nameStatus": "现有报道店名"
   },
   {
     "checked": "2026-10-17",
@@ -2813,7 +3239,11 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "福田农产品批发市场",
+    "playTitle": "水果、方言与市场烟火",
+    "nameStatus": "设施名称"
   },
   {
     "checked": "2026-10-17",
@@ -2868,7 +3298,11 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。"
+    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "宜家家居深圳商场",
+    "playTitle": "慢逛样板间，顺路看看欧洲城",
+    "nameStatus": "商户名称"
   },
   {
     "checked": "2026-10-17",
@@ -2927,7 +3361,11 @@
     ],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "AEON STYLE永旺东湖店",
+    "playTitle": "逛一会儿日式食品",
+    "nameStatus": "商户名称"
   },
   {
     "checked": "2026-10-17",
@@ -3019,7 +3457,11 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "蛇口市场",
+    "playTitle": "从海产逛到一份熟食",
+    "nameStatus": "设施名称"
   },
   {
     "checked": "2026-10-17",
@@ -3076,7 +3518,11 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "凤凰兴业一路（福永贵州街一带）",
+    "playTitle": "酸汤、羊肉粉与洋芋",
+    "nameStatus": "区域称呼"
   },
   {
     "checked": "2026-10-17",
@@ -3137,7 +3583,11 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "上梅林新村",
+    "playTitle": "豆花饭或一碗粿汁",
+    "nameStatus": "村落名称"
   },
   {
     "checked": "2026-10-17",
@@ -3194,7 +3644,11 @@
     "photoIds": [],
     "availability": "open",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "明珠市场（沙井）及辛居路",
+    "playTitle": "早餐与街边糖水",
+    "nameStatus": "地点与街道"
   },
   {
     "checked": "2026-10-17",
@@ -3240,8 +3694,10 @@
     },
     "sources": [
       {
-        "title": "SZDIY主办方：地点和周四时间",
-        "url": "https://szdiy.org/"
+        "title": "SZDIY主办方官网",
+        "url": "https://szdiy.org/",
+        "kind": "本轮名称核验",
+        "evidence": "该项为周四开放聚会系列，地址香港科技大学产学研大楼314-E；不是高校校园参观。"
       },
       {
         "title": "SZDIY参与规则：免费对外开放",
@@ -3251,7 +3707,20 @@
     "photoIds": [],
     "availability": "calendar",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。本轮另核对地点名称；这不代表已重验全部开放、票务与餐饮条件。",
+    "activity": "walk",
+    "officialName": "SZDIY社区周四开放聚会",
+    "playTitle": "听别人认真玩一件事",
+    "nameStatus": "活动系列",
+    "nameChecked": "2026-10-17",
+    "nameSources": [
+      {
+        "title": "SZDIY主办方官网",
+        "url": "https://szdiy.org/",
+        "note": "该项为周四开放聚会系列，地址香港科技大学产学研大楼314-E；不是高校校园参观。",
+        "checked": "2026-10-17"
+      }
+    ]
   },
   {
     "checked": "2026-10-17",
@@ -3328,7 +3797,11 @@
     ],
     "availability": "scheduled",
     "costPending": false,
-    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。"
+    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "旧天堂书店",
+    "playTitle": "青年爵士夜，留意具体场次",
+    "nameStatus": "商户及活动地点"
   },
   {
     "checked": "2026-10-17",
@@ -3385,7 +3858,11 @@
     "photoIds": [],
     "availability": "verify",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "九斤书店",
+    "playTitle": "在旧书堆里慢慢找",
+    "nameStatus": "商户名称"
   },
   {
     "checked": "2026-10-17",
@@ -3431,8 +3908,10 @@
     },
     "sources": [
       {
-        "title": "深圳音乐厅官方：古典吉他音乐会与抢票规则",
-        "url": "https://szyyt.com/public/afternoon_100000493761993.html"
+        "title": "深圳音乐厅官方场次页",
+        "url": "https://szyyt.com/public/afternoon_100000493761993.html",
+        "kind": "本轮名称核验",
+        "evidence": "2026-10-24音乐下午茶具体场次，地点深圳音乐厅二楼金树大厅；不是随时可参加的常设体验。"
       }
     ],
     "photoIds": [
@@ -3440,7 +3919,20 @@
     ],
     "availability": "scheduled",
     "costPending": true,
-    "sourceEvidence": "本项暂仅一条公开资料，尚缺独立中文实走交叉记录。"
+    "sourceEvidence": "环境与玩法仍缺独立中文实走交叉记录。本轮另核对地点名称；这不代表已重验全部开放、票务与餐饮条件。",
+    "activity": "walk",
+    "officialName": "深圳音乐厅·金树大厅",
+    "playTitle": "“音乐下午茶”：爱的罗曼斯——古典吉他音乐会",
+    "nameStatus": "场馆及具体场次",
+    "nameChecked": "2026-10-17",
+    "nameSources": [
+      {
+        "title": "深圳音乐厅官方场次页",
+        "url": "https://szyyt.com/public/afternoon_100000493761993.html",
+        "note": "2026-10-24音乐下午茶具体场次，地点深圳音乐厅二楼金树大厅；不是随时可参加的常设体验。",
+        "checked": "2026-10-17"
+      }
+    ]
   },
   {
     "checked": "2026-10-17",
@@ -3499,7 +3991,11 @@
     ],
     "availability": "scheduled",
     "costPending": false,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。",
+    "activity": "walk",
+    "officialName": "深圳博物馆",
+    "playTitle": "榫卯手作，馆区与集合点待报名确认",
+    "nameStatus": "场馆已知，馆区待确认"
   },
   {
     "checked": "2026-10-17",
@@ -3545,8 +4041,10 @@
     },
     "sources": [
       {
-        "title": "前海管理局：自动驾驶公共交通体验资料",
-        "url": "https://qh.sz.gov.cn/sygnan/qhzx/dtzx/content/post_11881965.html"
+        "title": "前海管理局转载深圳巴士集团资料",
+        "url": "https://qh.sz.gov.cn/sygnan/qhzx/dtzx/content/post_11881965.html",
+        "kind": "本轮名称核验",
+        "evidence": "B998是自动驾驶公交线路，和B996/B997/B999分别列示；历史资料不保证当日运营状态。"
       },
       {
         "title": "人民网2026现场报道：B998自动驾驶公交",
@@ -3583,6 +4081,1342 @@
     "photoIds": [],
     "availability": "verify",
     "costPending": true,
-    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。"
+    "sourceEvidence": "来源并列供核对；部分为官方介绍或报道，未逐条取得独立中文实走交叉记录。本轮另核对地点名称；这不代表已重验全部开放、票务与餐饮条件。",
+    "activity": "walk",
+    "officialName": "前海B998自动驾驶公交线路",
+    "playTitle": "预约一段乘车体验，再去水岸慢走",
+    "nameStatus": "公交线路",
+    "nameChecked": "2026-10-17",
+    "nameSources": [
+      {
+        "title": "前海管理局转载深圳巴士集团资料",
+        "url": "https://qh.sz.gov.cn/sygnan/qhzx/dtzx/content/post_11881965.html",
+        "note": "B998是自动驾驶公交线路，和B996/B997/B999分别列示；历史资料不保证当日运营状态。",
+        "checked": "2026-10-17"
+      }
+    ]
+  },
+  {
+    "id": "jog-lixiang",
+    "areaId": "lixiang",
+    "name": "荔香公园 · 课后不用坐车的古荔树环跑",
+    "officialName": "荔香公园",
+    "playTitle": "课后不用坐车的古荔树环跑",
+    "nameStatus": "正式地点 · 编辑选段",
+    "activity": "run",
+    "type": "nature",
+    "band": "daily",
+    "moods": [
+      "green",
+      "lake"
+    ],
+    "lead": "古荔树下跑一小段，累了就改成散步，课后的时间也够用。",
+    "travel": [
+      15,
+      30
+    ],
+    "stay": [
+      40,
+      90
+    ],
+    "cost": [
+      0,
+      6
+    ],
+    "costPending": false,
+    "costNote": "门票免费；区间只计可能的往返公交，不含餐饮。",
+    "access": {
+      "kind": "open",
+      "text": "公共开放步道或园路，遵守现场跑行分区；临时维护、围挡与开放公告优先。",
+      "url": "https://cgj.sz.gov.cn/xsmh/gysz/csgy/content/post_10774648.html"
+    },
+    "schedule": {
+      "closedDays": [],
+      "weekendsOnly": false,
+      "start": null,
+      "end": null,
+      "deadline": null,
+      "note": "具体开放时段与夜间条件见“适合时段”。首次优先白天熟悉路况，不把开园时间当作全线照明保证。"
+    },
+    "checked": "2026-10-17",
+    "availability": "open",
+    "tips": [
+      "沿现场跑行方向，经过入口和密集健走人群时降速。",
+      "别照搬旅游平台的“全天开放、3km橡胶跑道”等未经核对文案。"
+    ],
+    "photoIds": [
+      "lixiang-garden",
+      "lixiang-center"
+    ],
+    "sources": [
+      {
+        "title": "深圳市城管局：荔香公园",
+        "url": "https://cgj.sz.gov.cn/xsmh/gysz/csgy/content/post_10774648.html",
+        "kind": "官方资料",
+        "evidence": "确认正式名称、四周道路、主景点、古荔树与开放时段；东临南海大道、西临南光路。"
+      },
+      {
+        "title": "中文跑步达人路线记录（2018）",
+        "url": "https://www.sohu.com/a/243632125_380874",
+        "kind": "中文跑者记录或采访",
+        "evidence": "文章以跑者亲测为叙述，荔香部分描述水泥路、缓坡以及晚饭后混流；仅作历史体验线索，不将原文旧路面当2026现场事实。"
+      },
+      {
+        "title": "Tripadvisor中文访客记录",
+        "url": "https://cn.tripadvisor.com/Attraction_Review-g297415-d1864521-Reviews-Lixiang_Park-Shenzhen_Guangdong.html",
+        "kind": "中文实访记录",
+        "evidence": "2015–2016中文访客记录环形健走/慢跑氛围，约1500米仅为访客粗述，非认证环长。"
+      },
+      {
+        "title": "南山区官方2026荔香公园介绍",
+        "url": "https://www.szns.gov.cn/mlns/stns/lc/csgy/content/post_12600691.html",
+        "kind": "官方入口核验",
+        "evidence": "页面说明边界东南海大道、西南光路，交通指引明确西门；旧资料有麒麟路称呼冲突，采用新页明确西门。"
+      }
+    ],
+    "sourceEvidence": "桌面资料研究；未实跑、未电话核实。路面材质与环长体验证据偏旧，近期设施运行和人流不保证。",
+    "placeOverrides": {
+      "description": "保留它的理由是学生真的能反复用：出校即可到，不用为跑二十分钟先通勤一小时。古荔树和草坪也允许随时把慢跑改成散步。",
+      "transport": "粤海校区校门至入口的编辑估算，步行/短程公交；非实时导航。",
+      "entrance": "荔香公园西门（南光路侧）",
+      "spots": [
+        {
+          "name": "古荔树外侧主路",
+          "text": "在树荫下缓一缓，沿主路走跑，不穿草坪与脚底按摩小径。"
+        },
+        {
+          "name": "大草坪外围",
+          "text": "开阔处可以停下调整呼吸；注意散步与健走人群。"
+        }
+      ],
+      "comfort": {
+        "shade": "古荔树提供较多树荫，草坪边、广场和入口有开敞段；不能当成全天全阴。",
+        "seats": "不保证空座，按园区导览选择公开休息位置。",
+        "crowd": "历史实跑记录明确提到晚饭后健走、散步与跑步混流；这是容易去、容易随时停的一条，不适合追配速。",
+        "terrain": "有缓坡；无本次累计爬升测量。"
+      },
+      "nearby": [
+        {
+          "name": "南山文体中心",
+          "text": "想延长一点时间，可在周边公共空间停留。"
+        }
+      ]
+    },
+    "runInfo": {
+      "distanceKm": [
+        2,
+        4
+      ],
+      "distanceNote": "目标跑量，不是本次精测环长；跑友历史记录约1.4–1.5km一圈，圈数及里程按现场标识或自己的记录调整。",
+      "startEnd": "南光路侧入园，沿园内主环路绕行，回同一入口",
+      "turnPoints": [
+        "南光路侧主路",
+        "沿大草坪外围主环路",
+        "经过古荔树区后沿主环路返回；不跑草坪内的支径和台阶"
+      ],
+      "routeType": "园内小环 · 可重复",
+      "surface": "普通硬质园路；2018年实跑文章称水泥跑道，本次未实地确认是否已整体更新，不能标为全塑胶。",
+      "shade": "古荔树提供较多树荫，草坪边、广场和入口有开敞段；不能当成全天全阴。",
+      "grade": "有缓坡；无本次累计爬升测量。",
+      "crossings": "选园内闭环可避免反复过城市路口；校门到园门的过街单独步行处理，不保证零红绿灯。",
+      "crowd": "历史实跑记录明确提到晚饭后健走、散步与跑步混流；这是容易去、容易随时停的一条，不适合追配速。",
+      "bestTime": "优先工作日晨间，或天色尚亮的晚饭前；入夜留在主路。官网列6:00–22:30，临时闭园以公告为准。",
+      "support": "本轮未找到足够可靠的当前直饮水位置记录，按自带水安排。 先看入口导览找公厕；本轮未核实具体位置和当日开放，不作沿线随时可用承诺。",
+      "evidenceLimits": "桌面资料研究；未实跑、未电话核实。路面材质与环长体验证据偏旧，近期设施运行和人流不保证。",
+      "priority": 20,
+      "recommendFirst": 1
+    },
+    "mapKeyword": "荔香公园西门"
+  },
+  {
+    "id": "jog-dashahe-lower",
+    "areaId": "dashahe-lower",
+    "name": "南山大沙河生态长廊绿道 · 下游同岸短折返",
+    "officialName": "南山大沙河生态长廊绿道",
+    "playTitle": "下游同岸短折返",
+    "nameStatus": "正式地点 · 编辑选段",
+    "activity": "run",
+    "type": "nature",
+    "band": "daily",
+    "moods": [
+      "green",
+      "lake"
+    ],
+    "lead": "沿同一岸短折返，不追长距离，把河风留给今天。",
+    "travel": [
+      20,
+      40
+    ],
+    "stay": [
+      40,
+      90
+    ],
+    "cost": [
+      4,
+      10
+    ],
+    "costPending": false,
+    "costNote": "绿道免费；仅含人均往返公共交通，不含餐饮。",
+    "access": {
+      "kind": "open",
+      "text": "公共开放步道或园路，遵守现场跑行分区；临时维护、围挡与开放公告优先。",
+      "url": "https://cgj.sz.gov.cn/xsmh/szlh/jpld/content/post_10576002.html"
+    },
+    "schedule": {
+      "closedDays": [],
+      "weekendsOnly": false,
+      "start": null,
+      "end": null,
+      "deadline": null,
+      "note": "具体开放时段与夜间条件见“适合时段”。首次优先白天熟悉路况，不把开园时间当作全线照明保证。"
+    },
+    "checked": "2026-10-17",
+    "availability": "open",
+    "tips": [
+      "官方资料指出工作日自行车依指定车道通行、周末及法定节假日禁骑；执行和临时调整看现场。",
+      "大沙河公园与大沙河生态长廊是不同地点，导航不要只搜“大沙河”。",
+      "不为了凑里程进入亲水汀步或近水平台。"
+    ],
+    "photoIds": [
+      "dasha"
+    ],
+    "sources": [
+      {
+        "title": "深圳市城管局：南山大沙河生态长廊绿道",
+        "url": "https://cgj.sz.gov.cn/xsmh/szlh/jpld/content/post_10576002.html",
+        "kind": "官方资料",
+        "evidence": "确认正式名称、下游交通入口、设施、开放时段及人行/骑行管理；文中也提示园区存在坡道。"
+      },
+      {
+        "title": "深圳市水务局：下游示范段开放现场",
+        "url": "https://swj.sz.gov.cn/ztzl/jcjdzt/qmsshzz/hczgzkz/content/post_2927119.html",
+        "kind": "官方资料",
+        "evidence": "确认深南大道至入海口示范段约2km，以及下游便民设施设计建设；2018资料不证明2026每处设施运转。"
+      },
+      {
+        "title": "中文跑团记录：相约深圳湾 跑进2020",
+        "url": "https://www.cthks.com/20200107/3661",
+        "kind": "中文跑者记录或采访",
+        "evidence": "中文思苑跑团活动实录经过小沙山驿站及大沙河下游，记录河岸草本和跑步体验；只支持实际有跑团使用，不把当年赛事走法照搬为新手路线。"
+      },
+      {
+        "title": "人民网：改造大沙河",
+        "url": "https://sz.people.com.cn/n2/2022/0915/c202846-40124752.html",
+        "kind": "中文报道",
+        "evidence": "现场采访描述晨跑、团跑及通勤自行车/电动自行车进入两岸骑行道的实际情形；据此保留人车交汇警惕。"
+      }
+    ],
+    "sourceEvidence": "未实跑。官方全长、设施分布不能推导每个入口到设施的实时距离；不依赖商业跑步榜单“全程无机动车、补给充足”的强断言。",
+    "placeOverrides": {
+      "description": "它提供连续向前的感觉，却不需要一次跑完长廊；把校门外的办公区变成一条有河、有草、有桥影的日常折返线。",
+      "transport": "粤海校门到高新园/下游入口的公共交通含末段粗估，非跑过去的里程。",
+      "entrance": "大沙河生态长廊下游段（高新园地铁站A/D口步行接入，沿现场导览进入河岸人行步道）",
+      "spots": [
+        {
+          "name": "同岸滨河主步道",
+          "text": "按跑行导向沿同一岸前进，过窄段与坡道降速。"
+        },
+        {
+          "name": "自己的折返点",
+          "text": "单程1–2km的安全宽处折返，到河口路端则提前返回。"
+        }
+      ],
+      "comfort": {
+        "shade": "林荫、廊架与开敞水岸交替；下游视野开阔也会晒。",
+        "seats": "不保证空座，按园区导览选择公开休息位置。",
+        "crowd": "工作日绿道上有通勤骑行使用者；窄段和交汇口要主动让行，晨昏也有团跑。",
+        "terrain": "总体沿河，桥底衔接和坡道有起伏；不是绝对纯平路。"
+      },
+      "nearby": []
+    },
+    "runInfo": {
+      "distanceKm": [
+        2,
+        4
+      ],
+      "distanceNote": "建议累计跑量2–4km。水务局介绍的深南大道至入海口示范段约2km；入口接驳不计入跑量，不将13.7km全长当作下游短段。",
+      "startEnd": "深南大道一侧接入下游公开步道，沿同一岸向河口方向跑；记录单程1–2km或到路端即原路折返",
+      "turnPoints": [
+        "深南大道侧下游公开入口",
+        "同岸滨河人行步道向南",
+        "记录单程1–2km或到河口路端即原路返回，不必接深圳湾"
+      ],
+      "routeType": "同岸折返 · 可截短",
+      "surface": "河岸步道/健康跑道有不同铺装，不能宣称全程塑胶。选择现场标识的人行或跑步道，避开自行车道。",
+      "shade": "林荫、廊架与开敞水岸交替；下游视野开阔也会晒。",
+      "grade": "总体沿河，桥底衔接和坡道有起伏；不是绝对纯平路。",
+      "crossings": "沿同岸河岸步道折返为主，桥底衔接处看导向；本次未走完逐个路口，不能写零红绿灯或全程无车。",
+      "crowd": "工作日绿道上有通勤骑行使用者；窄段和交汇口要主动让行，晨昏也有团跑。",
+      "bestTime": "工作日天亮后的晨间或太阳落下前；官网列6:00–23:00，首次白天熟悉入口。雨大、水位涨、雷雨预警时不去临河低位步道。",
+      "support": "官方确认沿线配有直饮水与服务建筑，但未验证选定下游段每台设备当日可用；自带少量水。 官方确认长廊有卫生间及游客服务设施；本轮没有逐个核验距起点多少米，不写“每公里必有”。",
+      "evidenceLimits": "未实跑。官方全长、设施分布不能推导每个入口到设施的实时距离；不依赖商业跑步榜单“全程无机动车、补给充足”的强断言。",
+      "priority": 18,
+      "recommendFirst": 0
+    },
+    "photoReference": true,
+    "photoNote": "大沙河沿岸实景参考（非本短段具体起点）",
+    "mapKeyword": "大沙河生态长廊 下游段"
+  },
+  {
+    "id": "jog-zhongxinhe",
+    "areaId": "houhai",
+    "name": "中心河绿道（中心河公园） · 城市水岸短折返，慢到能看见倒影",
+    "officialName": "中心河绿道（中心河公园）",
+    "playTitle": "城市水岸短折返，慢到能看见倒影",
+    "nameStatus": "正式地点 · 编辑选段",
+    "activity": "run",
+    "type": "nature",
+    "band": "daily",
+    "moods": [
+      "green",
+      "lake"
+    ],
+    "lead": "社区水岸的短跑，经过儿童活动区就慢下来。",
+    "travel": [
+      25,
+      45
+    ],
+    "stay": [
+      40,
+      90
+    ],
+    "cost": [
+      4,
+      10
+    ],
+    "costPending": false,
+    "costNote": "公园免费；人均往返公共交通，餐饮另计。",
+    "access": {
+      "kind": "open",
+      "text": "公共开放步道或园路，遵守现场跑行分区；临时维护、围挡与开放公告优先。",
+      "url": "https://cgj.sz.gov.cn/xsmh/szlh/jpld/content/post_11170732.html"
+    },
+    "schedule": {
+      "closedDays": [],
+      "weekendsOnly": false,
+      "start": null,
+      "end": null,
+      "deadline": null,
+      "note": "具体开放时段与夜间条件见“适合时段”。首次优先白天熟悉路况，不把开园时间当作全线照明保证。"
+    },
+    "checked": "2026-10-17",
+    "availability": "open",
+    "tips": [
+      "经过亲子节点改成走路，别穿越喷水和儿童设施区域。",
+      "携程平台称“全天”与官方6:00–23:00冲突，采用官方时段。",
+      "地面较硬，想找明确软跑道时优先选前海运动公园。"
+    ],
+    "photoIds": [],
+    "sources": [
+      {
+        "title": "深圳市城管局：中心河绿道",
+        "url": "https://cgj.sz.gov.cn/xsmh/szlh/jpld/content/post_11170732.html",
+        "kind": "官方资料",
+        "evidence": "确认正式名称、东滨路至河口范围、一岸约2.2km、嬉水园/悦动台/童趣园等节点、6–23时开放及饮水/卫生间；园内禁骑机动车、电动车、自行车。"
+      },
+      {
+        "title": "南山区海绵城市工程资料：中心河二期",
+        "url": "https://m.dutenews.com/n/article/7896189?r=1",
+        "kind": "官方资料",
+        "evidence": "南山区海绵办项目报道说明二期铺设透水混凝土，北起东滨路、南接岸湾一街，不能据此标全塑胶。"
+      },
+      {
+        "title": "携程中文访客点评：后海中心河公园",
+        "url": "https://you.ctrip.com/sight/shenzhen26/143361403.html",
+        "kind": "中文实访记录",
+        "evidence": "2025-09-29访客写黄昏沿河较放松、当地人慢跑；2024-10-08访客写有跑步使用。仅两条样本，不证明任何时段都清静。"
+      },
+      {
+        "title": "深圳新闻网：中心河现场报道",
+        "url": "https://www.sznews.com/news/content/2023-12/19/content_30654462.htm",
+        "kind": "中文报道",
+        "evidence": "记者记录桥底通道、亲子设施和慢跑/遛娃共用状态；支持把儿童节点作为减速点。"
+      }
+    ],
+    "sourceEvidence": "未实跑，无GPX。平台开放时间与官方有冲突，已保守采用官方；没有逐段照度和路口计数。",
+    "placeOverrides": {
+      "description": "比人才公园小，比海滨更像社区日常；不看大场面，沿水慢跑二十多分钟，跑完就在河边放空。",
+      "transport": "粤海校门至嬉水园的公共交通含步行末段编辑估算。",
+      "entrance": "中心河公园嬉水园（东滨路节点；海月站步行接入）",
+      "spots": [
+        {
+          "name": "嬉水园外围主道",
+          "text": "把儿童活动区当作减速位置，经过喷水与横穿人流时改为走路。"
+        },
+        {
+          "name": "悦动台、童趣园沿途",
+          "text": "只作认方向的节点，跑量由运动记录控制，不把亲子设施当跑道。"
+        }
+      ],
+      "comfort": {
+        "shade": "保留乔木与廊架能提供局部遮阴，沿水段有开敞区；傍晚比正午合适。",
+        "seats": "不保证空座，按园区导览选择公开休息位置。",
+        "crowd": "这是全龄共享水岸，儿童、散步人群和跑者并存；嬉水园和童趣园附近不适合保持配速。",
+        "terrain": "整体缓和，跨桥/桥底与出入口有坡或高差，未测爬升。"
+      },
+      "nearby": [
+        {
+          "name": "海月社区",
+          "text": "可就近找一顿饭，也可直接乘车返校。"
+        }
+      ]
+    },
+    "runInfo": {
+      "distanceKm": [
+        2,
+        4
+      ],
+      "distanceNote": "2–4km为按运动记录控制的目标跑量。官方单岸全段约2.2km；“嬉水园⇄童趣园约1km”没有注明单程或往返，不据此推算固定环长。",
+      "startEnd": "嬉水园起，沿同岸公开主步道向河口方向；经过悦动台、童趣园后按现场连续主道，记录单程1–2km即折返，到路端提前返回",
+      "turnPoints": [
+        "东滨路嬉水园起跑",
+        "同岸向河口，经过悦动台、童趣园附近减速",
+        "记录单程1–2km或遇路端提前折返，回嬉水园"
+      ],
+      "routeType": "同岸折返 · 可截短",
+      "surface": "普通硬质滨水步道为主；二期官方工程报道为透水混凝土路面，不是全塑胶专用跑道。",
+      "shade": "保留乔木与廊架能提供局部遮阴，沿水段有开敞区；傍晚比正午合适。",
+      "grade": "整体缓和，跨桥/桥底与出入口有坡或高差，未测爬升。",
+      "crossings": "选同一岸公开步道折返，不为闭环频繁跨城市道路；过桥和出入口减速，红绿灯数量未实测。",
+      "crowd": "这是全龄共享水岸，儿童、散步人群和跑者并存；嬉水园和童趣园附近不适合保持配速。",
+      "bestTime": "工作日天色明亮的晨间或傍晚；官网6:00–23:00。首次不选深夜，不把智慧庭院灯理解为每米路面都明亮。",
+      "support": "官方确认配置直饮水机；位置和当日出水仍看导览及现场。 官方确认智能卫生间；不保证每个儿童节点附近都有，不把当前开放状态写死。",
+      "evidenceLimits": "未实跑，无GPX。平台开放时间与官方有冲突，已保守采用官方；没有逐段照度和路口计数。",
+      "priority": 16,
+      "recommendFirst": 0
+    },
+    "mapKeyword": "中心河公园 嬉水园"
+  },
+  {
+    "id": "jog-sihai",
+    "areaId": "shekou-north",
+    "name": "四海公园 · 湖岸小环，跑完慢逛蛇口",
+    "officialName": "四海公园",
+    "playTitle": "湖岸小环，跑完慢逛蛇口",
+    "nameStatus": "正式地点 · 编辑选段",
+    "activity": "run",
+    "type": "nature",
+    "band": "half",
+    "moods": [
+      "green",
+      "lake"
+    ],
+    "lead": "有湖、有荔枝林，选园内环道，跑够了就慢慢收工。",
+    "travel": [
+      35,
+      55
+    ],
+    "stay": [
+      40,
+      90
+    ],
+    "cost": [
+      6,
+      12
+    ],
+    "costPending": false,
+    "costNote": "公园免费；区间是人均往返公共交通，荔园路吃饭另计。",
+    "access": {
+      "kind": "open",
+      "text": "公共开放步道或园路，遵守现场跑行分区；临时维护、围挡与开放公告优先。",
+      "url": "https://hmo.sz.gov.cn/yw/content/post_737201.html"
+    },
+    "schedule": {
+      "closedDays": [],
+      "weekendsOnly": false,
+      "start": null,
+      "end": null,
+      "deadline": null,
+      "note": "具体开放时段与夜间条件见“适合时段”。首次优先白天熟悉路况，不把开园时间当作全线照明保证。"
+    },
+    "checked": "2026-10-17",
+    "availability": "open",
+    "tips": [
+      "湖边观景平台和儿童活动区不当跑道；人多就降速或停跑。",
+      "“环湖1.3km”来自建设时采访，展示为建议而非严格赛事里程。"
+    ],
+    "photoIds": [
+      "sihai"
+    ],
+    "sources": [
+      {
+        "title": "深圳新闻网采访：四海公园环湖跑道",
+        "url": "https://www.sznews.com/news/content/mb/2020-09/24/content_23587520.htm",
+        "kind": "中文报道",
+        "evidence": "记者现场走访并采访设计师，说明约1.3km环湖跑道及荔枝林休憩区；直接打开偶发服务器错误，本轮搜索可读取正文与照片说明。"
+      },
+      {
+        "title": "深圳市委港澳办：四海公园修葺后社区现场",
+        "url": "https://hmo.sz.gov.cn/yw/content/post_737201.html",
+        "kind": "官方资料",
+        "evidence": "确认已铺环湖跑道与休憩平台；描述傍晚居民、儿童活动，支持共享空间而非专属训练场判断。"
+      },
+      {
+        "title": "深圳市南山区蛇口公园管理所2021年预算",
+        "url": "https://www.szns.gov.cn/attachment/0/982/982297/8576928.pdf",
+        "kind": "官方资料",
+        "evidence": "四海公园按特级养护、公厕管理纳入经费；仅能确认设施存在及管理体系，不能证明2026当日可用。"
+      },
+      {
+        "title": "中文访客现场微博：四海公园秋日风光",
+        "url": "https://www.sina.cn/news/detail/5257107595068024.html",
+        "kind": "中文实访记录",
+        "evidence": "2026-01-20访客配图写健康跑道、湖边摄影和老人休息，是近期生活氛围补充；不是跑者全程轨迹。"
+      }
+    ],
+    "sourceEvidence": "未实跑。近期中文实访有，但独立跑者逐米轨迹未找到；不按照片颜色猜精确材质。",
+    "placeOverrides": {
+      "description": "小环道有水、树和蛇口老社区的生活声。两圈就能收工，不为了跑步再串长长的海岸线，结束后才慢慢决定吃什么。",
+      "transport": "粤海校门到公园路入口的地铁/公交加步行编辑估算。",
+      "entrance": "四海公园公园路侧入口（公园路6号）",
+      "spots": [
+        {
+          "name": "环湖跑道",
+          "text": "沿现场标识方向，在湖边和树影间绕行；桥头减速。"
+        },
+        {
+          "name": "荔林侧休憩处",
+          "text": "跑够就停，不用为了凑整圈穿越儿童区。"
+        }
+      ],
+      "comfort": {
+        "shade": "成片荔枝树与临湖开敞段交替，林下更有阴。",
+        "seats": "不保证空座，按园区导览选择公开休息位置。",
+        "crowd": "亲子、摄影与社区活动共享；有安静感不等于跑道无人。周末下午不作为匀速训练场。",
+        "terrain": "主环线大体缓和；桥头和局部衔接减速，未测坡度。"
+      },
+      "nearby": [
+        {
+          "name": "四海地铁站周边",
+          "text": "方便吃饭或直接返校，不必再走远。"
+        }
+      ]
+    },
+    "runInfo": {
+      "distanceKm": [
+        2,
+        4
+      ],
+      "distanceNote": "按2020官方采访所述约1.3km环湖跑道建议2–3圈；非本次GPS精测，改道、维修和实际走线会改变里程。",
+      "startEnd": "从公园路侧入园，沿现场标识环湖跑道绕行，回同一入口",
+      "turnPoints": [
+        "公园路侧入口",
+        "环湖跑道",
+        "过盖世金牛外侧景观后沿跑道继续，按标识回起点；不穿儿童乐园和栈道捷径"
+      ],
+      "routeType": "园内小环 · 可重复",
+      "surface": "有专设环湖跑道。2020现场报道确认铺设跑道，近期采购转载提及橡胶跑道，但材料当下完整性未现场核，不说全园软路面。",
+      "shade": "成片荔枝树与临湖开敞段交替，林下更有阴。",
+      "grade": "主环线大体缓和；桥头和局部衔接减速，未测坡度。",
+      "crossings": "留在园内环道，无需为每圈走出城市马路；入口、桥头及亲子区的步行交汇仍多。",
+      "crowd": "亲子、摄影与社区活动共享；有安静感不等于跑道无人。周末下午不作为匀速训练场。",
+      "bestTime": "优先工作日晨间或晚饭前，首次天亮去认环道；晚间仅选择清楚、有人的主线，开放时段以当前官方公告为准。",
+      "support": "未取得可靠当前直饮水位置资料，按自带水安排。 南山区蛇口公园管理所官方预算确认四海公园有公厕管养；具体位置与当日开放以入口导览为准。",
+      "evidenceLimits": "未实跑。近期中文实访有，但独立跑者逐米轨迹未找到；不按照片颜色猜精确材质。",
+      "priority": 14,
+      "recommendFirst": 0
+    },
+    "mapKeyword": "四海公园 公园路"
+  },
+  {
+    "id": "jog-qianhai-sports",
+    "areaId": "qianhai-sports",
+    "name": "前海运动公园 · 专程换一条塑胶环道，跑完就走",
+    "officialName": "前海运动公园",
+    "playTitle": "专程换一条塑胶环道，跑完就走",
+    "nameStatus": "正式地点 · 编辑选段",
+    "activity": "run",
+    "type": "nature",
+    "band": "half",
+    "moods": [
+      "green",
+      "city"
+    ],
+    "lead": "想换成塑胶环道时来这里；不靠串海岸线凑公里。",
+    "travel": [
+      35,
+      60
+    ],
+    "stay": [
+      40,
+      90
+    ],
+    "cost": [
+      6,
+      14
+    ],
+    "costPending": false,
+    "costNote": "按公共步道慢跑免费估算，只计往返公共交通；球场、停车、餐饮另计。",
+    "access": {
+      "kind": "open",
+      "text": "公共开放步道或园路，遵守现场跑行分区；临时维护、围挡与开放公告优先。",
+      "url": "https://zjj.sz.gov.cn/xxgk/gzdt/content/post_12662934.html"
+    },
+    "schedule": {
+      "closedDays": [],
+      "weekendsOnly": false,
+      "start": null,
+      "end": null,
+      "deadline": null,
+      "note": "具体开放时段与夜间条件见“适合时段”。首次优先白天熟悉路况，不把开园时间当作全线照明保证。"
+    },
+    "checked": "2026-10-17",
+    "availability": "open",
+    "tips": [
+      "2026前海投资计划含公园室内多功能馆工程，现场可能有阶段施工，遇围挡按开放线走。",
+      "球场收费/预约与公共跑道分开核对，不为慢跑默认付球场费。",
+      "环道长度公开资料冲突，展示建议公里数及不精测说明。"
+    ],
+    "photoIds": [],
+    "sources": [
+      {
+        "title": "深圳市住建局：活力足迹（2026-03-02）",
+        "url": "https://zjj.sz.gov.cn/xxgk/gzdt/content/post_12662934.html",
+        "kind": "官方资料",
+        "evidence": "确认正式名称、梦海大道/前湾二路位置及1400米环道；配有公园现场图片。该页2026-03-02发布；另有2019采购写0.67km，故不按固定圈数承诺公里数。"
+      },
+      {
+        "title": "深圳新闻网：前海运动公园开园现场",
+        "url": "https://news.sznews.com/content/2019-04/24/content_21695589.htm",
+        "kind": "中文报道",
+        "evidence": "采访公园建设运营方，明确环形跑道采用塑胶面层；原文1400米。"
+      },
+      {
+        "title": "前海管理局：2019安全秩序服务采购",
+        "url": "https://qh.sz.gov.cn/gkmlpt/content/6/6851/post_6851414.html",
+        "kind": "官方资料",
+        "evidence": "同名公园采购列0.67km塑胶环道，与1400米口径不同，故不写精准单圈。"
+      },
+      {
+        "title": "深圳政府在线：受访市民日常跑步",
+        "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/zwdt/content/mpost_10847949.html",
+        "kind": "中文跑者记录或采访",
+        "evidence": "2023报道采访36岁张建兴，称常在前海运动公园跑步；属于中文真实使用采访，不是本站实跑。"
+      },
+      {
+        "title": "前海管理局：2026政府投资项目计划",
+        "url": "https://qh.sz.gov.cn/gkmlpt/content/12/12673/post_12673785.html",
+        "kind": "官方资料",
+        "evidence": "列有前海运动公园室内多功能综合馆项目；仅提示可能施工，不推定全园关闭。"
+      }
+    ],
+    "sourceEvidence": "未实跑；当前环长、灯光、厕所及施工边界未实地核验。官方材料互有长度差异，已明确展示。",
+    "placeOverrides": {
+      "description": "选它是为了真正跑一会，而非再找一个海边拍照点。园子不大，路线容易退出，塑胶环道给日常轻松跑一个明确选项。",
+      "transport": "粤海校门至前海运动公园的地铁/公交及末段步行粗估；来回交通代价高于荔香。",
+      "entrance": "前海运动公园（梦海大道与前湾二路交会处；导航园门，非前海石公园）",
+      "spots": [
+        {
+          "name": "园内塑胶环道",
+          "text": "按现场箭头走跑，园门与球场通道交汇处让行。"
+        },
+        {
+          "name": "园门导览附近",
+          "text": "先确认开放环道和施工边界，认好回程出口。"
+        }
+      ],
+      "comfort": {
+        "shade": "运动场外围及树荫交替；开敞球场与草地旁会晒，不能称全程林荫。",
+        "seats": "不保证空座，按园区导览选择公开休息位置。",
+        "crowd": "2023受访跑者常来，2025报道也有每周跑两三次的使用者；运动氛围较强，清晨傍晚可能热闹，不能宣传为人少。",
+        "terrain": "短环线为主，现场是否有局部坡道及高差未量测；新手先慢走一圈认路。"
+      },
+      "nearby": []
+    },
+    "runInfo": {
+      "distanceKm": [
+        2,
+        4
+      ],
+      "distanceNote": "建议累计跑量2–4km，按现场里程标牌或自己的记录调整，不固定换算圈数。公开资料对环道长度有不同口径，详见来源说明。",
+      "startEnd": "从园门进入标识跑道，沿园内环形跑道重复，回同一园门",
+      "turnPoints": [
+        "前海运动公园园门",
+        "按现场箭头环形跑道绕行",
+        "凑够自己的2–4km回入口，不串到前海石/海滨骑行道"
+      ],
+      "routeType": "园内小环 · 可重复",
+      "surface": "开园现场报道明确采用塑胶面层环道；这比普通滨水硬铺装更符合想找软一些路面的需求，但不能保证每米完好无维修。",
+      "shade": "运动场外围及树荫交替；开敞球场与草地旁会晒，不能称全程林荫。",
+      "grade": "短环线为主，现场是否有局部坡道及高差未量测；新手先慢走一圈认路。",
+      "crossings": "选择园内环道无需每圈过城市红绿灯，园门与步道交汇处仍须让行；不跑进球场。",
+      "crowd": "2023受访跑者常来，2025报道也有每周跑两三次的使用者；运动氛围较强，清晨傍晚可能热闹，不能宣传为人少。",
+      "bestTime": "清晨天亮后或工作日傍晚；首次按园门当前公告确认开放，球场预约规则不能直接推导跑道也需预约。",
+      "support": "没有核实当前直饮水点和营业售水点；自带水。 可在园门导览确认洗手间位置；本次无当日运行证明，不写成固定补给站。",
+      "evidenceLimits": "未实跑；当前环长、灯光、厕所及施工边界未实地核验。官方材料互有长度差异，已明确展示。",
+      "priority": 12,
+      "recommendFirst": 2
+    },
+    "mapKeyword": "前海运动公园"
+  },
+  {
+    "id": "jog-xili-lake",
+    "areaId": "xili-lake",
+    "name": "环西丽湖绿道（碧道） · 白芒到写意三河，跑进湖边的田园",
+    "officialName": "环西丽湖绿道（碧道）",
+    "playTitle": "白芒到写意三河，跑进湖边的田园",
+    "nameStatus": "正式地点 · 编辑选段",
+    "activity": "run",
+    "type": "nature",
+    "band": "half",
+    "moods": [
+      "green",
+      "lake"
+    ],
+    "lead": "白芒出发，田园与湖景交替，只跑全环的一小段。",
+    "travel": [
+      55,
+      85
+    ],
+    "stay": [
+      50,
+      100
+    ],
+    "cost": [
+      8,
+      20
+    ],
+    "costPending": false,
+    "costNote": "每人公共交通往返粗估；绿道免费免预约，另购饮水与餐费未计。",
+    "access": {
+      "kind": "open",
+      "text": "公共开放步道或园路，遵守现场跑行分区；临时维护、围挡与开放公告优先。",
+      "url": "https://www.szns.gov.cn/mlns/stns/lc/ldbd/content/post_12599272.html"
+    },
+    "schedule": {
+      "closedDays": [],
+      "weekendsOnly": false,
+      "start": null,
+      "end": null,
+      "deadline": null,
+      "note": "具体开放时段与夜间条件见“适合时段”。首次优先白天熟悉路况，不把开园时间当作全线照明保证。"
+    },
+    "checked": "2026-10-17",
+    "availability": "open",
+    "tips": [
+      "白芒拓印与西丽湖地铁B口不是同一个入口，不要把到地铁站的时间当成到跑点的时间",
+      "水源保护区内只用公开主路，不下水不翻围栏",
+      "厕所和售水没有查到覆盖本短线的逐点现行清单；自带水，在白芒驿站按现场导览先确认",
+      "沿湖风光不等于每米贴水，田园随农时变化"
+    ],
+    "photoIds": [
+      "xili"
+    ],
+    "sources": [
+      {
+        "title": "南山区政府：环西丽湖绿道（碧道）（2026-01-13）",
+        "url": "https://www.szns.gov.cn/mlns/stns/lc/ldbd/content/post_12599272.html",
+        "kind": "官方资料",
+        "evidence": "确认正式名称、2025全线贯通、16.2km主线、白芒到写意三河3.4km短线、防滑沥青、6–22时、免费免预约。"
+      },
+      {
+        "title": "香港商报：南山新晋16.2公里环湖绿道（2025-02-24）",
+        "url": "https://www.hkcd.com/hkcdweb/content/2025/02/24/content_8682052.html",
+        "kind": "中文报道",
+        "evidence": "记者报道全线启用、东西入口区别及照明仍完善、建议白天；不能由此推定2026仍试运营或全线缺灯。"
+      },
+      {
+        "title": "两步路·逸尘若水：西丽湖绿道徒步（轨迹50186091，2024-11-24）",
+        "url": "https://www.2bulu.com/track/t-IDibluhBAr%252Fp%252FR2KBg5Tzw%253D%253D.htm",
+        "kind": "中文实访记录",
+        "evidence": "公开原作者记录14.1km、186m累计爬升，起于西丽湖站B口；仅证明实地可走且入口接驳有额外里程，非本次短线跑步实测。"
+      }
+    ],
+    "sourceEvidence": "官方主线与短线资料充分；独立实地记录是徒步且早于全线贯通，未找到可信可完整读取的本短线独立跑者GPS记录。不可标‘跑者实测6.8km’或‘全程0坡/已核实夜跑照明’。",
+    "placeOverrides": {
+      "description": "相比学校附近的都市滨水线，这一小段能看见湿地、村边和田园变化；往返能回到同一入口，不必为了‘环湖’硬跑16.2km。",
+      "transport": "粤海校门 → 公交/地铁到西丽片区 → 公交近白芒村 → 步行白芒拓印驿站。若从西丽湖站B口进入是另一侧，应另选东侧短线。 人工估算含等车、换乘与末段步行；未实时算路。往返交通约110–170分钟，适合半天专程。",
+      "entrance": "环西丽湖绿道白芒拓印驿站",
+      "spots": [
+        {
+          "name": "萤灯碧苑、稻香尺案沿途",
+          "text": "用作确认方向，不为取景进入田间小路或木栈桥。"
+        },
+        {
+          "name": "写意三河停车场",
+          "text": "完整3.4km短线的折返参照；想跑短一点可按运动记录提前折返。"
+        }
+      ],
+      "comfort": {
+        "shade": "山林段与开敞田水段交替；非全程林荫。",
+        "seats": "不保证空座，按园区导览选择公开休息位置。",
+        "crowd": "周末晴天游玩与骑行者多；工作日上午更适合按自己节奏跑。周末禁共享单车不等于没有私人自行车。",
+        "terrain": "主线为平缓线路；没有所选3.4km段的独立逐米高程实测，不能标0爬升。"
+      },
+      "nearby": [
+        {
+          "name": "大磡村",
+          "text": "若所走段正好靠近，可就近吃饭；不为吃饭绕完整环。"
+        }
+      ]
+    },
+    "runInfo": {
+      "distanceKm": [
+        4,
+        6.8
+      ],
+      "distanceNote": "官方观光线白芒拓印至写意三河停车场单程3.4km，往返约6.8km；想只跑4km，运动记录到单程2km处即原路折返。进站走路、绕景观平台不计入。全环主线为16.2km，不能写成5km环湖。",
+      "startEnd": "白芒拓印驿站 → 萤灯碧苑 → 稻香尺案 → 写意三河停车场 → 原路返回白芒拓印",
+      "turnPoints": [
+        "白芒拓印为起终点",
+        "萤灯碧苑、稻香尺案只作沿途确认方向",
+        "写意三河停车场为完整短线折返点；4km版按GPS单程2km提前折返"
+      ],
+      "routeType": "同岸折返 · 可截短",
+      "surface": "官方2026页面说明主路平整、防滑沥青；跑主线，不为取景钻木栈桥、田间小路或登塔。",
+      "shade": "山林段与开敞田水段交替；非全程林荫。",
+      "grade": "主线为平缓线路；没有所选3.4km段的独立逐米高程实测，不能标0爬升。",
+      "crossings": "绿道同时允许骑行，按地面分区走跑并注意弯道来车；驿站和停车场进出口减速，不能承诺全程人车完全隔离。",
+      "crowd": "周末晴天游玩与骑行者多；工作日上午更适合按自己节奏跑。周末禁共享单车不等于没有私人自行车。",
+      "bestTime": "白天凉爽时段。官方开放6:00–22:00；早期试运营报道明确照明仍在完善，本次未找到整线照明已完成的核验，故不推荐把它当夜跑路线。",
+      "support": "入园先按导览确认厕所；直饮水与售水点未逐点核实，自带水，不默认沿途有可用补给。",
+      "evidenceLimits": "官方主线与短线资料充分；独立实地记录是徒步且早于全线贯通，未找到可信可完整读取的本短线独立跑者GPS记录。不可标‘跑者实测6.8km’或‘全程0坡/已核实夜跑照明’。",
+      "priority": 10,
+      "recommendFirst": 0
+    },
+    "photoReference": true,
+    "photoNote": "西丽水库实景参考（非白芒短段起点）",
+    "mapKeyword": "白芒拓印驿站"
+  },
+  {
+    "id": "jog-lixin-lake",
+    "areaId": "lixin-lake",
+    "name": "环立新湖绿道 · 跑一段湖岸，再去书吧旁吹风",
+    "officialName": "环立新湖绿道",
+    "playTitle": "跑一段湖岸，再去书吧旁吹风",
+    "nameStatus": "正式地点 · 编辑选段",
+    "activity": "run",
+    "type": "nature",
+    "band": "half",
+    "moods": [
+      "green",
+      "lake"
+    ],
+    "lead": "平缓湖岸和林荫之间，跑完再到书吧旁坐一会儿。",
+    "travel": [
+      55,
+      80
+    ],
+    "stay": [
+      40,
+      90
+    ],
+    "cost": [
+      10,
+      22
+    ],
+    "costPending": false,
+    "costNote": "公共交通往返，每人；绿道免费。饮水餐食另计。",
+    "access": {
+      "kind": "open",
+      "text": "公共开放步道或园路，遵守现场跑行分区；临时维护、围挡与开放公告优先。",
+      "url": "https://cgj.sz.gov.cn/xsmh/szlh/jpld/content/post_9763943.html"
+    },
+    "schedule": {
+      "closedDays": [],
+      "weekendsOnly": false,
+      "start": null,
+      "end": null,
+      "deadline": null,
+      "note": "具体开放时段与夜间条件见“适合时段”。首次优先白天熟悉路况，不把开园时间当作全线照明保证。"
+    },
+    "checked": "2026-10-17",
+    "availability": "open",
+    "tips": [
+      "11号线桥头C口是到湖区的交通参照，所选雨林迎宾入口可能需要再走；按入口算门到门通勤",
+      "2019实访提到饮料售卖机，但不能保证2026每台正常或沿线不断供；自带水",
+      "厕所位置、直饮水开放状态未逐点核实，入园先看导览；不把书吧当更衣或寄存服务",
+      "月季是否盛放按季节与养护，不保证全年花海"
+    ],
+    "photoIds": [
+      "lixinhu"
+    ],
+    "sources": [
+      {
+        "title": "深圳城管：宝安环立新湖绿道（2022-05-07）",
+        "url": "https://cgj.sz.gov.cn/xsmh/szlh/jpld/content/post_9763943.html",
+        "kind": "官方资料",
+        "evidence": "确认8.8km整环、整体防滑塑胶/平缓、雨林迎宾—月季园—简阅书吧节点和桥头C口交通。"
+      },
+      {
+        "title": "深圳城管：环立新湖绿道",
+        "url": "https://cgj.sz.gov.cn/xsmh/gysz/szld/content/post_10700371.html",
+        "kind": "官方资料",
+        "evidence": "写明5:30–22:30与8.8km；另有官方公园目录6–22时，保留冲突说明而非任择较宽时段。"
+      },
+      {
+        "title": "深圳城管·公园深圳官方目录",
+        "url": "https://smartum.sz.gov.cn/upip/m/parkonline/citypark/home",
+        "kind": "官方资料",
+        "evidence": "立新湖公园目录时段6:00–22:00。"
+      },
+      {
+        "title": "深圳之窗：立新湖实访与常跑市民访谈（2019-08-16）",
+        "url": "https://travel.shenchuang.com/20190816/1501479.shtml",
+        "kind": "中文报道",
+        "evidence": "记者实访湖岸，采访每天慢跑的林先生，记录8km多湖圈、木质栈道与当时售卖机。"
+      }
+    ],
+    "sourceEvidence": "独立跑者证据为记者具名实访中的常跑市民访谈，年代较早，不是2026跑道质量复测。本次4–6km是可截短玩法，不是已测定固定景点间里程。",
+    "placeOverrides": {
+      "description": "湖岸、荔林和书吧外的停顿感能把一次跑步变成半天生活；有长期跑者使用记录，平缓程度也有官方依据。",
+      "transport": "粤海校门 → 11号线可接入站 → 桥头站C口 → 公交或步行到雨林迎宾入口；出站到所选入口的额外步行计入。 人工粗估含换乘与入口接驳；非实时导航。往返约110–160分钟，适合半天。",
+      "entrance": "立新湖绿道雨林迎宾入口（先定位雨林迎宾，不笼统导航立新湖水库）",
+      "spots": [
+        {
+          "name": "月季园外侧主绿道",
+          "text": "按跑行分区通过，赏花与拍照人群多时放慢。"
+        },
+        {
+          "name": "简阅书吧外侧湖岸",
+          "text": "结束后可以在公开湖岸缓一缓；不默认书吧提供寄存或更衣。"
+        }
+      ],
+      "comfort": {
+        "shade": "荔林与林中栈道有树荫，开敞湖岸、花田和坝边较晒。",
+        "seats": "不保证空座，按园区导览选择公开休息位置。",
+        "crowd": "社区常跑者多，傍晚及周末花田、儿童区容易热闹。",
+        "terrain": "整体地势平缓，桥和景观节点有局部缓坡；不进望牛亭登山路。"
+      },
+      "nearby": [
+        {
+          "name": "福永生活街区",
+          "text": "按入口就近吃饭，不把大范围逛街强加进来。"
+        }
+      ]
+    },
+    "runInfo": {
+      "distanceKm": [
+        4,
+        6
+      ],
+      "distanceNote": "这是一条按GPS2–3km折返的建议短线，景观点之间没有冒充精确测距。官方整环约8.8km，熟悉后可另做长一点的完整湖圈；本卡不把8.8km降写成8km。",
+      "startEnd": "雨林迎宾 → 月季园外侧主绿道 → 简阅书吧外侧湖岸 → 半岛花海方向，跑到单程2–3km处原路返回雨林迎宾",
+      "turnPoints": [
+        "雨林迎宾为起终点",
+        "月季园、简阅书吧为方向节点，避开拍照人群",
+        "单程2km或3km的主路安全宽处折返；不要在窄木栈桥急转"
+      ],
+      "routeType": "同岸折返 · 可截短",
+      "surface": "官方称环湖绿道整体为防滑塑胶；独立实访同时拍到木栈道。跑塑胶主线，木桥湿时放慢，不承诺全程单一材质。",
+      "shade": "荔林与林中栈道有树荫，开敞湖岸、花田和坝边较晒。",
+      "grade": "整体地势平缓，桥和景观节点有局部缓坡；不进望牛亭登山路。",
+      "crossings": "园内有骑行和亲子游玩，按现场跑骑分区；连接书吧、花田与儿童区处易横穿行人，不作为无人打断的刷配速场地。",
+      "crowd": "社区常跑者多，傍晚及周末花田、儿童区容易热闹。",
+      "bestTime": "凉爽工作日下午或清晨；保守安排6:00–22:00内完成。官方绿道页写5:30–22:30，官方公园目录写6:00–22:00，有口径差异，不主推最早最晚边界时段。",
+      "support": "入园先按导览确认厕所；直饮水与售水点未逐点核实，自带水，不默认沿途有可用补给。",
+      "evidenceLimits": "独立跑者证据为记者具名实访中的常跑市民访谈，年代较早，不是2026跑道质量复测。本次4–6km是可截短玩法，不是已测定固定景点间里程。",
+      "priority": 8,
+      "recommendFirst": 0
+    },
+    "mapKeyword": "立新湖 雨林迎宾"
+  },
+  {
+    "id": "jog-shiyan-lake",
+    "areaId": "shiyan-lake",
+    "name": "环石岩湖碧道 · 湿地公园段，给湖山留半天",
+    "officialName": "环石岩湖碧道",
+    "playTitle": "湿地公园段，给湖山留半天",
+    "nameStatus": "正式地点 · 编辑选段",
+    "activity": "run",
+    "type": "nature",
+    "band": "half",
+    "moods": [
+      "green",
+      "lake"
+    ],
+    "lead": "给湖山留半天，认准跑步道，按自己的里程折返。",
+    "travel": [
+      70,
+      105
+    ],
+    "stay": [
+      40,
+      90
+    ],
+    "cost": [
+      10,
+      24
+    ],
+    "costPending": false,
+    "costNote": "每人公共交通往返估算；免费公共碧道，不计自愿餐饮和单车租赁。",
+    "access": {
+      "kind": "open",
+      "text": "公共开放步道或园路，遵守现场跑行分区；临时维护、围挡与开放公告优先。",
+      "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12603370.html"
+    },
+    "schedule": {
+      "closedDays": [],
+      "weekendsOnly": false,
+      "start": null,
+      "end": null,
+      "deadline": null,
+      "note": "具体开放时段与夜间条件见“适合时段”。首次优先白天熟悉路况，不把开园时间当作全线照明保证。"
+    },
+    "checked": "2026-10-17",
+    "availability": "open",
+    "tips": [
+      "单程通勤长，适合半天专程，不写成放学随便跑一圈",
+      "官方提到公厕与补给点，但未查到本段全部点位营业时刻；随身水、入园先如厕，不能依赖途中餐饮必开",
+      "湖边木栈道湿时谨慎，不下水，不进入水源保护围挡内",
+      "花期不是路线成立条件，不把1月油菜花报道当10月现况"
+    ],
+    "photoIds": [],
+    "sources": [
+      {
+        "title": "深圳政府在线：20公里环湖骑行道与三道分离升级（2026-01-15）",
+        "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12603370.html",
+        "kind": "官方资料",
+        "evidence": "确认约20km骑行环线、跑骑漫步三道分离设计、补给点、公厕配套及与旧碧道改造关系。"
+      },
+      {
+        "title": "深圳住建局：宜居深圳之骑行追风（2026）",
+        "url": "https://zjj.sz.gov.cn/xxgk/gzdt/content/post_12942679.html",
+        "kind": "官方资料",
+        "evidence": "现行报道环湖20km、荔林湿地与俯仰之间/陌上花节点，不能用为跑道实际公里数。"
+      },
+      {
+        "title": "深圳城管·公园深圳官方目录",
+        "url": "https://smartum.sz.gov.cn/upip/m/parkonline/citypark/home",
+        "kind": "官方资料",
+        "evidence": "石岩湖湿地公园6:00–22:00。"
+      },
+      {
+        "title": "两步路：解锁深圳本地六大越野路跑网红路线（2021）",
+        "url": "https://www.2bulu.com/community/gotohuatinfo.htm?id=3ZW1iHreMslMV4hd%2BuID2Q%3D%3D",
+        "kind": "中文跑者记录或采访",
+        "evidence": "石岩湖‘画枫叶’跑者线路约21.8km、累计爬升100m以上，以湖畔绿道为主；仅作有实际长跑使用的交叉，不照搬21.8km或其野外小径。"
+      },
+      {
+        "title": "深圳政府在线：环石岩湖绿道交通指引",
+        "url": "https://www.sz.gov.cn/szzt2010/gysz/szld/content/mpost_10775675.html",
+        "kind": "官方资料",
+        "evidence": "湿地公园段公交接驳站为石岩湿地公园东门。线路号属历史信息，本指南不固定承诺当前班次。"
+      },
+      {
+        "title": "高德地图：石岩湿地公园东门公交站",
+        "url": "https://ditu.amap.com/place/BV09072079",
+        "kind": "地图运营方",
+        "evidence": "地图运营方可识别的具体接入点，位于宝安石岩；不是环湖另一侧入口。"
+      }
+    ],
+    "sourceEvidence": "现行官方建设资料明确，独立跑者资料早于2026升级。4–6km由用户GPS折返实现，未宣称固定端点实测；未核实夜间照明覆盖。",
+    "placeOverrides": {
+      "description": "大湖、远山和湿地比重复深圳湾滨海段更有新鲜感；跑骑空间升级有2026官方证据，短返能避免长距离环湖的通勤和体力叠加。",
+      "transport": "粤海校门 → 地铁至西丽/宝安可接入站 → 公交到石岩湖湿地公园周边 → 步行主入口。出发按所选入口查当天换乘，不假定地铁直接到湖边。 人工宽区间含公交末段与候车；非实时导航。往返140–210分钟，最好半天宽松安排。",
+      "entrance": "石岩湿地公园东门公交站（松白路侧，按园门导览接入公开跑道）",
+      "spots": [
+        {
+          "name": "湿地公园湖岸主道",
+          "text": "优先标识跑步空间，开阔处看湖山，不进观景台台阶。"
+        },
+        {
+          "name": "自己的2–3km折返点",
+          "text": "找安全宽处调头；有围挡或路况不舒服就提前返回。"
+        }
+      ],
+      "comfort": {
+        "shade": "荔林/湿地林下与开敞湖岸交替；有连续曝晒可能，不选夏季中午。",
+        "seats": "不保证空座，按园区导览选择公开休息位置。",
+        "crowd": "周末露营、亲子、骑行与赏花客多，公园主入口附近尤甚。",
+        "terrain": "所选主碧道多缓，不上俯仰之间台阶观景点；没有精确累计爬升实测。"
+      },
+      "nearby": [
+        {
+          "name": "石岩生活街区",
+          "text": "可在返程公交方向吃饭，不一定在景区消费。"
+        }
+      ]
+    },
+    "runInfo": {
+      "distanceKm": [
+        4,
+        6
+      ],
+      "distanceNote": "4–6km为同侧原路折返的建议跑量，以运动记录单程2–3km控制；并未声称入口到俯仰之间恰好3km。2026官方20km数字是升级骑行环线，旧30.8km是绿道总体口径，均不是本卡慢跑距离。",
+      "startEnd": "石岩湿地公园东门站步行入园 → 沿标识接入湖岸跑步道，往俯仰之间方向 → 记录单程2–3km的安全宽处折返 → 回原入口",
+      "turnPoints": [
+        "石岩湿地公园东门站步行入园",
+        "接入湖岸标识跑步道，往俯仰之间方向",
+        "记录单程2–3km安全宽处折返，不必到观景台或上台阶"
+      ],
+      "routeType": "同岸折返 · 可截短",
+      "surface": "2026官方确认升级设计跑步、骑行、漫步分离；沿标识跑专用跑步空间。旧记录有透水软性路面与生态木栈道，不能笼统写全程塑胶。",
+      "shade": "荔林/湿地林下与开敞湖岸交替；有连续曝晒可能，不选夏季中午。",
+      "grade": "所选主碧道多缓，不上俯仰之间台阶观景点；没有精确累计爬升实测。",
+      "crossings": "看清跑骑分道标识，节点汇合、桥边、观景平台前减速；不能因为设计‘三道分离’就承诺全线任何节点均无行人横穿。",
+      "crowd": "周末露营、亲子、骑行与赏花客多，公园主入口附近尤甚。",
+      "bestTime": "凉爽白天或日落前完成。官方目录石岩湖湿地公园6:00–22:00；没有查到所选全段逐点灯光状态，远途第一次不把夜跑当默认玩法。",
+      "support": "入园先按导览确认厕所；直饮水与售水点未逐点核实，自带水，不默认沿途有可用补给。",
+      "evidenceLimits": "现行官方建设资料明确，独立跑者资料早于2026升级。4–6km由用户GPS折返实现，未宣称固定端点实测；未核实夜间照明覆盖。",
+      "priority": 6,
+      "recommendFirst": 0
+    },
+    "mapKeyword": "石岩湿地公园东门公交站"
+  },
+  {
+    "id": "jog-xinzhou-river",
+    "areaId": "xinzhou-river",
+    "name": "新洲河碧道（新洲红树碧道） · 跟着河水，慢慢跑到红树林边",
+    "officialName": "新洲河碧道（新洲红树碧道）",
+    "playTitle": "跟着河水，慢慢跑到红树林边",
+    "nameStatus": "正式地点 · 编辑选段",
+    "activity": "run",
+    "type": "nature",
+    "band": "half",
+    "moods": [
+      "green",
+      "lake"
+    ],
+    "lead": "从社区跑向红树林边，有橡胶跑道，也要给行人留路。",
+    "travel": [
+      50,
+      75
+    ],
+    "stay": [
+      40,
+      90
+    ],
+    "cost": [
+      8,
+      18
+    ],
+    "costPending": false,
+    "costNote": "每人公共交通往返粗估；河道免费免预约。餐食饮料另计。",
+    "access": {
+      "kind": "open",
+      "text": "公共开放步道或园路，遵守现场跑行分区；临时维护、围挡与开放公告优先。",
+      "url": "https://swj.sz.gov.cn/ztzl/swhjs/swhgs/content/post_11776869.html"
+    },
+    "schedule": {
+      "closedDays": [],
+      "weekendsOnly": false,
+      "start": null,
+      "end": null,
+      "deadline": null,
+      "note": "具体开放时段与夜间条件见“适合时段”。首次优先白天熟悉路况，不把开园时间当作全线照明保证。"
+    },
+    "checked": "2026-10-17",
+    "availability": "open",
+    "tips": [
+      "路线经过生态公园周边，安静慢跑，不外放音乐、不靠近候鸟、不越界进入修复和控制区",
+      "采访有直饮水现场记录，但不是全天供应承诺；带自己的水，厕所按公园导览找，夜间状态未逐点核实",
+      "河道与公园开放规则不同，园门关闭就原路折返",
+      "与深圳湾福田红树林自然保护区不是同一个开放对象，不写成可随意跑进保护区"
+    ],
+    "photoIds": [
+      "xinzhou-river"
+    ],
+    "sources": [
+      {
+        "title": "深圳市水务局：新洲河碧道（2024-11-22）",
+        "url": "https://swj.sz.gov.cn/ztzl/swhjs/swhgs/content/post_11776869.html",
+        "kind": "官方资料",
+        "evidence": "确认正式别称、近8km总体、橡胶跑道、可跑可骑、24h免费、沙尾B口600m接驳。"
+      },
+      {
+        "title": "深圳政府在线：福田红树林生态公园",
+        "url": "https://www.sz.gov.cn/szzt2010/gysz/zrgy/content/post_10775958.html",
+        "kind": "官方资料",
+        "evidence": "园区6:00–23:00，分游览/修复/控制区，位于新洲南路与福荣路，区别旁边国家自然保护区。"
+      },
+      {
+        "title": "晶报实访：运动健身何以全民？沙头街道给出答案（2024）",
+        "url": "https://m.dutenews.com/n/article/8273409?r=1",
+        "kind": "中文跑者记录或采访",
+        "evidence": "记者访谈附近跑者邹小姐每周2–3次、约5km，现场提到新跑道与直饮水；岗亭保安说明生态公园可跑步但不能喧哗。"
+      },
+      {
+        "title": "携程独立游记：下一站，去深圳福田开启生态漫行之旅",
+        "url": "https://you.ctrip.com/travels/shenzhen26/4120998.html",
+        "kind": "中文实访记录",
+        "evidence": "中文实访记录碧道慢跑者及与福田红树林生态公园相邻的环境；只作为现场氛围，不作距离与开放权威。"
+      }
+    ],
+    "sourceEvidence": "具有官方加独立跑者访谈的交叉；建议短线公里数未独立GPS测量。水与厕所的即时供应、所有桥下路段施工状态未逐点核实。",
+    "placeOverrides": {
+      "description": "它从社区烟火气跑向湿地，既不是纯商业街，也不是同质滨海观光；记者采访到每周来2–3次、每次约5km的跑者，能支撑日常慢跑场景。",
+      "transport": "粤海校门 → 公共交通接7号线沙尾站B口 → 沿福强路向东转新洲路，步行约600m到碧道（官方接驳指引）。 校门到入口人工估算含换乘及600m末段；非实时导航。往返100–150分钟。",
+      "entrance": "新洲河碧道福强路入口（沙尾站B口向东再转新洲路）",
+      "spots": [
+        {
+          "name": "社区河岸段",
+          "text": "桥下、坡道、社区入口放慢，让通行的居民先走。"
+        },
+        {
+          "name": "生态公园入口广场",
+          "text": "先看园内是否允许当前跑行；园门关闭就沿河原路返回，不进生态控制区。"
+        }
+      ],
+      "comfort": {
+        "shade": "社区河段有部分树荫；开敞河口和观鸟侧较晒、有风，不是全程浓荫。",
+        "seats": "不保证空座，按园区导览选择公开休息位置。",
+        "crowd": "日落前常跑者与散步家庭较多；适合轻跑，不宜在观鸟人群中抢道。",
+        "terrain": "以河岸平路为主；过桥、空中栈道有缓坡，不把楼梯当跑步必经线。"
+      },
+      "nearby": []
+    },
+    "runInfo": {
+      "distanceKm": [
+        4,
+        6
+      ],
+      "distanceNote": "4–6km为河岸与公开园路组合的建议跑量；不是沙尾站至公园往返固定测距。先以河口入口为折返节点，再按GPS在公开跑道补足；不为补里程闯生态控制区。",
+      "startEnd": "福强路新洲河入口 → 沿公开碧道向南到福田红树林生态公园入口广场 → 沿园内明确允许跑步的公开主道短跑后原路返回福强路入口",
+      "turnPoints": [
+        "福强路新洲河碧道入口为起终点",
+        "向南沿河到福田红树林生态公园入口广场",
+        "园内仅走现场允许跑步的主道；达到单程2–3km或遇限制即折返"
+      ],
+      "routeType": "同岸折返 · 可截短",
+      "surface": "市水务局明确沿线有步行道和橡胶跑道；园内路面可能混合，沿跑道标识，不承诺全线塑胶。",
+      "shade": "社区河段有部分树荫；开敞河口和观鸟侧较晒、有风，不是全程浓荫。",
+      "grade": "以河岸平路为主；过桥、空中栈道有缓坡，不把楼梯当跑步必经线。",
+      "crossings": "碧道兼顾居民通行、骑行，桥下/坡道节点和进出社区处注意行人；按现场引导过路，不承诺无红绿灯。",
+      "crowd": "日落前常跑者与散步家庭较多；适合轻跑，不宜在观鸟人群中抢道。",
+      "bestTime": "清晨或日落前后。河道官方为24小时免费免预约，但福田红树林生态公园另为6:00–23:00；夜间只跑可清楚看见路面的开放段，不能把河道24h套给园区。",
+      "support": "入园先按导览确认厕所；直饮水与售水点未逐点核实，自带水，不默认沿途有可用补给。",
+      "evidenceLimits": "具有官方加独立跑者访谈的交叉；建议短线公里数未独立GPS测量。水与厕所的即时供应、所有桥下路段施工状态未逐点核实。",
+      "priority": 4,
+      "recommendFirst": 3
+    },
+    "photoReference": true,
+    "photoNote": "新洲河沿岸实景参考（非所选短线的具体起点）",
+    "mapKeyword": "新洲河碧道 福强路"
+  },
+  {
+    "id": "jog-xiangmi-park",
+    "areaId": "xiangmi-park",
+    "name": "香蜜公园 · 在地面跑道串起花湖与荔林",
+    "officialName": "香蜜公园",
+    "playTitle": "在地面跑道串起花湖与荔林",
+    "nameStatus": "正式地点 · 编辑选段",
+    "activity": "run",
+    "type": "nature",
+    "band": "half",
+    "moods": [
+      "green",
+      "lake"
+    ],
+    "lead": "选地面慢跑道和荔林侧，赏花游客多的地方改成走。",
+    "travel": [
+      40,
+      65
+    ],
+    "stay": [
+      40,
+      90
+    ],
+    "cost": [
+      8,
+      18
+    ],
+    "costPending": false,
+    "costNote": "每人公共交通往返粗估；公园免费。园内餐饮与图书服务不纳入费用保证。",
+    "access": {
+      "kind": "open",
+      "text": "公共开放步道或园路，遵守现场跑行分区；临时维护、围挡与开放公告优先。",
+      "url": "https://cgj.sz.gov.cn/xsmh/gysz/twf/etly/content/post_10841297.html"
+    },
+    "schedule": {
+      "closedDays": [],
+      "weekendsOnly": false,
+      "start": null,
+      "end": null,
+      "deadline": null,
+      "note": "具体开放时段与夜间条件见“适合时段”。首次优先白天熟悉路况，不把开园时间当作全线照明保证。"
+    },
+    "checked": "2026-10-17",
+    "availability": "open",
+    "tips": [
+      "历史活动补给是赛事安排，不当作日常免费补水点",
+      "厕所与饮水点即时状态未逐点核实；自带水、入园先看导览，不承诺淋浴寄存",
+      "不把空中步道包装成连续跑道，赏花与婚礼人群面前放慢",
+      "这是公园跑，不追求无人干扰；如果专程只想刷匀速圈，仍优先校内或近校跑道"
+    ],
+    "photoIds": [
+      "xiangmi-waterfront",
+      "xiangmi-lake"
+    ],
+    "sources": [
+      {
+        "title": "深圳城管：香蜜公园官方介绍",
+        "url": "https://cgj.sz.gov.cn/xsmh/gysz/twf/etly/content/post_10841297.html",
+        "kind": "官方资料",
+        "evidence": "确认正式名称、农园路38号、6–23时、地面慢跑道/生态草沟、花蜜湖及农林C口/侨香B口。"
+      },
+      {
+        "title": "深圳政府互动答复：塑胶跑道分布（2023-12-07）",
+        "url": "https://www.sz.gov.cn/hdjlpt/detail?pid=2790166",
+        "kind": "官方资料",
+        "evidence": "福田区园林科明确香蜜公园有塑胶跑道；没有给可当单圈精确值的里程。"
+      },
+      {
+        "title": "福田城管：一起为爱奔跑（2023-05-24）",
+        "url": "https://www.szft.gov.cn/bmxx/qcgzfj/gzdt/content/post_10610308.html",
+        "kind": "官方资料",
+        "evidence": "绕园绿道约6km活动及玫瑰园/婚礼园/书吧串联，只作跑量可行证据，不把当日补给当常设设施。"
+      },
+      {
+        "title": "读特·元故事346期：她，带着你奔跑（2023-10-09）",
+        "url": "https://www.dutenews.com/n/article/7791601",
+        "kind": "中文跑者记录或采访",
+        "evidence": "记者采访跑步教练胡晓翠，香蜜公园是其常去训练场；证实实际跑者使用，未测本线长度。"
+      },
+      {
+        "title": "深圳新闻网：步步行善新年行动实报（2025-01-05）",
+        "url": "https://www.sznews.com/news/content/2025-01/05/content_31425001.htm?prolongation=1",
+        "kind": "中文跑者记录或采访",
+        "evidence": "报道香蜜公园出发3.5km跑步路线与跑团参与；不代表任何一圈固定为3.5km。"
+      }
+    ],
+    "sourceEvidence": "官方与独立跑者采访交叉，但地面园路组合未有可复核GPS；所给3.5–6km是安排跑量范围，线路细节按园内导览，不能画成已精确测量的封闭赛道。",
+    "placeOverrides": {
+      "description": "专程来能获得‘跑完坐在湖边’的完整小半天；相较远途大湖，这里地铁接驳清楚、退出方便，适合想换环境又不想规划长绿道的学生。",
+      "transport": "粤海校门 → 公共交通接7号线农林站C口 → 步行农园路西南门；也可2号线侨香站B口接入，但入口不同需重新估步行。 校门到入口人工估算含换乘；非实时导航。往返80–130分钟，适合半天，时间紧优先近校。",
+      "entrance": "香蜜公园农园路侧公开入口（农林站C口步行接入）",
+      "spots": [
+        {
+          "name": "荔林侧地面慢跑道",
+          "text": "避开空中步道，遇起伏就降低速度或步行。"
+        },
+        {
+          "name": "花蜜湖外围",
+          "text": "拍照与婚庆人流多时改走，跑后再慢慢看水面。"
+        }
+      ],
+      "comfort": {
+        "shade": "荔林侧较有树荫，花湖与草坪侧更开敞；不许诺全程遮阴。",
+        "seats": "不保证空座，按园区导览选择公开休息位置。",
+        "crowd": "周末亲子与婚庆拍照人流多；工作日上午或早一点的傍晚较从容。",
+        "terrain": "园路有起伏，选择地面慢跑道；坡度不舒服就走过，空中步道不纳入主线。未取得本组合的逐米高程测量。"
+      },
+      "nearby": []
+    },
+    "runInfo": {
+      "distanceKm": [
+        3.5,
+        4
+      ],
+      "distanceNote": "建议累计3.5–4km。历史活动有3.5km与6km组织跑量，不代表自然闭合一圈为该长度；本次不承诺固定圈长。熟悉后再自选补圈。",
+      "startEnd": "农园路侧公开入口 → 地面慢跑道 → 花蜜湖、荔林一带 → 按导览回原入口；按运动记录累计3.5–4km，避开空中步道和花圃小径",
+      "turnPoints": [
+        "农园路侧公开入口为起终点",
+        "花蜜湖外围与荔林侧地面慢跑道",
+        "按现场导览回入口；达到3.5–4km可收工"
+      ],
+      "routeType": "园内小环 · 可重复",
+      "surface": "政府答复确认有塑胶跑道；本线优先地面慢跑道，普通连接园路可能为硬质铺装。",
+      "shade": "荔林侧较有树荫，花湖与草坪侧更开敞；不许诺全程遮阴。",
+      "grade": "园路有起伏，选择地面慢跑道；坡度不舒服就走过，空中步道不纳入主线。未取得本组合的逐米高程测量。",
+      "crossings": "留在园内能少碰市政路口，但跑道与游园动线仍有交汇；婚庆、儿童与赏花区域不适合提速。",
+      "crowd": "周末亲子与婚庆拍照人流多；工作日上午或早一点的傍晚较从容。",
+      "bestTime": "清晨或凉爽傍晚；官方公园时段6:00–23:00。首次白天熟路，晚间只用看得清的地面跑道，书吧/图书馆营业时刻另算。",
+      "support": "入园先按导览确认厕所；直饮水与售水点未逐点核实，自带水，不默认沿途有可用补给。",
+      "evidenceLimits": "官方与独立跑者采访交叉，但地面园路组合未有可复核GPS；所给3.5–6km是安排跑量范围，线路细节按园内导览，不能画成已精确测量的封闭赛道。",
+      "priority": 2,
+      "recommendFirst": 0
+    },
+    "mapKeyword": "香蜜公园 农园路"
   }
 ]

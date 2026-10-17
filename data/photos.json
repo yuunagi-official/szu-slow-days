@@ -826,5 +826,113 @@
     "taken": "",
     "width": 1280,
     "height": 960
+  },
+  {
+    "id": "xiangmi-waterfront",
+    "file": "assets/photos/xiangmi-trees.jpg",
+    "caption": "香蜜公园水景与绿地（2019年4月实景，非跑道全貌）",
+    "author": "Mx. Granger",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E9%A6%99%E8%9C%9C%E5%85%AC%E5%9B%AD_1.jpg",
+    "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/%E9%A6%99%E8%9C%9C%E5%85%AC%E5%9B%AD_1.jpg/1280px-%E9%A6%99%E8%9C%9C%E5%85%AC%E5%9B%AD_1.jpg",
+    "changes": "采用Wikimedia生成的1280px缩略图，未重新修图；网页可按版式显示裁切。",
+    "width": 1280,
+    "height": 960,
+    "placeIds": [
+      "xiangmi",
+      "xiangmi-park"
+    ],
+    "matchIds": [
+      "xiangmi",
+      "xiangmi-park"
+    ],
+    "keywords": [
+      "香蜜公园",
+      "花香湖",
+      "深圳",
+      "福田"
+    ],
+    "taken": "2019-04-24",
+    "checked": "2026-10-17",
+    "location": {
+      "lat": 22.547009,
+      "lon": 114.018219
+    },
+    "evidence": "Commons文件页中英文说明直接指向深圳香蜜公园，自有作品并明确CC0；坐标与园内水景一致。已打开本地实图检查。",
+    "limits": "旧照片用于认地点与氛围，不能证明2026跑道地面和开放状态。"
+  },
+  {
+    "id": "xiangmi-lake",
+    "file": "assets/photos/xiangmi-lake.jpg",
+    "caption": "香蜜公园花香湖暮色（2019年7月实景）",
+    "author": "WindowPain",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Huaxiang_Lake_in_Honey_Park.jpg",
+    "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Huaxiang_Lake_in_Honey_Park.jpg/1280px-Huaxiang_Lake_in_Honey_Park.jpg",
+    "changes": "采用Wikimedia生成的1280px缩略图；原上传者已于2020年做水平校正，本站未新增修图。网页可按版式显示裁切，图片及其衍生改动保留CC BY-SA 4.0。",
+    "width": 1280,
+    "height": 960,
+    "placeIds": [
+      "xiangmi",
+      "xiangmi-park"
+    ],
+    "matchIds": [
+      "xiangmi",
+      "xiangmi-park"
+    ],
+    "keywords": [
+      "香蜜公园",
+      "花香湖",
+      "暮色",
+      "深圳",
+      "福田"
+    ],
+    "taken": "2019-07-23",
+    "checked": "2026-10-17",
+    "location": {
+      "lat": 22.546892,
+      "lon": 114.018411
+    },
+    "evidence": "Commons文件页明确写深圳香蜜公园花香湖，自有作品并CC BY-SA 4.0，提供相机坐标。已打开本地实图检查。",
+    "limits": "可作园内氛围图，不能用照片亮灯推断整条跑道夜间照明。"
+  },
+  {
+    "id": "xinzhou-river",
+    "file": "assets/photos/xinzhou-river.jpg",
+    "caption": "新洲河沿岸步行空间（2026年10月实景，非碧道全程）",
+    "author": "Dinkun Chen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:XINZHOU_RIVER,_SHENZHEN_(112).jpg",
+    "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/XINZHOU_RIVER%2C_SHENZHEN_%28112%29.jpg/1280px-XINZHOU_RIVER%2C_SHENZHEN_%28112%29.jpg",
+    "changes": "采用Wikimedia生成的1280px缩略图，未重新修图；网页可按版式显示裁切，图片及其衍生改动保留CC BY-SA 4.0。",
+    "width": 1280,
+    "height": 772,
+    "placeIds": [
+      "xinzhou",
+      "xinzhou-river",
+      "xinzhou-greenway"
+    ],
+    "matchIds": [
+      "xinzhou",
+      "xinzhou-river",
+      "xinzhou-greenway"
+    ],
+    "keywords": [
+      "新洲河",
+      "新洲河碧道",
+      "深圳",
+      "福田"
+    ],
+    "taken": "2026-10-12",
+    "checked": "2026-10-17",
+    "location": {
+      "lat": 22.529058,
+      "lon": 114.04425
+    },
+    "evidence": "Commons文件名/说明/分类明确为深圳新洲河，提供相机坐标，作者自有作品并明确CC BY-SA 4.0。实图为沿河硬质步行路和楼宇，已检查。",
+    "limits": "上架前按新洲河所选跑段范围核对坐标；若线路只选更南的红树碧道，标“新洲河沿岸参考”而非声称起点/全程同景。"
   }
 ]
