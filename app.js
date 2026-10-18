@@ -1,293 +1,341 @@
-/* 深大出走 · buildless, no analytics or business API */
+/* 深大出走 · three real views, browser-local data, no business API */
 (() => {
   'use strict';
-  const $ = (s, root = document) => root.querySelector(s);
-  const $$ = (s, root = document) => [...root.querySelectorAll(s)];
-  const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const safeUrl = url => { try { const u = new URL(url); return /^https?:$/.test(u.protocol) ? esc(u.href) : '#'; } catch { return '#'; } };
-  const bands = { daily:'日常休闲', half:'半天', day:'全天' };
-  const types = { nature:'自然与绿地', campus:'校园走走', market:'市场与超市', food:'街巷风味', culture:'文化生活' };
-  const moods = { sea:'海风与落日', green:'树荫与绿意', lake:'湖畔发呆', campus:'换个校园', food:'逛逛吃吃', art:'文化与灵感' };
-  const localDate = (date = new Date()) => `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
-  const today = localDate();
-  const defaults = {activity:'all',band:'all',mood:'all',budget:'any',commute:'any',allowReserve:true,directOnly:false};
-  const storageKey = 'szu-slow-days:v1';
-  let stored = {};
-  try { stored = JSON.parse(localStorage.getItem(storageKey) || '{}') || {}; } catch { /* private storage may be unavailable */ }
-  const state = { ...defaults, ...stored.filters, date:today, search:'', view:'all', sort:'fit', page:12, batch:0, mobileTab:'recommend' };
-  const bookmarks = new Set(Array.isArray(stored.saved) ? stored.saved : []);
-  const familiar = new Set(Array.isArray(stored.familiar) ? stored.familiar : []);
-  const tried = new Set(Array.isArray(stored.tried) ? stored.tried : []);
-  let places = [], photos = [], photoMap = new Map(), guideId = null, returnFocus = null, toastTimer;
-  let recommendationCache = {key:'',ids:[]};
-  const recommendationKey = 'szu-slow-days:last-recommendation';
+  const $=(s,root=document)=>root.querySelector(s);
+  const $$=(s,root=document)=>[...root.querySelectorAll(s)];
+  const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const safeUrl=url=>{try{const u=new URL(url);return /^https?:$/.test(u.protocol)?esc(u.href):'#';}catch{return '#';}};
+  const icon=name=>`<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
+  const localDate=(date=new Date())=>{
+    const parts=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(date);
+    const part=type=>parts.find(p=>p.type===type).value;
+    return `${part('year')}-${part('month')}-${part('day')}`;
+  };
+  const today=localDate();
+  const types={nature:'自然绿地',campus:'校园走走',market:'超市与市场',food:'街巷逛吃',culture:'文化生活'};
+  const categories={all:'全部',walk:'散步',run:'慢跑',sea:'海边',green:'绿地',food:'逛吃',culture:'文化',campus:'校园'};
+  const defaults={category:'all',query:'',commute:'any',budget:'any',date:today,noReserve:false,readyOnly:false,sort:'recommended'};
+  const preferenceKeys=['commute','budget','noReserve','readyOnly'];
+  const storageKey='szu-slow-days:v1',recommendationKey='szu-slow-days:last-recommendation',historyKey='szu-flow-v2';
+  let stored={};
+  try{stored=JSON.parse(localStorage.getItem(storageKey)||'{}')||{};}catch{}
+  const readSet=value=>new Set(Array.isArray(value)?value.filter(x=>typeof x==='string'):[]);
+  const bookmarks=readSet(stored.saved),familiar=readSet(stored.familiar),tried=readSet(stored.tried);
+  function cleanFilters(value={}){
+    return {
+      category:Object.hasOwn(categories,value.category)?value.category:'all',
+      query:typeof value.query==='string'?value.query.slice(0,80):'',
+      commute:['any','30','45','60','90','120'].includes(String(value.commute))?String(value.commute):'any',
+      budget:['any','30','60','120'].includes(String(value.budget))?String(value.budget):'any',
+      date:/^\d{4}-\d{2}-\d{2}$/.test(value.date||'')&&value.date>=today?value.date:today,
+      noReserve:value.noReserve===true,readyOnly:value.readyOnly===true,
+      sort:['recommended','near','cheap'].includes(value.sort)?value.sort:'recommended'
+    };
+  }
+  const state={view:'discover',explore:cleanFilters({...defaults,...stored.explorePreferences}),limit:12,savedLimit:12};
+  const viewScroll={discover:0,explore:0,saved:0};
+  let places=[],photos=[],photoMap=new Map(),placeMap=new Map(),recommendationIds=[];
+  let overlay=null,draft=null,pendingFilterApply=null,returnFocus=null,returnGuideId=null,toastTimer,undoAction=null,isComposing=false,closingOverlay=false;
 
-  function persist() {
-    const filters = Object.fromEntries(Object.keys(defaults).map(k => [k,state[k]]));
-    try { localStorage.setItem(storageKey, JSON.stringify({filters,saved:[...bookmarks],familiar:[...familiar],tried:[...tried]})); } catch { toast('当前浏览器未允许保存；本次仍可使用'); }
+  function persist(){
+    const explorePreferences=Object.fromEntries(preferenceKeys.map(k=>[k,state.explore[k]]));
+    try{localStorage.setItem(storageKey,JSON.stringify({...stored,explorePreferences,saved:[...bookmarks],familiar:[...familiar],tried:[...tried]}));}catch{toast('浏览器未允许保存，本次仍可使用');}
   }
-  function toast(text) { const el = $('#toast'); el.textContent = text; el.classList.add('visible'); clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('visible'),2700); }
-  function mins(value) { return value % 60 === 0 && value >= 60 ? `${value/60}小时` : `${value}分钟`; }
-  function duration(range) { return range[0] === range[1] ? mins(range[0]) : range[1] <= 120 || range.some(n=>n%30) ? `${range[0]}–${range[1]}分钟` : `${range[0]/60}–${range[1]/60}小时`; }
-  function fare(range) { return range[0] === range[1] ? `¥${range[0]}` : `¥${range[0]}–${range[1]}`; }
-  const nameOf = p => p.officialName || p.name;
-  const labelOf = p => `${nameOf(p)}${p.playTitle?' · '+p.playTitle:''}`;
-  const runDistance = p => p.runInfo ? `${p.runInfo.distanceKm[0]}${p.runInfo.distanceKm[0]===p.runInfo.distanceKm[1]?'':'–'+p.runInfo.distanceKm[1]} km` : '';
-  function dateTime(value) { if (!value) return ''; return value.replace('T',' ').replace(/:00(?:\+08:00|Z)?$/,'').replace(/\+08:00$/,''); }
-  function dayStatus(p) {
-    const s = p.schedule || {}, from = new Date(`${state.date}T00:00:00+08:00`), until = new Date(`${state.date}T23:59:59+08:00`);
-    const end = s.end ? new Date(s.end) : s.start ? new Date(`${s.start.slice(0,10)}T23:59:59+08:00`) : null, start = s.start ? new Date(s.start) : null;
-    const expiryCheck = state.date === today ? new Date() : from;
-    if (end && end < expiryCheck) return {code:'expired',label:'活动已结束',actionable:false};
-    if (s.deadline && new Date(s.deadline) < new Date()) return {code:'deadline',label:'报名已截止',actionable:false};
-    if (start && start > until) return {code:'future',label:`${String(s.start).slice(5,10).replace('-','/')} 场次`,actionable:false};
-    const dow = new Date(`${state.date}T12:00:00+08:00`).getDay();
-    if ((s.closedDays || []).includes(dow) || (s.weekendsOnly && ![0,6].includes(dow))) return {code:'closed',label:'所选日期不开放',actionable:false};
-    if ((s.verifyWeekdays || []).includes(dow)) return {code:'calendar',label:'先查当日预约日历',actionable:false};
-    if (p.availability === 'verify') return {code:'verify',label:'先核实参与条件',actionable:false};
-    if (p.access.kind === 'event' && !start) return {code:'calendar',label:'查看本期排期',actionable:false};
-    if (p.access.kind === 'member') return {code:'member',label:'须邀请／特定条件',actionable:false};
-    if (p.access.kind === 'event') return {code:'event',label:'当日活动 · 先查名额',actionable:true};
-    if (p.access.kind === 'reserve') return {code:'reserve',label:'需预约／登记',actionable:true};
-    return {code:'open',label:'常规可去',actionable:true};
+  function toast(message,undo=null){
+    clearTimeout(toastTimer);$('#toast-text').textContent=message;$('#toast').hidden=false;
+    undoAction=undo;$('#undo-save').hidden=!undo;
+    toastTimer=setTimeout(()=>{$('#toast').hidden=true;undoAction=null;},undo?6000:2600);
   }
-  function match(p) {
-    if (state.activity !== 'all' && p.activity !== state.activity) return false;
-    if (state.band !== 'all' && p.band !== state.band) return false;
-    if (state.mood !== 'all' && !(state.mood === 'campus' ? p.type === 'campus' : p.moods.includes(state.mood))) return false;
-    if (state.budget !== 'any' && (p.costPending || p.cost[1] > +state.budget)) return false;
-    if (state.commute !== 'any' && p.travel[1] > +state.commute) return false;
-    if (!state.allowReserve && p.access.kind !== 'open') return false;
-    if (state.directOnly && !dayStatus(p).actionable) return false;
-    if (state.search && ![p.name,nameOf(p),p.playTitle,p.activity==='run'?'慢跑 跑步 绿道': '',p.district,types[p.type],bands[p.band],p.lead,p.description,...p.spots.map(x => x.name)].join(' ').toLowerCase().includes(state.search.toLowerCase())) return false;
-    return true;
-  }
-  function score(p) { return (p.type === 'nature' ? 120 : p.type === 'campus' ? 90 : 60) - p.travel[1] * .32 - p.cost[1] * .05 + (p.moods.includes('green') ? 8 : 0) + ({'lixiang-shade':8,'talent-liuhua':18,'xili-lake-section':9}[p.id]||0) + (p.activity==='run' ? state.activity==='run' ? (p.runInfo.priority||0) : -22 : 0); }
-  function sorted(items) {
-    return [...items].sort((a,b) => {
-      const action = +dayStatus(b).actionable - +dayStatus(a).actionable;
-      if (action) return action;
-      if (state.sort === 'near') return a.travel[1]-b.travel[1] || a.cost[1]-b.cost[1];
-      if (state.sort === 'cheap') return a.cost[1]-b.cost[1] || a.travel[1]-b.travel[1];
-      return score(b)-score(a) || a.name.localeCompare(b.name,'zh-CN');
-    });
-  }
-  function selectedPhotos(p) { return (p.photoIds || []).map(id => photoMap.get(id)).filter(Boolean); }
-  function photoInfo(p) {
-    const exact = selectedPhotos(p);
-    if (exact.length) return {photo:exact[0],reference:!!p.photoReference,caption:p.photoNote||exact[0].caption};
-    return {photo:null,reference:false,caption:'实景待补'};
-  }
-  function shortIntro(p) {
-    const text=String(p.lead||p.playTitle||'').trim();
-    const first=text.match(/^[^。！？]+[。！？]?/)?.[0]||text;
+  const nameOf=p=>p.officialName||p.name;
+  const mins=n=>n>=60&&n%60===0?`${n/60}小时`:`${n}分钟`;
+  const duration=range=>range[0]===range[1]?mins(range[0]):range[1]>120&&range.every(n=>n%30===0)?`${range[0]/60}–${range[1]/60}小时`:`${range[0]}–${range[1]}分钟`;
+  const compactDuration=range=>duration(range).replaceAll('分钟','分');
+  const fare=range=>range[0]===range[1]?`¥${range[0]}`:`¥${range[0]}–${range[1]}`;
+  const runDistance=p=>p.runInfo?`${p.runInfo.distanceKm[0]}${p.runInfo.distanceKm[0]===p.runInfo.distanceKm[1]?'':'–'+p.runInfo.distanceKm[1]} km`:'';
+  const dateTime=value=>value?value.replace('T',' ').replace(/:00(?:\+08:00|Z)?$/,'').replace(/\+08:00$/,''):'';
+  function shortIntro(p){
+    const text=String(p.lead||p.playTitle||'').trim(),first=text.match(/^[^。！？]+[。！？]?/)?.[0]||text;
     return first.length<=52?first:first.slice(0,51).replace(/[，、；：]$/,'')+'…';
   }
-  function amapLinks(p, platform) {
-    if (!platform) {
-      const ua=navigator.userAgent||'';
-      platform=/iPhone|iPad|iPod/i.test(ua)||(/Macintosh/i.test(ua)&&navigator.maxTouchPoints>1)?'ios':/Android/i.test(ua)?'android':'web';
+  function dayStatus(p,date=today){
+    const s=p.schedule||{},from=new Date(`${date}T00:00:00+08:00`),until=new Date(`${date}T23:59:59+08:00`);
+    const end=s.end?new Date(s.end):s.start?new Date(`${s.start.slice(0,10)}T23:59:59+08:00`):null,start=s.start?new Date(s.start):null;
+    if(end&&end<(date===today?new Date():from))return {code:'expired',label:'活动已结束',actionable:false};
+    if(s.deadline&&new Date(s.deadline)<new Date())return {code:'deadline',label:'报名已截止',actionable:false};
+    if(start&&start>until)return {code:'future',label:`${s.start.slice(5,10).replace('-','/')} 场次`,actionable:false};
+    const dow=new Date(`${date}T12:00:00+08:00`).getUTCDay();
+    if((s.closedDays||[]).includes(dow)||(s.weekendsOnly&&![0,6].includes(dow)))return {code:'closed',label:'所选日期不开放',actionable:false};
+    if((s.verifyWeekdays||[]).includes(dow))return {code:'calendar',label:'先查当日预约日历',actionable:false};
+    if(p.availability==='verify')return {code:'verify',label:'参与条件待核实',actionable:false};
+    if(p.access.kind==='event'&&!start)return {code:'calendar',label:'查看本期排期',actionable:false};
+    if(p.access.kind==='member')return {code:'member',label:'须邀请或特定条件',actionable:false};
+    if(p.access.kind==='event')return {code:'event',label:'当日活动 · 先查名额',actionable:true};
+    if(p.access.kind==='reserve')return {code:'reserve',label:'需预约或登记',actionable:true};
+    return {code:'open',label:'常规可去',actionable:true};
+  }
+  function match(p,filters=state.explore){
+    const c=filters.category;
+    if(c==='run'&&p.activity!=='run')return false;
+    if(c==='walk'&&p.activity==='run')return false;
+    if(c==='sea'&&!p.moods.includes('sea'))return false;
+    if(c==='green'&&!['nature','campus'].includes(p.type))return false;
+    if(c==='food'&&!['food','market'].includes(p.type))return false;
+    if(c==='culture'&&p.type!=='culture')return false;
+    if(c==='campus'&&p.type!=='campus')return false;
+    if(filters.commute!=='any'&&p.travel[1]>+filters.commute)return false;
+    if(filters.budget!=='any'&&(p.costPending||p.cost[1]>+filters.budget))return false;
+    if(filters.noReserve&&p.access.kind!=='open')return false;
+    if(filters.readyOnly&&!dayStatus(p,filters.date).actionable)return false;
+    const words=filters.query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
+    if(words.length){
+      const terms=[nameOf(p),p.name,p.playTitle,p.district,types[p.type],p.lead,p.description,...p.spots.map(s=>s.name),p.activity==='run'?'慢跑 跑步 绿道':'散步',p.moods.includes('sea')?'海边 看海 海风':'',p.moods.includes('lake')?'湖边 湖畔':'',p.type==='campus'?'学校 大学 校园':'',p.type==='food'?'美食 小吃 逛吃':''].join(' ').toLocaleLowerCase();
+      if(!words.every(w=>terms.includes(w)))return false;
     }
-    const raw=String(p.mapKeyword||p.entrance||nameOf(p)).trim();
-    const destination=/深圳/.test(raw)?raw:'深圳 '+raw;
-    const source=encodeURIComponent('深大出走'), name=encodeURIComponent(destination);
-    const web='https://uri.amap.com/search?keyword='+name+'&city='+encodeURIComponent('深圳')+'&view=map&callnative=0';
-    const primary=platform==='ios'?'iosamap://path?sourceApplication='+source+'&dname='+name+'&dev=0&t=1&m=0':platform==='android'?'androidamap://poi?sourceApplication='+source+'&keywords='+name+'&dev=0':web;
-    return {primary,web,native:platform==='ios'||platform==='android',destination};
+    return true;
   }
-  function media(p, {guide=false,eager=false}={}) {
-    const {photo,reference,caption}=photoInfo(p);
-    if(!photo) return '<div class="place-placeholder tone-'+esc(p.type)+'" role="img" aria-label="'+esc(nameOf(p))+'，实景照片待补"><span class="placeholder-symbol" aria-hidden="true">'+(p.type==='nature'?'〰':p.type==='campus'?'⌂':p.type==='culture'?'✳':'◒')+'</span><span>'+esc(p.district)+' / '+esc(types[p.type])+'</span><strong>'+esc(nameOf(p))+'</strong><small>实景待补</small></div>';
-    return '<img src="'+esc(photo.file)+'" alt="'+esc(caption)+'" loading="'+(eager?'eager':'lazy')+'" decoding="async"><span class="'+(guide?'guide-hero-caption':'image-caption')+(reference?' reference':'')+'">'+esc(caption)+'</span>';
+  function score(p){return (p.type==='nature'?70:p.type==='campus'?55:35)-p.travel[1]*.35+(p.moods.includes('green')?8:0)-(p.activity==='run'?8:0);}
+  function ordered(items,filters=state.explore){
+    return [...items].sort((a,b)=>{
+      const availability=+dayStatus(b,filters.date).actionable-+dayStatus(a,filters.date).actionable;
+      if(availability)return availability;
+      if(filters.sort==='near')return a.travel[1]-b.travel[1]||a.cost[1]-b.cost[1];
+      if(filters.sort==='cheap')return a.cost[1]-b.cost[1]||a.travel[1]-b.travel[1];
+      return score(b)-score(a)||nameOf(a).localeCompare(nameOf(b),'zh-CN');
+    });
   }
-  function card(p,index,recommend=false) {
-    const saved=bookmarks.has(p.id), map=amapLinks(p), status=dayStatus(p);
-    return `<article class="place-card" data-place="${esc(p.id)}">
-      <button class="bookmark" type="button" data-save="${esc(p.id)}" aria-label="${saved?'取消想去：':'收藏想去：'}${esc(nameOf(p))}" aria-pressed="${saved}">${saved?'♥':'♡'}</button>
-      <a class="card-image-link" href="#place=${encodeURIComponent(p.id)}" data-guide="${esc(p.id)}" tabindex="-1" aria-hidden="true">${media(p,{eager:recommend&&index===0})}</a>
-      <div class="card-body"><div class="card-kicker"><span>${esc(p.district)}</span><span class="dot"></span><span>${p.activity==='run'?'慢跑 · '+runDistance(p):esc(types[p.type])}</span><span class="band-tag">${bands[p.band]}</span></div>
-      <h3><a class="card-title-link" href="#place=${encodeURIComponent(p.id)}" data-guide="${esc(p.id)}">${esc(nameOf(p))}</a></h3><p class="card-lead">${esc(shortIntro(p))}</p>
-      <div class="card-stats"><div><span>单程 · 约</span><strong>${duration(p.travel)}</strong></div><div><span>停留</span><strong>${duration(p.stay)}</strong></div><div><span>人均 · 约</span><strong>${p.costPending?'待核':fare(p.cost)}</strong></div></div>
-      ${status.code!=='open'?'<p class="card-condition">'+esc(status.label)+'</p>':p.travel[1]>90?'<p class="card-condition">较远，留足往返时间</p>':''}
-      <div class="card-bottom"><a class="guide-link" href="#place=${encodeURIComponent(p.id)}" data-guide="${esc(p.id)}">看看详情 <span aria-hidden="true">↗</span></a><a class="map-button" href="${esc(map.primary)}" data-map aria-label="高德导航到${esc(p.entrance)}"><svg viewBox="0 0 20 20" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m17 3-5 14-3-6-6-3 14-5Z"/></svg>高德导航</a></div></div></article>`;
-  }
-
-  function syncControls() {
-    $$('[data-activity]').forEach(el => {el.classList.toggle('active',el.dataset.activity===state.activity);el.setAttribute('aria-pressed',String(el.dataset.activity===state.activity));});
-    $$('[data-mobile-nav]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.mobileNav===state.mobileTab)));
-    $$('[data-band]').forEach(el => { el.classList.toggle('active',el.dataset.band === state.band); el.setAttribute('aria-pressed',String(el.dataset.band === state.band)); });
-    $$('[data-mood]').forEach(el => { el.classList.toggle('active',el.dataset.mood === state.mood); el.setAttribute('aria-pressed',String(el.dataset.mood === state.mood)); });
-    for (const id of ['budget','commute','sort']) $(`#${id}`).value = state[id];
-    $('#allow-reserve').checked = state.allowReserve; $('#direct-only').checked = state.directOnly; $('#trip-date').value = state.date; $('#search').value = state.search;
-    $$('[data-view]').forEach(el => {el.classList.toggle('active',el.dataset.view === state.view);el.setAttribute('aria-pressed',String(el.dataset.view === state.view));});
-    $('#saved-count').textContent = bookmarks.size; $('#tab-saved-count').textContent = bookmarks.size; $('#mobile-saved-count').textContent=bookmarks.size; $('#total-count').textContent = places.filter(p=>state.activity==='all'||p.activity===state.activity).length;
-    $('#all-tab-label').textContent=state.activity==='run'?'全部跑线':state.activity==='walk'?'散步与生活':'所有去处';
-    $('#filter-summary').textContent=[state.budget==='any'?'预算不限':`¥${state.budget}以内`,state.commute==='any'?'通勤不限':`${state.commute}分钟内`,(!state.allowReserve||state.directOnly||state.date!==today)&&'含参与条件'].filter(Boolean).join(' · ');
-  }
-  function shuffled(items) {
+  function shuffled(items){
     const out=[...items];
-    for(let i=out.length-1;i>0;i--) {
+    for(let i=out.length-1;i>0;i--){
       let j;
-      if(globalThis.crypto?.getRandomValues) {
-        const limit=Math.floor(4294967296/(i+1))*(i+1), value=new Uint32Array(1);
-        do { crypto.getRandomValues(value); } while(value[0]>=limit);
-        j=value[0]%(i+1);
-      } else j=Math.floor(Math.random()*(i+1));
+      if(globalThis.crypto?.getRandomValues){const limit=Math.floor(4294967296/(i+1))*(i+1),value=new Uint32Array(1);do{crypto.getRandomValues(value);}while(value[0]>=limit);j=value[0]%(i+1);}
+      else j=Math.floor(Math.random()*(i+1));
       [out[i],out[j]]=[out[j],out[i]];
     }
     return out;
   }
-  function recommendations(items) {
-    const pool=items.filter(p=>dayStatus(p).actionable), n=Math.min(3,pool.length);
-    $('#shuffle').disabled=pool.length<=n;
-    const key=JSON.stringify([Object.keys(defaults).map(k=>state[k]),state.date,state.search,state.batch,pool.map(p=>p.id)]);
-    if(key===recommendationCache.key) return recommendationCache.ids.map(id=>pool.find(p=>p.id===id)).filter(Boolean);
-    let previous=recommendationCache.ids;
-    if(!previous.length) {try{const ids=JSON.parse(localStorage.getItem(recommendationKey)||'[]');if(Array.isArray(ids))previous=ids;}catch{}}
-    const old=new Set(previous), fresh=shuffled(pool.filter(p=>!old.has(p.id))), repeated=shuffled(pool.filter(p=>old.has(p.id)));
-    const available=fresh.length>=n?fresh:[...fresh,...repeated], out=[];
-    // Random people and places, with the original preference for nature plus a little everyday life.
-    if(state.mood==='all'&&state.activity!=='run'&&fresh.length>=n) {
-      out.push(...available.filter(p=>p.type==='nature').slice(0,2));
-      const life=available.find(p=>p.type!=='nature');if(life)out.push(life);
-    }
-    for(const p of available)if(out.length<n&&!out.includes(p))out.push(p);
-    const result=shuffled(out.slice(0,n));
-    recommendationCache={key,ids:result.map(p=>p.id)};
-    try{localStorage.setItem(recommendationKey,JSON.stringify(recommendationCache.ids));}catch{}
-    return result;
+  function recommendations(force=false){
+    const pool=places.filter(p=>dayStatus(p,today).actionable),n=Math.min(3,new Set(pool.map(p=>p.areaId)).size);
+    if(!force&&recommendationIds.length===n&&recommendationIds.every(id=>pool.some(p=>p.id===id)))return recommendationIds.map(id=>placeMap.get(id));
+    let previous=recommendationIds;
+    if(!previous.length){try{const value=JSON.parse(localStorage.getItem(recommendationKey)||'[]');if(Array.isArray(value))previous=value;}catch{}}
+    const old=new Set(previous),fresh=pool.filter(p=>!old.has(p.id));
+    const candidates=shuffled(new Set(fresh.map(p=>p.areaId)).size>=n?fresh:pool),out=[],areas=new Set();
+    const add=p=>{if(p&&!areas.has(p.areaId)&&out.length<n){out.push(p);areas.add(p.areaId);}};
+    candidates.filter(p=>p.type==='nature').slice(0,2).forEach(add);
+    add(candidates.find(p=>p.type!=='nature'&&!areas.has(p.areaId)));
+    candidates.forEach(add);
+    recommendationIds=shuffled(out).map(p=>p.id);
+    try{localStorage.setItem(recommendationKey,JSON.stringify(recommendationIds));}catch{}
+    return recommendationIds.map(id=>placeMap.get(id));
   }
-
-  function render() {
-    syncControls();
-    const matches = places.filter(match);
-    $('#filter-match-count').textContent=`${matches.length} 项符合条件`;
-    $('#recommend-title').textContent=state.activity==='run'?'今天，跑这一段？':'今天，去这里？';
-    $('#explore-title').textContent=state.activity==='run'?'全部慢跑路线':'全部去处';
-    $('#run-selection-note').hidden=state.activity!=='run';
-    const recs = recommendations(matches);
-    $('#recommend-grid').innerHTML = recs.length ? recs.map((p,i) => card(p,i,true)).join('') : '<div class="empty-state" style="grid-column:1/-1"><h3>这一天，暂时没有合适的可参与推荐</h3><p>调整交通、主题或日期，也可以在下方收藏待排期的灵感。</p><button class="primary-button" type="button" data-show-all>放宽条件看看</button></div>';
-    $('#recommend-summary').textContent=recs.length?'随机选了 '+recs.length+' 处，喜欢就出发。':'放宽一点条件，再看看。';
-    const catalog = sorted(matches.filter(p => state.view !== 'saved' || bookmarks.has(p.id)));
-    $('#catalog-grid').innerHTML = catalog.slice(0,state.page).map((p,i) => card(p,i)).join('');
-    $('#result-count').textContent = `${catalog.length} 处`; $('#empty-state').hidden = catalog.length > 0; $('#load-more').hidden = catalog.length <= state.page;
-    if (!catalog.length) {
-      $('#empty-state h3').textContent = state.view === 'saved' && !bookmarks.size ? '先留下一点想去的心情' : '给条件留一点余地';
-      $('#empty-state p').textContent = state.view === 'saved' && !bookmarks.size ? '点卡片上的爱心，把喜欢的去处留给下一次空闲。' : '试试更长的交通时间，或换一种想看的风景。';
-    }
-    const conditions = [state.activity!=='all'&&(state.activity==='run'?'轻松慢跑':'散步与生活'),state.band!=='all'&&bands[state.band],state.mood!=='all'&&moods[state.mood],state.budget!=='any'&&`人均上限 ¥${state.budget}`,state.commute!=='any'&&`单程上限 ${state.commute} 分钟`,!state.allowReserve&&'无需预约',state.directOnly&&'明确可去',state.search&&`搜索“${state.search}”`].filter(Boolean);
-    $('#active-conditions').innerHTML = conditions.length ? `${esc(conditions.join(' / '))} <button class="text-button" data-show-all type="button" style="margin-left:10px">查看完整 ${places.length} 项</button>` : `全部 ${places.length} 项 · 熟悉的、新发现的，都在这里`;
-    persist();
+  function selectedPhotos(p){return (p.photoIds||[]).map(id=>photoMap.get(id)).filter(Boolean);}
+  function photoInfo(p){const ph=selectedPhotos(p)[0];return {photo:ph||null,reference:!!ph&&!!p.photoReference,caption:p.photoNote||ph?.caption||'实景待补'};}
+  function media(p,guide=false,eager=false){
+    const {photo,reference,caption}=photoInfo(p);
+    if(!photo)return `<div class="place-placeholder tone-${esc(p.type)}" role="img" aria-label="${esc(nameOf(p))}，实景照片待补">${icon(p.type==='nature'?'leaf':p.type==='culture'?'book':p.type==='food'||p.type==='market'?'food':'pin')}<small>实景待补</small></div>`;
+    return `<img src="${esc(photo.file)}" alt="${esc(caption)}" loading="${eager?'eager':'lazy'}" decoding="async">${guide?`<span class="guide-photo-caption">${esc(caption)}</span>`:reference?'<span class="photo-reference">同片区参考图</span>':''}`;
   }
-  function changed() {state.batch=0;state.page=12;state.mobileTab=state.view==='saved'?'saved':state.activity==='run'?'run':'recommend';render();}
-  function showAll() {Object.assign(state,defaults,{commute:'any',search:'',view:'all',page:12,batch:0,mobileTab:'all'});render();}
-  function navigate(mode) {
-    if(mode==='all') showAll();
-    else if(mode==='saved') {Object.assign(state,{view:'saved',search:'',page:12,batch:0,mobileTab:mode});render();}
-    else {state.view='all';state.mobileTab=mode;if(mode==='run'){state.activity='run';state.mood='all';state.search='';state.batch=0;state.page=12;}render();}
-    history.replaceState(null,'',location.pathname+location.search+({run:'#running',saved:'#saved',all:'#explore',recommend:'#recommendations'}[mode]));
-    $(mode==='recommend'?'#recommendations':'#explore').scrollIntoView({behavior:'auto'});
+  function amapLinks(p,platform){
+    if(!platform){const ua=navigator.userAgent||'';platform=/iPhone|iPad|iPod/i.test(ua)||(/Macintosh/i.test(ua)&&navigator.maxTouchPoints>1)?'ios':/Android/i.test(ua)?'android':'web';}
+    const raw=String(p.mapKeyword||p.entrance||nameOf(p)).trim(),destination=/深圳/.test(raw)?raw:'深圳 '+raw;
+    const source=encodeURIComponent('深大出走'),name=encodeURIComponent(destination),web='https://uri.amap.com/search?keyword='+name+'&city='+encodeURIComponent('深圳')+'&view=map&callnative=0';
+    return {destination,web,native:platform!=='web',primary:platform==='ios'?'iosamap://path?sourceApplication='+source+'&dname='+name+'&dev=0&t=1&m=0':platform==='android'?'androidamap://poi?sourceApplication='+source+'&keywords='+name+'&dev=0':web};
   }
-  function save(id) {
-    const p=places.find(p=>p.id===id); if(!p)return;
-    if(bookmarks.has(id)){bookmarks.delete(id);toast('已从想去清单移除');}else{bookmarks.add(id);toast('已收藏，留给下一次空闲');}
-    persist();
-    $$(`[data-save="${id}"]`).forEach(el=>{const yes=bookmarks.has(id);el.textContent=el.classList.contains('bookmark')?(yes?'♥':'♡'):(yes?'♥ 已加入想去':'♡ 加入想去');el.setAttribute('aria-pressed',String(yes));el.setAttribute('aria-label',`${yes?'取消想去：':'收藏想去：'}${labelOf(p)}`);});$('#saved-count').textContent=bookmarks.size;$('#tab-saved-count').textContent=bookmarks.size;$('#mobile-saved-count').textContent=bookmarks.size;
-    if(state.view==='saved') render();
+  function saveButton(p,guide=false){const yes=bookmarks.has(p.id);return `<button type="button" class="save-button" data-save="${esc(p.id)}" aria-label="${yes?'取消想去：':'收藏想去：'}${esc(nameOf(p))}" aria-pressed="${yes}">${icon('heart')}<span>${yes?'已想去':'想去'}</span></button>`;}
+  function card(p,index=0,date=today){
+    const status=dayStatus(p,date),map=amapLinks(p);
+    return `<article class="place-card" data-place="${esc(p.id)}"><a class="card-open" href="#place=${encodeURIComponent(p.id)}" data-guide="${esc(p.id)}"><div class="card-image">${media(p,false,index===0)}</div><div class="card-info"><div class="card-kicker"><span>${esc(p.district)}</span><span>${p.activity==='run'?'慢跑 · '+runDistance(p):esc(types[p.type])}</span></div><h3>${esc(nameOf(p))}${icon('arrow')}</h3><p class="card-lead">${esc(shortIntro(p))}</p><div class="card-facts"><span>单程约 ${compactDuration(p.travel)}</span><span class="fare">${p.costPending?'费用待核':fare(p.cost)}</span></div><small class="card-stay">建议停留 ${duration(p.stay)}</small>${status.code!=='open'?`<p class="card-condition">${esc(status.label)}</p>`:p.travel[1]>90?'<p class="card-condition">较远，留足往返时间</p>':''}</div></a><div class="card-footer">${saveButton(p)}<a class="map-link" data-map href="${esc(map.primary)}" aria-label="高德导航到${esc(p.entrance)}">${icon('nav')}高德导航</a></div></article>`;
   }
-  function runGuide(p) {
-    const r=p.runInfo;if(!r)return '';
-    return `<section class="run-guide"><div class="run-guide-heading"><h3>这段怎么跑</h3><strong>${runDistance(p)}</strong></div><p class="run-start-end">${esc(r.startEnd)}</p><p class="run-compact-note">${esc(r.routeType)} · 建议累计跑量，可随时折返</p></section>`;
+  function appliedFilters(filters=state.explore){
+    return [filters.commute!=='any'&&['commute',`单程${filters.commute}分内`],filters.budget!=='any'&&['budget',`¥${filters.budget}以内`],filters.date!==today&&['date',`${filters.date.slice(5).replace('-','/')}出发`],filters.noReserve&&['noReserve','无需预约'],filters.readyOnly&&['readyOnly','仅当日可安排']].filter(Boolean);
   }
-  function guide(p) {
-    const status=dayStatus(p), map=amapLinks(p), r=p.runInfo;
-    const needsCheck=status.code!=='open';
-    return `<div class="guide-close-row"><button class="dialog-close" type="button" data-close="guide" aria-label="关闭指南">×</button></div><div class="guide-hero">${media(p,{guide:true,eager:true})}</div>
-      <div class="guide-main"><p class="guide-kicker">${esc(p.district)} · ${p.activity==='run'?'慢跑路线':esc(types[p.type])} · ${bands[p.band]}</p><h2 id="guide-title">${esc(nameOf(p))}</h2><p class="guide-lead">${esc(shortIntro(p))}</p>
-      <div class="guide-actions"><a href="${esc(map.primary)}" data-map>高德导航 ↗</a><button data-save="${esc(p.id)}" type="button" aria-pressed="${bookmarks.has(p.id)}" aria-label="${bookmarks.has(p.id)?'取消想去：':'收藏想去：'}${esc(nameOf(p))}">${bookmarks.has(p.id)?'♥ 已收藏':'♡ 收藏'}</button></div>
-      <div class="guide-summary"><div><small>单程 · 约</small><strong>${duration(p.travel)}</strong></div><div><small>停留</small><strong>${duration(p.stay)}</strong></div><div><small>人均 · 约</small><strong>${p.costPending?'费用待核':fare(p.cost)}</strong></div></div>
-      <div class="guide-entry"><span>${r?'起跑接入点':'导航入口'}</span><strong>${esc(p.entrance)}</strong><a href="${safeUrl(map.web)}" target="_blank" rel="noopener noreferrer">用网页版 ↗</a></div>
-      ${r?runGuide(p):'<div class="guide-stops"><span>值得停一停</span>'+p.spots.slice(0,3).map(s=>'<strong>'+esc(s.name)+'</strong>').join('')+'</div>'}
-      ${needsCheck?'<div class="guide-prerequisite"><strong>'+esc(status.label)+'</strong><span>'+esc(p.type==='campus'?'先确认入校、图书馆及餐饮权限':status.code==='expired'?'本场已结束，留作下次灵感':status.code==='future'?'留意场次日期与报名名额':'出发前请核实当天条件')+'</span>'+(p.access.url?'<a href="'+safeUrl(p.access.url)+'" target="_blank" rel="noopener noreferrer">官方信息 ↗</a>':'')+'</div>':''}
-      <details class="practical-details"><summary>出发信息 · 路况、开放与费用</summary>
-        <p><strong>交通</strong>${esc(p.transport)}</p><p><strong>费用</strong>${esc(p.costNote)}</p><p><strong>开放</strong>${esc(p.access.text)}</p>
-        ${p.schedule.start?'<p>场次：'+esc(dateTime(p.schedule.start))+(p.schedule.end?' — '+esc(dateTime(p.schedule.end)):'')+'</p>':''}${p.schedule.deadline?'<p>报名截止：'+esc(dateTime(p.schedule.deadline))+'</p>':''}${p.schedule.note?'<p>'+esc(p.schedule.note)+'</p>':''}
-        ${r?'<p><strong>跑法</strong>'+r.turnPoints.map(t=>esc(typeof t==='string'?t:t.name)).join(' → ')+'</p><p>'+esc(r.distanceNote)+'</p>'+Object.entries({surface:'路面',grade:'坡度',shade:'遮阴',crossings:'路口',crowd:'人流',bestTime:'时段',support:'补水与厕所'}).filter(([k])=>r[k]).map(([k,label])=>'<p><strong>'+label+'</strong>'+esc(r[k])+'</p>').join('')+'<p>'+esc(r.evidenceLimits)+'</p>':Object.entries({shade:'遮阴',seats:'可坐',crowd:'人流',terrain:'坡度'}).map(([k,label])=>'<p><strong>'+label+'</strong>'+esc(p.comfort[k])+'</p>').join('')}
-        ${p.tips.length?'<p><strong>留意</strong>'+p.tips.map(t=>esc(t)).join(' ')+'</p>':''}${p.nearby.length?'<p><strong>顺路</strong>'+p.nearby.map(n=>esc(n.name)).join(' · ')+'</p>':''}
-        <div class="experience-history"><label><input type="checkbox" data-familiar="${esc(p.areaId)}" ${familiar.has(p.areaId)?'checked':''}>熟悉这个地方</label><label><input type="checkbox" data-tried="${esc(p.id)}" ${tried.has(p.id)?'checked':''}>体验过这个玩法</label></div><button class="text-button" type="button" data-share="${esc(p.id)}">复制指南链接 ↗</button>
-      </details>
-      <details class="source-details"><summary>来源与照片 · ${esc(p.checked)}</summary>${selectedPhotos(p).length>1?'<div class="guide-photo-strip">'+selectedPhotos(p).slice(1,3).map(ph=>'<figure><img src="'+esc(ph.file)+'" alt="'+esc(ph.caption)+'" loading="lazy"><figcaption>'+esc(ph.caption)+'</figcaption></figure>').join('')+'</div>':''}${p.sources.map(s=>'<div class="source-item"><a href="'+safeUrl(s.url)+'" target="_blank" rel="noopener noreferrer">'+esc(s.title)+' ↗</a>'+(s.evidence?'<p>'+esc(s.evidence)+'</p>':'')+'</div>').join('')}<p>${esc(p.sourceEvidence)}交通与费用为估算，以当日实际信息为准。</p>${selectedPhotos(p).map(ph=>'<p>照片：'+esc(ph.caption)+' · '+esc(ph.author)+' · <a href="'+safeUrl(ph.licenseUrl)+'" target="_blank" rel="noopener noreferrer">'+esc(ph.license)+'</a> · <a href="'+safeUrl(ph.sourceUrl)+'" target="_blank" rel="noopener noreferrer">原图</a>。'+esc(ph.changes||'缩放与裁切')+'</p>').join('')}${!selectedPhotos(p).length?'<p>未取得对应点位的可用实景，封面为文字占位。</p>':''}</details></div>`;
+  function syncNav(){
+    $$('[data-nav]').forEach(el=>{if(el.dataset.nav===state.view)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');});
+    const savedCount=places.filter(p=>bookmarks.has(p.id)).length;
+    $$('[data-saved-count]').forEach(el=>{el.textContent=savedCount;el.hidden=savedCount===0;});
+    $('#library-count').textContent=places.length;$('#explore-library-count').textContent=`${places.length}处精选`;
+    for(const view of ['discover','explore','saved'])$(`#${view}-view`).hidden=state.view!==view;
   }
-
-  function openGuide(id,updateHash=true) {
-    const p=places.find(p=>p.id===id);if(!p)return;
-    returnFocus=document.activeElement; guideId=id; $('#guide-content').innerHTML=guide(p);
-    if(!$('#guide-dialog').open) $('#guide-dialog').showModal();
-    document.body.classList.add('modal-open');$('#guide-dialog').scrollTop=0;
-    if(updateHash) history.pushState({place:id},'',`#place=${encodeURIComponent(id)}`);
+  function renderExplore(){
+    const f=state.explore,matches=ordered(places.filter(p=>match(p,f)),f),active=appliedFilters(f);
+    if($('#search').value!==f.query)$('#search').value=f.query;
+    $('#clear-search').hidden=!f.query;$('#sort').value=f.sort;
+    $$('[data-category]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.category===f.category)));
+    $('#filter-count').textContent=active.length;$('#filter-count').hidden=!active.length;
+    $('#result-count').textContent=`${matches.length}处`;
+    $('#active-filters').hidden=!active.length;
+    $('#active-filters').innerHTML=active.map(([key,label])=>`<button type="button" class="active-filter" data-remove-filter="${key}" aria-label="移除筛选：${esc(label)}">${esc(label)}${icon('close')}</button>`).join('');
+    $('#search-summary').hidden=!f.query.trim();$('#search-summary').innerHTML=f.query.trim()?`“<strong>${esc(f.query.trim())}</strong>”的搜索结果`:'';
+    $('#explore-grid').innerHTML=matches.slice(0,state.limit).map((p,i)=>card(p,i,f.date)).join('');
+    $('#explore-empty').hidden=matches.length>0;$('#load-more').hidden=matches.length<=state.limit;
+    $('#load-more').textContent=`再看看更多 · 还有${Math.max(0,matches.length-state.limit)}处`;
   }
-  function closeGuide(updateHash=true) {
-    if($('#guide-dialog').open) $('#guide-dialog').close();guideId=null;document.body.classList.remove('modal-open');
-    if(updateHash&&location.hash.startsWith('#place=')) history.replaceState(null,'',location.pathname+location.search+(state.activity==='run'?'#running':'#explore'));
-    if(returnFocus?.isConnected)returnFocus.focus({preventScroll:true});
+  function renderSaved(){
+    // A collection is independent of exploration, including its search and date.
+    const saved=[...bookmarks].reverse().map(id=>placeMap.get(id)).filter(Boolean);
+    $('#saved-total').textContent=`${saved.length}处`;$('#saved-note').hidden=!saved.length;$('#saved-empty').hidden=saved.length>0;
+    $('#saved-grid').innerHTML=saved.map((p,i)=>card(p,i,today)).join('');
   }
-  function credits() {
-    $('#photo-credits').innerHTML=photos.map(ph=>`<div class="credit-row"><img src="${esc(ph.file)}" alt="${esc(ph.caption)}" loading="lazy"><div><strong>${esc(ph.caption)}</strong><p>${esc(ph.author)} · <a href="${safeUrl(ph.licenseUrl)}" target="_blank" rel="noopener noreferrer">${esc(ph.license)}</a> · <a href="${safeUrl(ph.sourceUrl)}" target="_blank" rel="noopener noreferrer">原图页面 ↗</a></p><p>${esc(ph.changes||'缩放与版式裁切')}</p></div></div>`).join('');
-    $('#credits-dialog').showModal();document.body.classList.add('modal-open');
+  function render(){
+    syncNav();
+    if(state.view==='discover'){
+      const recs=recommendations();$('#recommend-grid').innerHTML=recs.map((p,i)=>card(p,i,today)).join('');
+      $('#shuffle').disabled=places.filter(p=>dayStatus(p,today).actionable).length<=recs.length;
+    }else if(state.view==='explore')renderExplore();else renderSaved();
   }
-  function initEvents() {
-    $('#filters').addEventListener('submit',e=>e.preventDefault());
-    $('#filters').addEventListener('reset',e=>{e.preventDefault();Object.assign(state,defaults,{date:today});changed();toast('已恢复默认条件');});
-    $('#filters').addEventListener('click',e=>{const b=e.target.closest('[data-band]'),m=e.target.closest('[data-mood]'),a=e.target.closest('[data-activity]');if(b){state.band=b.dataset.band;changed();}if(m){state.mood=m.dataset.mood;changed();}if(a){state.activity=a.dataset.activity;state.view='all';changed();}});
-    for(const id of ['budget','commute']) $(`#${id}`).addEventListener('change',e=>{state[id]=e.target.value;changed();});
-    for(const [id,key] of [['allow-reserve','allowReserve'],['direct-only','directOnly']]) $(`#${id}`).addEventListener('change',e=>{state[key]=e.target.checked;changed();});
-    $('#trip-date').min=today;
-    $('#trip-date').addEventListener('change',e=>{if(e.target.value&&e.target.validity.valid){state.date=e.target.value;changed();}});
-    $('#filter-refine').open=false;
-    $('#shuffle').addEventListener('click',()=>{state.batch++;render();toast('换了一批，筛选条件已保留');});
-    $('#search').addEventListener('input',e=>{state.search=e.target.value.trim();state.page=12;render();$('#search').focus({preventScroll:true});});
-    $('#sort').addEventListener('change',e=>{state.sort=e.target.value;render();});
-    $$('[data-view]').forEach(b=>b.addEventListener('click',()=>{state.view=b.dataset.view;state.page=12;state.mobileTab=state.view==='saved'?'saved':state.activity==='run'?'run':'all';render();history.replaceState(null,'',location.pathname+location.search+(state.view==='saved'?'#saved':state.activity==='run'?'#running':'#explore'));}));
-    $('#saved-nav').addEventListener('click',()=>navigate('saved'));
-    $('#run-nav').addEventListener('click',()=>navigate('run'));
-    $$('[data-mobile-nav]').forEach(el=>el.addEventListener('click',()=>navigate(el.dataset.mobileNav)));
-    $('[data-filter-shortcut]').addEventListener('click',()=>{$('.chooser').scrollIntoView({behavior:'auto'});$('#chooser-title').focus({preventScroll:true});});
-    $('.site-header nav a[href="#explore"]').addEventListener('click',e=>{e.preventDefault();navigate('all');});
-    $('#empty-reset').addEventListener('click',showAll);
-    $('#load-more').addEventListener('click',()=>{state.page+=12;render();});
-    document.addEventListener('click',async e=>{
-      const saveButton=e.target.closest('[data-save]');if(saveButton){save(saveButton.dataset.save);return;}
-      const link=e.target.closest('[data-guide]');if(link){e.preventDefault();openGuide(link.dataset.guide);return;}
-      if(e.target.closest('[data-show-all]')){showAll();return;}
-      if(e.target.closest('[data-credits]')){credits();return;}
-      if(e.target.closest('[data-close="guide"]')){closeGuide();return;}
-      if(e.target.closest('[data-close="credits"]')){$('#credits-dialog').close();if(!guideId)document.body.classList.remove('modal-open');return;}
-      const share=e.target.closest('[data-share]');if(share){try{await navigator.clipboard.writeText(`${location.origin}${location.pathname}#place=${encodeURIComponent(share.dataset.share)}`);toast('指南链接已复制');}catch{toast('可复制浏览器地址栏中的指南链接');}}
+  function snapshot(override={}){return {marker:historyKey,view:state.view,explore:{...state.explore},limit:state.limit,scrollY:window.scrollY||0,overlay:null,...override};}
+  const baseUrl=()=>location.href.split('#')[0];
+  const viewUrl=view=>`${baseUrl()}#${view}`;
+  function recordCurrent(){if(history.state?.marker===historyKey){const y=overlay?history.state.scrollY:window.scrollY||0;viewScroll[state.view]=y;history.replaceState(snapshot({overlay:history.state.overlay,scrollY:y}),'',location.href);}}
+  function replaceRoute(){history.replaceState(snapshot(),'',viewUrl(state.view));}
+  function restorePosition(y=0){requestAnimationFrame(()=>window.scrollTo({top:y,behavior:'instant'}));}
+  function hideOverlays(){for(const id of ['guide-dialog','filter-dialog','about-dialog'])if($(`#${id}`).open)$(`#${id}`).close();overlay=null;draft=null;document.body.classList.remove('modal-open');}
+  function focusReturn(){
+    if(returnFocus?.isConnected){returnFocus.focus({preventScroll:true});return;}
+    const cardLink=returnGuideId&&$$('[data-guide]',$(`#${state.view}-view`)).find(el=>el.dataset.guide===returnGuideId);
+    if(cardLink){cardLink.focus({preventScroll:true});return;}
+    $(`#${state.view==='saved'?'saved':state.view==='explore'?'explore':'discover'}-title`).focus({preventScroll:true});
+  }
+  function showOverlay(type){overlay=type;document.body.classList.add('modal-open');$(`#${type}-dialog`).showModal();$(`#${type}-dialog`).scrollTop=0;}
+  function restoreRoute(entry){
+    closingOverlay=false;
+    const previousOverlay=overlay;hideOverlays();
+    if(entry?.marker===historyKey){state.view=['discover','explore','saved'].includes(entry.view)?entry.view:'discover';state.explore=cleanFilters(entry.explore);state.limit=Math.max(12,Number(entry.limit)||12);}
+    else {state.view=location.hash==='#saved'?'saved':['#explore','#running'].includes(location.hash)?'explore':'discover';if(location.hash==='#running')state.explore={...defaults,category:'run'};}
+    if(pendingFilterApply){state.explore=cleanFilters({...state.explore,...pendingFilterApply});state.limit=12;pendingFilterApply=null;replaceRoute();persist();}
+    viewScroll[state.view]=entry?.scrollY||0;
+    render();restorePosition(entry?.scrollY||0);
+    if(entry?.overlay?.type==='guide'&&placeMap.has(entry.overlay.id))showGuide(entry.overlay.id,entry.overlay.date||today);
+    else if(entry?.overlay?.type==='filter')prepareFilters(false);
+    else if(entry?.overlay?.type==='about')showAbout(false);
+    else if(previousOverlay)focusReturn();
+  }
+  function navigate(view,{reset=false,preset=null,focusSearch=false}={}){
+    if(!['discover','explore','saved'].includes(view))return;
+    recordCurrent();hideOverlays();
+    if(reset)state.explore={...defaults};
+    if(preset){state.explore={...defaults,category:preset==='near'?'all':preset,commute:preset==='near'?'45':'any'};state.limit=12;}
+    const changed=state.view!==view||reset||preset;
+    const y=reset||preset||state.view===view?0:viewScroll[view]||0;
+    state.view=view;render();
+    if(changed)history.pushState(snapshot({scrollY:y}),'',viewUrl(view));else replaceRoute();
+    window.scrollTo({top:y,behavior:'instant'});persist();
+    if(focusSearch)$('#search').focus({preventScroll:true});
+    else $(`#${view==='discover'?'discover':view==='saved'?'saved':'explore'}-title`).focus({preventScroll:true});
+  }
+  function editExplore(patch){state.explore=cleanFilters({...state.explore,...patch});state.limit=12;renderExplore();replaceRoute();persist();}
+  function resetExplore(){editExplore({...defaults});$('#search').focus({preventScroll:true});}
+  function prepareFilters(push=true){
+    if(overlay)return;
+    if(push){recordCurrent();returnFocus=document.activeElement;returnGuideId=null;history.pushState(snapshot({overlay:{type:'filter'}}),'',viewUrl(state.view));}
+    draft={...state.explore};
+    for(const el of $$('[data-draft]')){const key=el.dataset.draft;if(el.type==='radio')el.checked=el.value===draft[key];else if(el.type==='checkbox')el.checked=draft[key];else el.value=draft[key];}
+    $('#trip-date').min=today;updateDraftCount();showOverlay('filter');
+  }
+  function updateDraftCount(){if(draft)$('#apply-filters').textContent=`查看 ${places.filter(p=>match(p,draft)).length} 处`;}
+  function closeOverlay(apply=false){
+    if(!overlay||closingOverlay)return;
+    if(apply&&overlay==='filter')pendingFilterApply={...draft};
+    if(history.state?.marker===historyKey&&history.state.overlay){closingOverlay=true;history.back();}
+    else {const next=pendingFilterApply;pendingFilterApply=null;hideOverlays();if(next){state.explore=cleanFilters(next);state.limit=12;render();persist();}replaceRoute();focusReturn();}
+  }
+  function openGuide(id){
+    if(!placeMap.has(id)||overlay)return;
+    recordCurrent();returnFocus=document.activeElement;returnGuideId=id;
+    const date=state.view==='explore'?state.explore.date:today;
+    history.pushState(snapshot({overlay:{type:'guide',id,date}}),'',`${baseUrl()}#place=${encodeURIComponent(id)}`);
+    showGuide(id,date);
+  }
+  function runGuide(p){const r=p.runInfo;if(!r)return '';return `<section class="run-guide"><div class="run-heading"><h3>这段怎么跑</h3><strong>${runDistance(p)}</strong></div><p>${esc(r.startEnd)}</p><small>${esc(r.routeType)} · 建议累计跑量，可随时折返</small></section>`;}
+  function guide(p,date=today){
+    const status=dayStatus(p,date),map=amapLinks(p),r=p.runInfo;
+    return `<div class="guide-top">${media(p,true,true)}<button type="button" class="icon-button" data-close-overlay aria-label="返回列表">${icon('back')}</button><button type="button" class="share-button" data-share="${esc(p.id)}">分享</button></div><div class="guide-main"><p class="guide-kicker">${esc(p.district)} · ${p.activity==='run'?'轻松慢跑 · '+runDistance(p):esc(types[p.type])}</p><h2 id="guide-title">${esc(nameOf(p))}</h2><p class="guide-lead">${esc(shortIntro(p))}</p><div class="guide-summary"><div><small>单程 · 约</small><strong>${duration(p.travel)}</strong></div><div><small>建议停留</small><strong>${duration(p.stay)}</strong></div><div><small>人均 · 约</small><strong>${p.costPending?'费用待核':fare(p.cost)}</strong></div></div>${status.code!=='open'?`<div class="guide-prerequisite"><strong>${esc(status.label)}</strong><span>${esc(status.code==='expired'?'本场已结束，留作下次灵感':status.code==='future'?'留意具体场次与报名名额':p.type==='campus'?'先确认入校、图书馆与餐饮权限':'出发前确认当天开放与参与条件')}</span>${p.access.url?`<br><a href="${safeUrl(p.access.url)}" target="_blank" rel="noopener noreferrer">查看官方信息 ↗</a>`:''}</div>`:''}<div class="guide-entry"><span>${r?'起跑接入点':'从这里开始'}</span><strong>${esc(p.entrance)}</strong><a href="${safeUrl(map.web)}" target="_blank" rel="noopener noreferrer">用高德网页版 ↗</a></div>${r?runGuide(p):`<div class="guide-stops"><span>值得停一停</span>${p.spots.slice(0,3).map(s=>`<strong>${esc(s.name)}</strong>`).join('')}</div>`}
+      <details class="practical-details"><summary>交通与现场情况</summary><p><strong>交通</strong>${esc(p.transport)}</p><p><strong>费用</strong>${esc(p.costNote)}</p><p><strong>开放</strong>${esc(p.access.text)}</p>${p.schedule.start?`<p>场次：${esc(dateTime(p.schedule.start))}${p.schedule.end?' — '+esc(dateTime(p.schedule.end)):''}</p>`:''}${p.schedule.deadline?`<p>报名截止：${esc(dateTime(p.schedule.deadline))}</p>`:''}${p.schedule.note?`<p>${esc(p.schedule.note)}</p>`:''}${r?`<p><strong>跑法</strong>${r.turnPoints.map(t=>esc(typeof t==='string'?t:t.name)).join(' → ')}</p><p>${esc(r.distanceNote)}</p>${Object.entries({surface:'路面',grade:'坡度',shade:'遮阴',crossings:'路口',crowd:'人流',bestTime:'时段',support:'补水与厕所'}).filter(([k])=>r[k]).map(([k,label])=>`<p><strong>${label}</strong>${esc(r[k])}</p>`).join('')}<p>${esc(r.evidenceLimits)}</p>`:Object.entries({shade:'遮阴',seats:'可坐',crowd:'人流',terrain:'坡度'}).map(([k,label])=>`<p><strong>${label}</strong>${esc(p.comfort[k])}</p>`).join('')}${p.tips.length?`<p><strong>留意</strong>${p.tips.map(esc).join(' ')}</p>`:''}${p.nearby.length?`<p><strong>顺路</strong>${p.nearby.map(n=>esc(n.name)).join(' · ')}</p>`:''}<div class="experience-history"><label><input type="checkbox" data-familiar="${esc(p.areaId)}" ${familiar.has(p.areaId)?'checked':''}>熟悉这个地方</label><label><input type="checkbox" data-tried="${esc(p.id)}" ${tried.has(p.id)?'checked':''}>体验过这个玩法</label></div></details>
+      <details class="source-details"><summary>资料与照片来源 · ${esc(p.checked)}</summary>${selectedPhotos(p).length>1?`<div class="guide-photo-strip">${selectedPhotos(p).slice(1,3).map(ph=>`<figure><img src="${esc(ph.file)}" alt="${esc(ph.caption)}" loading="lazy"><figcaption>${esc(ph.caption)}</figcaption></figure>`).join('')}</div>`:''}${p.sources.map(s=>`<div class="source-item"><a href="${safeUrl(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)} ↗</a>${s.evidence?`<p>${esc(s.evidence)}</p>`:''}</div>`).join('')}<p>${esc(p.sourceEvidence)}交通和费用为估算，以当天实际信息为准。</p>${selectedPhotos(p).map(ph=>`<p>照片：${esc(ph.caption)} · ${esc(ph.author)} · <a href="${safeUrl(ph.licenseUrl)}" target="_blank" rel="noopener noreferrer">${esc(ph.license)}</a> · <a href="${safeUrl(ph.sourceUrl)}" target="_blank" rel="noopener noreferrer">原图</a>。${esc(ph.changes||'缩放与裁切')}</p>`).join('')}${!selectedPhotos(p).length?'<p>尚未取得对应点位的可用实景，封面为文字占位。</p>':''}</details></div><div class="guide-footer">${saveButton(p,true)}<a class="primary-button" data-map href="${esc(map.primary)}">${icon('nav')}打开高德导航</a></div>`;
+  }
+  function showGuide(id,date){$('#guide-content').innerHTML=guide(placeMap.get(id),date);showOverlay('guide');}
+  function showAbout(push=true){
+    if(overlay)return;
+    if(push){recordCurrent();returnFocus=document.activeElement;returnGuideId=null;history.pushState(snapshot({overlay:{type:'about'}}),'',viewUrl(state.view));}
+    $('#photo-credits').innerHTML=photos.map(ph=>`<div class="credit-row"><img src="${esc(ph.file)}" alt="${esc(ph.caption)}" loading="lazy"><div><strong>${esc(ph.caption)}</strong><p>${esc(ph.author)} · <a href="${safeUrl(ph.licenseUrl)}" target="_blank" rel="noopener noreferrer">${esc(ph.license)}</a> · <a href="${safeUrl(ph.sourceUrl)}" target="_blank" rel="noopener noreferrer">原图</a></p><p>${esc(ph.changes||'缩放与版式裁切')}</p></div></div>`).join('');
+    showOverlay('about');
+  }
+  function updateSavedButtons(id){
+    const p=placeMap.get(id),yes=bookmarks.has(id);
+    for(const el of $$('[data-save]'))if(el.dataset.save===id){el.setAttribute('aria-pressed',String(yes));el.setAttribute('aria-label',`${yes?'取消想去：':'收藏想去：'}${nameOf(p)}`);el.innerHTML=icon('heart')+`<span>${yes?'已想去':'想去'}</span>`;}
+    syncNav();if(state.view==='saved')renderSaved();
+  }
+  function save(id){
+    if(!placeMap.has(id))return;
+    if(bookmarks.has(id)){
+      const order=[...bookmarks];bookmarks.delete(id);persist();updateSavedButtons(id);
+      toast('已移出想去',()=>{bookmarks.clear();for(const item of order)bookmarks.add(item);persist();updateSavedButtons(id);toast('已恢复到想去');});
+    }else {bookmarks.add(id);persist();updateSavedButtons(id);toast('已加入想去');}
+  }
+  async function share(id){
+    const url=`${baseUrl()}#place=${encodeURIComponent(id)}`,title=`深大出走 · ${nameOf(placeMap.get(id))}`;
+    try{if(navigator.share){await navigator.share({title,url});}else {await navigator.clipboard.writeText(url);toast('路线链接已复制');}}
+    catch(error){if(error.name!=='AbortError')toast('可复制浏览器地址栏中的链接');}
+  }
+  function initEvents(){
+    $('#search-form').addEventListener('submit',e=>{e.preventDefault();$('#search').blur();});
+    $('#search').addEventListener('compositionstart',()=>{isComposing=true;});
+    $('#search').addEventListener('compositionend',e=>{isComposing=false;editExplore({query:e.target.value});});
+    $('#search').addEventListener('input',e=>{if(!isComposing)editExplore({query:e.target.value});});
+    $('#clear-search').addEventListener('click',()=>{editExplore({query:''});$('#search').focus({preventScroll:true});});
+    $('#sort').addEventListener('change',e=>editExplore({sort:e.target.value}));
+    $('#open-filters').addEventListener('click',()=>prepareFilters());
+    $('#filter-form').addEventListener('change',e=>{const el=e.target;if(!draft||!el.dataset.draft)return;if(el.type==='date'&&(!el.value||!el.validity.valid))return;draft[el.dataset.draft]=el.type==='checkbox'?el.checked:el.value;updateDraftCount();});
+    $('#filter-form').addEventListener('submit',e=>{e.preventDefault();closeOverlay(true);});
+    $('#reset-filter-draft').addEventListener('click',()=>{if(!draft)return;const {category,query,sort}=draft;draft={...defaults,category,query,sort};for(const el of $$('[data-draft]')){if(el.type==='radio')el.checked=el.value===draft[el.dataset.draft];else if(el.type==='checkbox')el.checked=draft[el.dataset.draft];else el.value=draft[el.dataset.draft];}updateDraftCount();});
+    $('#reset-explore').addEventListener('click',resetExplore);
+    $('#load-more').addEventListener('click',()=>{const y=window.scrollY;state.limit+=12;renderExplore();replaceRoute();window.scrollTo({top:y,behavior:'instant'});});
+    $('#shuffle').addEventListener('click',()=>{recommendations(true);render();toast('换了一组，慢慢挑');});
+    $('#undo-save').addEventListener('click',()=>{const undo=undoAction;undoAction=null;if(undo)undo();});
+    document.addEventListener('click',e=>{
+      const el=e.target.closest('a,button');if(!el)return;
+      const modified=e.metaKey||e.ctrlKey||e.shiftKey||e.altKey;
+      if(el.classList.contains('skip-link')){e.preventDefault();$('#main').focus();return;}
+      if(el.dataset.save){save(el.dataset.save);return;}
+      if(el.dataset.guide){if(modified)return;e.preventDefault();openGuide(el.dataset.guide);return;}
+      if(el.hasAttribute('data-close-overlay')){closeOverlay();return;}
+      if(el.hasAttribute('data-start-search')){navigate('explore',{reset:true,focusSearch:true});return;}
+      if(el.dataset.preset){navigate('explore',{preset:el.dataset.preset});return;}
+      if(el.dataset.category){editExplore({category:el.dataset.category});return;}
+      if(el.dataset.removeFilter){const key=el.dataset.removeFilter;editExplore({[key]:defaults[key]});return;}
+      if(el.hasAttribute('data-about')){showAbout();return;}
+      if(el.dataset.share){share(el.dataset.share);return;}
+      if(el.dataset.nav){if(modified)return;e.preventDefault();navigate(el.dataset.nav,{reset:el.hasAttribute('data-browse-all')});}
     });
-    $('#guide-dialog').addEventListener('change',e=>{if(e.target.dataset.familiar){e.target.checked?familiar.add(e.target.dataset.familiar):familiar.delete(e.target.dataset.familiar);persist();}if(e.target.dataset.tried){e.target.checked?tried.add(e.target.dataset.tried):tried.delete(e.target.dataset.tried);persist();}});
-    $('#guide-dialog').addEventListener('cancel',e=>{e.preventDefault();closeGuide();});
-    $('#credits-dialog').addEventListener('close',()=>{if(!guideId)document.body.classList.remove('modal-open');});
-    for(const id of ['guide-dialog','credits-dialog']) $(`#${id}`).addEventListener('click',e=>{if(e.target===e.currentTarget){const r=e.currentTarget.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom){id==='guide-dialog'?closeGuide():$('#credits-dialog').close();}}});
-    window.addEventListener('hashchange',()=>{if(location.hash.startsWith('#place=')){try{openGuide(decodeURIComponent(location.hash.slice(7)),false);}catch{}}else{if(guideId)closeGuide(false);if(location.hash==='#running')navigate('run');else if(location.hash==='#saved')navigate('saved');}});
+    $('#guide-dialog').addEventListener('change',e=>{const el=e.target;if(el.dataset.familiar){el.checked?familiar.add(el.dataset.familiar):familiar.delete(el.dataset.familiar);persist();}if(el.dataset.tried){el.checked?tried.add(el.dataset.tried):tried.delete(el.dataset.tried);persist();}});
+    for(const id of ['guide-dialog','filter-dialog','about-dialog']){
+      const dialog=$(`#${id}`);
+      dialog.addEventListener('cancel',e=>{e.preventDefault();closeOverlay();});
+      dialog.addEventListener('click',e=>{if(e.target!==dialog)return;const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)closeOverlay();});
+    }
+    window.addEventListener('popstate',e=>restoreRoute(e.state));
+    window.addEventListener('pagehide',recordCurrent);
   }
-  async function init() {
-    try {
+  async function init(){
+    try{
       const fetchJson=async path=>{const r=await fetch(path,{cache:'no-cache'});if(!r.ok)throw new Error(`HTTP ${r.status}: ${path}`);return r.json();};
       const [areas,experiences,images]=await Promise.all([fetchJson('data/areas.json'),fetchJson('data/experiences.json'),fetchJson('data/photos.json')]);
       const areaMap=new Map(areas.map(a=>[a.id,a]));photos=images;photoMap=new Map(photos.map(p=>[p.id,p]));
-      places=experiences.map(e=>({...areaMap.get(e.areaId),activity:'walk',...e,...(e.placeOverrides||{})}));
-      const validIds=new Set(places.map(p=>p.id));for(const id of bookmarks)if(!validIds.has(id))bookmarks.delete(id);
-      if(location.hash==='#running')Object.assign(state,{activity:'run',mood:'all',mobileTab:'run'});
-      else if(location.hash==='#saved')Object.assign(state,{view:'saved',mobileTab:'saved'});
-      initEvents();render();
-      if(location.hash.startsWith('#place='))openGuide(decodeURIComponent(location.hash.slice(7)),false);
-      else if(location.hash==='#running')navigate('run');
-      else if(location.hash==='#saved')navigate('saved');
-      // Pure helpers made available for local verification without a second recommendation implementation.
-      window.SZU={get places(){return places},get state(){return {...state}},dayStatus,match,photoInfo};
-    } catch(error) {
-      console.error(error);$('#recommend-grid').innerHTML='<p role="alert">去处资料暂时没有加载成功，请刷新页面再试。</p>';
-    }
+      places=experiences.map(e=>({...areaMap.get(e.areaId),activity:'walk',...e,...(e.placeOverrides||{})}));placeMap=new Map(places.map(p=>[p.id,p]));
+      try{history.scrollRestoration='manual';}catch{}
+      initEvents();
+      if(history.state?.marker===historyKey)restoreRoute(history.state);
+      else {
+        const hash=location.hash;let directId=null;
+        if(hash.startsWith('#place=')){try{directId=decodeURIComponent(hash.slice(7));}catch{}}
+        else if(hash==='#saved')state.view='saved';
+        else if(['#running','#explore'].includes(hash)){state.view='explore';if(hash==='#running')state.explore={...defaults,category:'run'};}
+        history.replaceState(snapshot({scrollY:0}),'',viewUrl(state.view));render();
+        if(directId&&placeMap.has(directId))openGuide(directId);
+      }
+      persist();
+      window.SZU={get places(){return places},get state(){return {view:state.view,explore:{...state.explore},limit:state.limit}},dayStatus,match,photoInfo};
+    }catch(error){console.error(error);$('#recommend-grid').innerHTML='<div class="empty-state" role="alert"><h2>资料暂时没加载好</h2><p>刷新页面，再来找一处好风景。</p></div>';}
   }
   init();
 })();
