@@ -43,6 +43,7 @@
     if (start && start > until) return {code:'future',label:`${String(s.start).slice(5,10).replace('-','/')} 场次`,actionable:false};
     const dow = new Date(`${state.date}T12:00:00+08:00`).getDay();
     if ((s.closedDays || []).includes(dow) || (s.weekendsOnly && ![0,6].includes(dow))) return {code:'closed',label:'所选日期不开放',actionable:false};
+    if ((s.verifyWeekdays || []).includes(dow)) return {code:'calendar',label:'先查当日预约日历',actionable:false};
     if (p.availability === 'verify') return {code:'verify',label:'先核实参与条件',actionable:false};
     if (p.access.kind === 'event' && !start) return {code:'calendar',label:'查看本期排期',actionable:false};
     if (p.access.kind === 'member') return {code:'member',label:'须邀请／特定条件',actionable:false};
