@@ -169,6 +169,7 @@
     $('#active-filters').innerHTML=active.map(([key,label])=>`<button type="button" class="active-filter" data-remove-filter="${key}" aria-label="移除筛选：${esc(label)}">${esc(label)}${icon('close')}</button>`).join('');
     const sunsetNote=f.category==='sunset'?'<span>选开阔的天色，不保证每天有霞。建议日落前30–45分钟到，按当季日落时间安排。</span>':'';
     $('#search-summary').hidden=!f.query.trim()&&!sunsetNote;$('#search-summary').innerHTML=(f.query.trim()?`“<strong>${esc(f.query.trim())}</strong>”的搜索结果`:'')+sunsetNote;
+    $('#sunset-context').hidden=f.category!=='sunset';
     $('#explore-grid').innerHTML=matches.slice(0,state.limit).map((p,i)=>card(p,i,f.date)).join('');
     $('#explore-empty').hidden=matches.length>0;$('#load-more').hidden=matches.length<=state.limit;
     $('#load-more').textContent=`再看看更多 · 还有${Math.max(0,matches.length-state.limit)}处`;
@@ -308,6 +309,7 @@
       if(el.dataset.guide){if(modified)return;e.preventDefault();openGuide(el.dataset.guide);return;}
       if(el.hasAttribute('data-close-overlay')){closeOverlay();return;}
       if(el.hasAttribute('data-start-search')){navigate('explore',{reset:true,focusSearch:true});return;}
+      if(el.hasAttribute('data-sky-open')){navigate('discover');$('#sky-title').focus({preventScroll:true});window.scrollTo({top:$('#sky-card').getBoundingClientRect().top+window.scrollY-90,behavior:'instant'});return;}
       if(el.dataset.preset){navigate('explore',{preset:el.dataset.preset});return;}
       if(el.dataset.category){editExplore({category:el.dataset.category});return;}
       if(el.dataset.removeFilter){const key=el.dataset.removeFilter;editExplore({[key]:key==='lowCommerce'?false:defaults[key]});return;}
@@ -323,6 +325,10 @@
     }
     window.addEventListener('popstate',e=>restoreRoute(e.state));
     window.addEventListener('pagehide',recordCurrent);
+    document.addEventListener('szu:sky-routes',e=>{
+      const category=e.detail?.category==='sea'?'sea':'sunset',date=cleanFilters({date:e.detail?.date}).date;
+      navigate('explore',{preset:category});editExplore({date});
+    });
   }
   async function init(){
     try{
