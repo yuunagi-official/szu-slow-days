@@ -74,7 +74,13 @@
       "entrance": "荔香公园西门（南光路侧）",
       "transport": "从粤海校区按所在校门选择步行或短程公交，导航至荔香公园西门；官方公共交通另列桃园站A口步行约700米。含校门至入口末段，非实时导航。"
     },
-    "photoReference": false
+    "photoReference": false,
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -154,7 +160,13 @@
         "note": "云之园在白石路与科技南路路口西南侧；不是科技公园别名。",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -214,7 +226,13 @@
     "officialName": "松坪山公园",
     "playTitle": "小湖与荔枝林",
     "nameStatus": "正式地点",
-    "photoReference": false
+    "photoReference": false,
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -276,7 +294,13 @@
     "officialName": "四海公园",
     "playTitle": "湖边慢走，顺路逛荔园路",
     "nameStatus": "正式地点",
-    "photoReference": false
+    "photoReference": false,
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -338,7 +362,13 @@
     "activity": "walk",
     "officialName": "中心河公园（后海段）",
     "playTitle": "沿河随走随返",
-    "nameStatus": "地点与路段"
+    "nameStatus": "地点与路段",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -395,7 +425,13 @@
     "activity": "walk",
     "officialName": "南海公园",
     "playTitle": "在南油找一小片绿荫",
-    "nameStatus": "正式地点"
+    "nameStatus": "正式地点",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -470,7 +506,13 @@
         "note": "正式工程名称与正文均使用本草公园，无需人为加南山前缀。",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -498,7 +540,7 @@
       "art",
       "city"
     ],
-    "lead": "先把心情散开，再随手翻一本没有作业要求的书。",
+    "lead": "先在文心公园树下走走，想翻书再进书城。",
     "travel": [
       20,
       40
@@ -532,7 +574,13 @@
     "activity": "walk",
     "officialName": "文心公园、深圳书城南山城",
     "playTitle": "先散步，再翻几页书",
-    "nameStatus": "多个独立地点"
+    "nameStatus": "多个独立地点",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "culture",
@@ -597,7 +645,13 @@
     "activity": "walk",
     "officialName": "南山博物馆",
     "playTitle": "只认真看一个展",
-    "nameStatus": "正式地点"
+    "nameStatus": "正式地点",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -652,6 +706,13 @@
       {
         "title": "深圳官方公园地图与临时公告",
         "url": "https://smartum.sz.gov.cn/upip/m/parkonline/citypark/home"
+      },
+      {
+        "title": "米拍：深圳人才公园落日晚霞",
+        "url": "https://mepai.me/works/w_67ece1bdc9cc4?f=recommend&i=MA%3D%3D",
+        "kind": "中文摄影社区索引",
+        "evidence": "公开检索作品标题作为晚霞环境线索，不转载照片、不据此指定太阳方位。",
+        "checked": "2026-10-23"
       }
     ],
     "photoIds": [
@@ -674,7 +735,20 @@
       }
     ],
     "photoReference": false,
-    "photoNote": "深圳人才公园实景"
+    "photoNote": "深圳人才公园实景",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    },
+    "sunset": {
+      "kind": "afterglow",
+      "spot": "内湖沿岸开放步道",
+      "note": "看晚霞、内湖倒影与楼群轮廓；是城市黄昏，不是海上落日机位。",
+      "leave": "留在环湖主园路，散场或活动人多时避开聚集处。",
+      "checked": "2026-10-23"
+    }
   },
   {
     "type": "culture",
@@ -750,7 +824,13 @@
         "note": "使用城南古巷文化街区品牌，覆盖四古村，不是单一公园。",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "curation": {
+      "commerce": "mixed",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "公共空间与店铺并存，挑开放园路或公共街巷，消费自选。"
+    }
   },
   {
     "type": "nature",
@@ -823,7 +903,13 @@
       }
     ],
     "photoReference": true,
-    "photoNote": "西丽水库实景参考（非新建绿道具体起点）"
+    "photoNote": "西丽水库实景参考（非新建绿道具体起点）",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -895,7 +981,13 @@
         "note": "正式名西丽湖国际科教城步道；公告说2公里示范段开放，其余建设中。",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -960,7 +1052,13 @@
     "playTitle": "不登顶，山林前段就很好",
     "nameStatus": "地点与入口",
     "photoReference": true,
-    "photoNote": "塘朗山实景参考（非深云谷入口）"
+    "photoNote": "塘朗山实景参考（非深云谷入口）",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -988,7 +1086,7 @@
       "lake",
       "city"
     ],
-    "lead": "在起伏花坡与水岸之间，给自己一个很慢的下午。",
+    "lead": "沿桂湾的公共河岸看红树林，走到舒服的位置就停。",
     "travel": [
       35,
       60
@@ -1022,7 +1120,13 @@
     "activity": "walk",
     "officialName": "前海紫荆园、桂湾公园",
     "playTitle": "挑一处园路与水岸慢待",
-    "nameStatus": "多个独立地点"
+    "nameStatus": "多个独立地点",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -1079,7 +1183,13 @@
     "activity": "walk",
     "officialName": "平峦山公园",
     "playTitle": "林荫短返",
-    "nameStatus": "正式地点"
+    "nameStatus": "正式地点",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -1136,7 +1246,13 @@
     "activity": "walk",
     "officialName": "尖岗山公园",
     "playTitle": "休闲廊道与小山景",
-    "nameStatus": "正式地点"
+    "nameStatus": "正式地点",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -1184,6 +1300,13 @@
       {
         "title": "立新湖公园｜深圳城管局",
         "url": "https://cgj.sz.gov.cn/xsmh/gysz/twf/tyyd/content/post_10841273.html"
+      },
+      {
+        "title": "立新湖湖岸游记（2017）",
+        "url": "https://kknews.cc/travel/86z8m6g.html",
+        "kind": "旧中文实访，非现状依据",
+        "evidence": "旧中文实访描述环湖夕照，距今较久，仅作湖面黄昏线索；不采纳餐饮、骑行及设施现状。",
+        "checked": "2026-10-23"
       }
     ],
     "photoIds": [
@@ -1196,7 +1319,20 @@
     "officialName": "立新湖公园",
     "playTitle": "湖岸挑一段慢坐",
     "nameStatus": "正式地点",
-    "photoReference": false
+    "photoReference": false,
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    },
+    "sunset": {
+      "kind": "afterglow",
+      "spot": "立新北路接入的沿湖开放步道",
+      "note": "等湖面天色变暖即可，不为追太阳绕完整圈，也不进临水封闭处。",
+      "leave": "常规6:00–22:00；选入口附近短段，天暗就按来路回返。",
+      "checked": "2026-10-23"
+    }
   },
   {
     "type": "culture",
@@ -1253,7 +1389,13 @@
     "activity": "walk",
     "officialName": "蛇口老街、南水路",
     "playTitle": "看看街坊的日常",
-    "nameStatus": "街道与片区"
+    "nameStatus": "街道与片区",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "culture",
@@ -1325,7 +1467,13 @@
     "activity": "walk",
     "officialName": "赤湾左炮台、文天祥纪念公园",
     "playTitle": "海防遗迹与山脚古树",
-    "nameStatus": "多个独立地点"
+    "nameStatus": "多个独立地点",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "culture",
@@ -1389,7 +1537,13 @@
     "activity": "walk",
     "officialName": "华侨城生态广场及周边",
     "playTitle": "树荫与旧建筑",
-    "nameStatus": "地点与片区"
+    "nameStatus": "地点与片区",
+    "curation": {
+      "commerce": "mixed",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "公共空间与店铺并存，挑开放园路或公共街巷，消费自选。"
+    }
   },
   {
     "type": "culture",
@@ -1468,7 +1622,13 @@
         "note": "2026-09-14官方报道使用深圳工业站·深港文化创艺街名称。",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "curation": {
+      "commerce": "mixed",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "公共空间与店铺并存，挑开放园路或公共街巷，消费自选。"
+    }
   },
   {
     "type": "culture",
@@ -1531,7 +1691,13 @@
     "playTitle": "老园林与街巷生活",
     "nameStatus": "多个独立地点",
     "photoReference": false,
-    "photoNote": "水围夜市小吃摊（2023年历史实景，非当期菜单与价格）"
+    "photoNote": "水围夜市小吃摊（2023年历史实景，非当期菜单与价格）",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "culture",
@@ -1594,7 +1760,13 @@
     "activity": "walk",
     "officialName": "上步绿廊光岛园、园岭街区",
     "playTitle": "从绿廊慢慢走进老社区",
-    "nameStatus": "地点与片区"
+    "nameStatus": "地点与片区",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -1654,7 +1826,13 @@
     "activity": "walk",
     "officialName": "阳台山碧道（陶吓入口）",
     "playTitle": "山脚林荫短返",
-    "nameStatus": "地点与入口"
+    "nameStatus": "地点与入口",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -1727,7 +1905,13 @@
       }
     ],
     "photoReference": false,
-    "photoNote": "梅林水库实景"
+    "photoNote": "梅林水库实景",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -1792,7 +1976,13 @@
     "activity": "walk",
     "officialName": "华侨城湿地公园",
     "playTitle": "安静看一池水",
-    "nameStatus": "正式地点"
+    "nameStatus": "正式地点",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "culture",
@@ -1893,7 +2083,13 @@
         "note": "明确名称为深圳中国钢结构博物馆，地址中心路3331号中建科工大厦西侧。",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -1945,6 +2141,13 @@
       {
         "title": "宝安山海休闲空间｜深圳政府在线",
         "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_10379099.html"
+      },
+      {
+        "title": "石岩湖俯仰之间实访（2026）",
+        "url": "https://tw.trip.com/moments/detail/shenzhen-26-142070490/",
+        "kind": "中文游客记录",
+        "evidence": "公开游记提到俯仰之间观景及晚霞；本条仅选现有湖岸短段，不建议为了日落登高或走完整环。",
+        "checked": "2026-10-23"
       }
     ],
     "photoIds": [],
@@ -1954,7 +2157,20 @@
     "activity": "walk",
     "officialName": "石岩湖湿地公园",
     "playTitle": "草地与湖岸的空白一天",
-    "nameStatus": "正式地点"
+    "nameStatus": "正式地点",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    },
+    "sunset": {
+      "kind": "afterglow",
+      "spot": "陌上花公园附近已开放湖岸",
+      "note": "看开阔湖面的黄昏天色；不把远处山坡观景亭当必到点。",
+      "leave": "本条只选近入口湖岸，天暗前折返，不夜走长环线。",
+      "checked": "2026-10-23"
+    }
   },
   {
     "type": "nature",
@@ -2015,7 +2231,13 @@
     "activity": "walk",
     "officialName": "迳口古村",
     "playTitle": "田边慢生活",
-    "nameStatus": "村落名称"
+    "nameStatus": "村落名称",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -2073,7 +2295,13 @@
     "activity": "walk",
     "officialName": "光明湖碧道",
     "playTitle": "观湖云桥与山水",
-    "nameStatus": "正式步道"
+    "nameStatus": "正式步道",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -2134,7 +2362,13 @@
     "activity": "walk",
     "officialName": "大顶岭绿道",
     "playTitle": "给森林多一点时间",
-    "nameStatus": "正式步道"
+    "nameStatus": "正式步道",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "culture",
@@ -2199,7 +2433,13 @@
     "activity": "walk",
     "officialName": "上围艺术村",
     "playTitle": "溪边与老屋",
-    "nameStatus": "村落名称"
+    "nameStatus": "村落名称",
+    "curation": {
+      "commerce": "mixed",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "公共空间与店铺并存，挑开放园路或公共街巷，消费自选。"
+    }
   },
   {
     "type": "culture",
@@ -2263,7 +2503,13 @@
     "activity": "walk",
     "officialName": "鳌湖艺术村、俄地吓村",
     "playTitle": "老屋与版画记忆",
-    "nameStatus": "多个独立地点"
+    "nameStatus": "多个独立地点",
+    "curation": {
+      "commerce": "mixed",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "公共空间与店铺并存，挑开放园路或公共街巷，消费自选。"
+    }
   },
   {
     "type": "culture",
@@ -2326,7 +2572,13 @@
     "activity": "walk",
     "officialName": "观澜古墟",
     "playTitle": "因河而生的街，走到老码头",
-    "nameStatus": "正式街区"
+    "nameStatus": "正式街区",
+    "curation": {
+      "commerce": "mixed",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "公共空间与店铺并存，挑开放园路或公共街巷，消费自选。"
+    }
   },
   {
     "type": "nature",
@@ -2389,7 +2641,13 @@
     "activity": "walk",
     "officialName": "茜坑老村",
     "playTitle": "老村街巷与附近绿道",
-    "nameStatus": "村落名称"
+    "nameStatus": "村落名称",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -2457,7 +2715,13 @@
         "note": "官方标题罗湖淘金山绿道；路线由翠荫入口至沙湾路入口。",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "nature",
@@ -2534,7 +2798,13 @@
         "note": "官方活动明确经海山路、恩上瀑布到达恩上湿地公园；作为两个地点的路线组合。",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "type": "culture",
@@ -2599,7 +2869,13 @@
     "activity": "walk",
     "officialName": "金龟自然书房、金龟村",
     "playTitle": "自然书房与树下半日",
-    "nameStatus": "地点与村落"
+    "nameStatus": "地点与村落",
+    "curation": {
+      "commerce": "mixed",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "公共空间与店铺并存，挑开放园路或公共街巷，消费自选。"
+    }
   },
   {
     "type": "nature",
@@ -2661,7 +2937,13 @@
     "activity": "walk",
     "officialName": "燕罗湿地公园、茅洲河碧道",
     "playTitle": "挑一段水岸慢一天",
-    "nameStatus": "多个独立地点"
+    "nameStatus": "多个独立地点",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "checked": "2026-10-17",
@@ -2738,7 +3020,13 @@
       }
     ],
     "photoReference": false,
-    "photoNote": "南方科技大学湖畔生活区晚霞（2018年实景）"
+    "photoNote": "南方科技大学湖畔生活区晚霞（2018年实景）",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "checked": "2026-10-17",
@@ -2820,7 +3108,13 @@
         "note": "当前主页校园风光明确西丽校区留仙洞园区；旧分页面仍称留仙洞校区，优先当前主页。",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "checked": "2026-10-17",
@@ -2903,7 +3197,13 @@
       }
     ],
     "photoReference": false,
-    "photoNote": "深圳大学城图书馆外观（2016年实景）"
+    "photoNote": "深圳大学城图书馆外观（2016年实景）",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "checked": "2026-10-17",
@@ -2988,7 +3288,13 @@
       }
     ],
     "photoReference": false,
-    "photoNote": "香港中文大学（深圳）中央大道（2023年实景）"
+    "photoNote": "香港中文大学（深圳）中央大道（2023年实景）",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "checked": "2026-10-17",
@@ -3067,7 +3373,13 @@
         "note": "标题及正文明确中山大学深圳校区，公常路66号。",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "checked": "2026-10-17",
@@ -3142,7 +3454,13 @@
         "note": "确认中文全称，首页有参观预约入口。",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "checked": "2026-10-17",
@@ -3205,7 +3523,13 @@
     "activity": "walk",
     "officialName": "sp@ce天虹超市（西丽益田假日里店）",
     "playTitle": "给今晚挑一份小食",
-    "nameStatus": "现有报道店名"
+    "nameStatus": "现有报道店名",
+    "curation": {
+      "commerce": "high",
+      "discovery": false,
+      "reviewed": "2026-10-23",
+      "note": "商场内超市是主要体验，更适合有明确采购兴趣时主动查找。"
+    }
   },
   {
     "checked": "2026-10-17",
@@ -3266,7 +3590,13 @@
     "activity": "walk",
     "officialName": "福田农产品批发市场",
     "playTitle": "水果、方言与市场烟火",
-    "nameStatus": "设施名称"
+    "nameStatus": "设施名称",
+    "curation": {
+      "commerce": "mixed",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "居民日常街巷或市场，吃饭购物按需选择，不以连吃打卡为目标。"
+    }
   },
   {
     "checked": "2026-10-17",
@@ -3329,7 +3659,13 @@
     "playTitle": "慢逛样板间，顺路看看欧洲城",
     "nameStatus": "商户名称",
     "photoReference": false,
-    "photoNote": "深圳宜家家居样板间（2025年实景，非当期陈列）"
+    "photoNote": "深圳宜家家居样板间（2025年实景，非当期陈列）",
+    "curation": {
+      "commerce": "high",
+      "discovery": false,
+      "reviewed": "2026-10-23",
+      "note": "主要体验依赖家居卖场与餐饮消费，本轮不作放空首选。"
+    }
   },
   {
     "checked": "2026-10-17",
@@ -3392,7 +3728,13 @@
     "activity": "walk",
     "officialName": "AEON STYLE永旺东湖店",
     "playTitle": "逛一会儿日式食品",
-    "nameStatus": "商户名称"
+    "nameStatus": "商户名称",
+    "curation": {
+      "commerce": "high",
+      "discovery": false,
+      "reviewed": "2026-10-23",
+      "note": "主要体验是商场购物，且往返较远，不作为自然放松推荐。"
+    }
   },
   {
     "checked": "2026-10-17",
@@ -3488,7 +3830,13 @@
     "activity": "walk",
     "officialName": "蛇口市场",
     "playTitle": "从海产逛到一份熟食",
-    "nameStatus": "设施名称"
+    "nameStatus": "设施名称",
+    "curation": {
+      "commerce": "mixed",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "居民日常街巷或市场，吃饭购物按需选择，不以连吃打卡为目标。"
+    }
   },
   {
     "checked": "2026-10-17",
@@ -3549,7 +3897,13 @@
     "activity": "walk",
     "officialName": "凤凰兴业一路（福永贵州街一带）",
     "playTitle": "酸汤、羊肉粉与洋芋",
-    "nameStatus": "区域称呼"
+    "nameStatus": "区域称呼",
+    "curation": {
+      "commerce": "mixed",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "居民日常街巷或市场，吃饭购物按需选择，不以连吃打卡为目标。"
+    }
   },
   {
     "checked": "2026-10-17",
@@ -3614,7 +3968,13 @@
     "activity": "walk",
     "officialName": "上梅林新村",
     "playTitle": "豆花饭或一碗粿汁",
-    "nameStatus": "村落名称"
+    "nameStatus": "村落名称",
+    "curation": {
+      "commerce": "mixed",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "居民日常街巷或市场，吃饭购物按需选择，不以连吃打卡为目标。"
+    }
   },
   {
     "checked": "2026-10-17",
@@ -3675,7 +4035,13 @@
     "activity": "walk",
     "officialName": "明珠市场（沙井）及辛居路",
     "playTitle": "早餐与街边糖水",
-    "nameStatus": "地点与街道"
+    "nameStatus": "地点与街道",
+    "curation": {
+      "commerce": "mixed",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "居民日常街巷或市场，吃饭购物按需选择，不以连吃打卡为目标。"
+    }
   },
   {
     "checked": "2026-10-17",
@@ -3747,7 +4113,13 @@
         "note": "该项为周四开放聚会系列，地址香港科技大学产学研大楼314-E；不是高校校园参观。",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "checked": "2026-10-17",
@@ -3828,7 +4200,13 @@
     "activity": "walk",
     "officialName": "旧天堂书店",
     "playTitle": "青年爵士夜，留意具体场次",
-    "nameStatus": "商户及活动地点"
+    "nameStatus": "商户及活动地点",
+    "curation": {
+      "commerce": "mixed",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "公共空间与店铺并存，挑开放园路或公共街巷，消费自选。"
+    }
   },
   {
     "checked": "2026-10-17",
@@ -3893,7 +4271,13 @@
     "playTitle": "在旧书堆里慢慢找",
     "nameStatus": "商户名称",
     "photoReference": false,
-    "photoNote": "九斤书店门面（2025年11月实景）"
+    "photoNote": "九斤书店门面（2025年11月实景）",
+    "curation": {
+      "commerce": "mixed",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "公共空间与店铺并存，挑开放园路或公共街巷，消费自选。"
+    }
   },
   {
     "checked": "2026-10-17",
@@ -3963,7 +4347,13 @@
         "note": "2026-10-24音乐下午茶具体场次，地点深圳音乐厅二楼金树大厅；不是随时可参加的常设体验。",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "checked": "2026-10-17",
@@ -4026,7 +4416,13 @@
     "activity": "walk",
     "officialName": "深圳博物馆",
     "playTitle": "榫卯手作，馆区与集合点待报名确认",
-    "nameStatus": "场馆已知，馆区待确认"
+    "nameStatus": "场馆已知，馆区待确认",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "checked": "2026-10-17",
@@ -4125,7 +4521,13 @@
         "note": "B998是自动驾驶公交线路，和B996/B997/B999分别列示；历史资料不保证当日运营状态。",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "jog-lixiang",
@@ -4258,7 +4660,13 @@
       "recommendFirst": 1
     },
     "mapKeyword": "荔香公园西门",
-    "photoReference": false
+    "photoReference": false,
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "jog-dashahe-lower",
@@ -4387,7 +4795,13 @@
     },
     "photoReference": true,
     "photoNote": "大沙河沿岸实景参考（非本短段具体起点）",
-    "mapKeyword": "大沙河生态长廊 下游段"
+    "mapKeyword": "大沙河生态长廊 下游段",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "jog-zhongxinhe",
@@ -4517,7 +4931,13 @@
       "priority": 16,
       "recommendFirst": 0
     },
-    "mapKeyword": "中心河公园 嬉水园"
+    "mapKeyword": "中心河公园 嬉水园",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "jog-sihai",
@@ -4649,7 +5069,13 @@
       "recommendFirst": 0
     },
     "mapKeyword": "四海公园 公园路",
-    "photoReference": false
+    "photoReference": false,
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "jog-qianhai-sports",
@@ -4780,7 +5206,13 @@
       "priority": 12,
       "recommendFirst": 2
     },
-    "mapKeyword": "前海运动公园"
+    "mapKeyword": "前海运动公园",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "jog-xili-lake",
@@ -4909,7 +5341,13 @@
     },
     "photoReference": true,
     "photoNote": "西丽水库实景参考（非白芒短段起点）",
-    "mapKeyword": "白芒拓印驿站"
+    "mapKeyword": "白芒拓印驿站",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "jog-lixin-lake",
@@ -5043,7 +5481,13 @@
       "recommendFirst": 0
     },
     "mapKeyword": "立新湖 雨林迎宾",
-    "photoReference": false
+    "photoReference": false,
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "jog-shiyan-lake",
@@ -5186,7 +5630,13 @@
       "priority": 6,
       "recommendFirst": 0
     },
-    "mapKeyword": "石岩湿地公园东门公交站"
+    "mapKeyword": "石岩湿地公园东门公交站",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "jog-xinzhou-river",
@@ -5316,7 +5766,13 @@
     },
     "photoReference": true,
     "photoNote": "新洲河沿岸实景参考（非所选短线的具体起点）",
-    "mapKeyword": "新洲河碧道 福强路"
+    "mapKeyword": "新洲河碧道 福强路",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "jog-xiangmi-park",
@@ -5452,7 +5908,13 @@
       "recommendFirst": 0
     },
     "mapKeyword": "香蜜公园 农园路",
-    "photoReference": false
+    "photoReference": false,
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "zhongshan-old-trees",
@@ -5519,7 +5981,13 @@
       "zhongshan-lawn-2025"
     ],
     "photoReference": false,
-    "mapKeyword": "深圳中山公园正门"
+    "mapKeyword": "深圳中山公园正门",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "nantou-backstreets",
@@ -5586,7 +6054,13 @@
       "nantou"
     ],
     "photoReference": false,
-    "mapKeyword": "南头古城南城门"
+    "mapKeyword": "南头古城南城门",
+    "curation": {
+      "commerce": "high",
+      "discovery": false,
+      "reviewed": "2026-10-23",
+      "note": "历史街区与密集餐饮零售并存，本轮避开商业时先隐藏；仍保留收藏和主动查找。"
+    }
   },
   {
     "id": "qianhai-flower-lake",
@@ -5603,7 +6077,7 @@
       "green",
       "lake"
     ],
-    "lead": "逛一小段花店，去芦趣湖边透口气，不用等花海。",
+    "lead": "先确认芦趣湖园路开放，再去湖边走一段，花店随意。",
     "travel": [
       25,
       45
@@ -5632,10 +6106,11 @@
       "note": "仅选日间已开放园路；台风、暴雨、养护时以现场公告为准。"
     },
     "checked": "2026-10-18",
-    "availability": "open",
+    "availability": "verify",
     "tips": [
       "这是前海公园，不是前海石公园。",
-      "迎春郁金香、花市有明确季节，不能当全年景观。"
+      "迎春郁金香、花市有明确季节，不能当全年景观。",
+      "本次官方公园地图检索摘要出现“前海公园（不含荷兰花卉小镇）暂停开放”，动态页未返回完整公告，暂标待核实，不推荐直接奔芦趣湖。"
     ],
     "sources": [
       {
@@ -5649,12 +6124,25 @@
         "url": "https://www.stnn.cc/detail/6a2a0f0bbfdc942ba3da092c.html",
         "kind": "中文媒体 / 小红书间接线索",
         "evidence": "只作花店与环境线索；原小红书笔记未读取，春节花海已过季。"
+      },
+      {
+        "title": "深圳官方公园地图：临时状态待核实",
+        "url": "https://smartum.sz.gov.cn/upip/m/parkonline/citypark/home",
+        "kind": "官方动态页索引，状态待核实",
+        "evidence": "本轮公开检索摘要提示公园部分暂停，正文动态加载，尚不能确认边界和恢复日期；从发现推荐移出。",
+        "checked": "2026-10-23"
       }
     ],
     "sourceEvidence": "小红书线索来自媒体署名引用，未读取原帖；常态分区按城管资料核对。花期、商户营业与可坐情况需出发时再看。",
     "photoIds": [],
     "photoReference": false,
-    "mapKeyword": "荷兰花卉小镇正门"
+    "mapKeyword": "荷兰花卉小镇正门",
+    "curation": {
+      "commerce": "mixed",
+      "discovery": false,
+      "reviewed": "2026-10-23",
+      "note": "花市商业与芦趣湖园路并存；公园部分开放状态待核实，先查官方动态。"
+    }
   },
   {
     "id": "dachong-riverside-pause",
@@ -5722,7 +6210,13 @@
     "sourceEvidence": "地点按南山官方资料核对；未取得足够独立近期实走记录。只推荐已开放河岸，改造范围与现场座位不作保证。",
     "photoIds": [],
     "photoReference": false,
-    "mapKeyword": "大冲公园（大沙河生态长廊）"
+    "mapKeyword": "大冲公园（大沙河生态长廊）",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "dashahe-park-lawn",
@@ -5786,7 +6280,13 @@
     "sourceEvidence": "官方地点资料为主体，B站仅取得合集索引标题，独立实走交叉证据仍有限。未用视频时长推算推荐步行长度。",
     "photoIds": [],
     "photoReference": false,
-    "mapKeyword": "大沙河公园南门（北环大道8228号）"
+    "mapKeyword": "大沙河公园南门（北环大道8228号）",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "lilin-low-forest",
@@ -5856,7 +6356,13 @@
     "sourceEvidence": "环境线索与官方地点信息分开核对，未亲自实走。短段、停留和通勤为编辑选择；旧记录不代表当前店铺、座位或人流。",
     "photoIds": [],
     "photoReference": false,
-    "mapKeyword": "荔林公园 东滨路"
+    "mapKeyword": "荔林公园 东滨路",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "moon-bay-litchi",
@@ -5923,7 +6429,13 @@
     "sourceEvidence": "环境线索与官方地点信息分开核对，未亲自实走。短段、停留和通勤为编辑选择；旧记录不代表当前店铺、座位或人流。",
     "photoIds": [],
     "photoReference": false,
-    "mapKeyword": "月亮湾公园（前海路0333号）"
+    "mapKeyword": "月亮湾公园（前海路0333号）",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "yanhanshan-shaded-return",
@@ -5987,7 +6499,13 @@
     "sourceEvidence": "环境线索与官方地点信息分开核对，未亲自实走。短段、停留和通勤为编辑选择；旧记录不代表当前店铺、座位或人流。",
     "photoIds": [],
     "photoReference": false,
-    "mapKeyword": "燕晗山郊野公园（侨城东街入口）"
+    "mapKeyword": "燕晗山郊野公园（侨城东街入口）",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "xili-ecology-lower",
@@ -6051,7 +6569,13 @@
     "sourceEvidence": "环境线索与官方地点信息分开核对，未亲自实走。短段、停留和通勤为编辑选择；旧记录不代表当前店铺、座位或人流。",
     "photoIds": [],
     "photoReference": false,
-    "mapKeyword": "西丽生态公园（同东路与打石一路入口）"
+    "mapKeyword": "西丽生态公园（同东路与打石一路入口）",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "shigushan-small-hill",
@@ -6115,7 +6639,13 @@
     "sourceEvidence": "环境线索与官方地点信息分开核对，未亲自实走。短段、停留和通勤为编辑选择；旧记录不代表当前店铺、座位或人流。",
     "photoIds": [],
     "photoReference": false,
-    "mapKeyword": "石鼓山公园（石鼓路2012号）"
+    "mapKeyword": "石鼓山公园（石鼓路2012号）",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "bay-sunrise-short-stay",
@@ -6177,6 +6707,13 @@
         "url": "https://www.bilibili.com/video/BV1tYnTziEth/",
         "kind": "B站公开索引",
         "evidence": "仅核公开检索标题与简介，未观看完整视频。用来比较不同停留点；本页推荐短段，未继承视频全程走法。"
+      },
+      {
+        "title": "深圳发布：用日升告白日落",
+        "url": "https://www.thepaper.cn/newsDetail_forward_30058396",
+        "kind": "政务号原文",
+        "evidence": "政务号正文明确日出剧场可赏日落余晖，核对深圳湾公园站D2/C；这里只推荐晚霞，不承诺太阳落入海面。",
+        "checked": "2026-10-23"
       }
     ],
     "sourceEvidence": "环境线索与官方地点信息分开核对，未亲自实走。短段、停留和通勤为编辑选择；旧记录不代表当前店铺、座位或人流。",
@@ -6184,7 +6721,20 @@
       "bay-theatre"
     ],
     "photoReference": false,
-    "mapKeyword": "深圳湾公园日出剧场"
+    "mapKeyword": "深圳湾公园日出剧场",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    },
+    "sunset": {
+      "kind": "afterglow",
+      "spot": "日出剧场草坪与海岸步道",
+      "note": "这里选开阔天色和海面余晖，不保证看到太阳落入海面。",
+      "leave": "留在有照明的主步道，回深圳湾公园站；遇管制改走现场出口。",
+      "checked": "2026-10-23"
+    }
   },
   {
     "id": "bay-heron-short-bank",
@@ -6257,7 +6807,13 @@
     "sourceEvidence": "环境线索与官方地点信息分开核对，未亲自实走。短段、停留和通勤为编辑选择；旧记录不代表当前店铺、座位或人流。",
     "photoIds": [],
     "photoReference": false,
-    "mapKeyword": "深圳湾公园北湾鹭港"
+    "mapKeyword": "深圳湾公园北湾鹭港",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "spring-cocoon-outside",
@@ -6326,7 +6882,13 @@
       "spring-cocoon-square-2024"
     ],
     "photoReference": false,
-    "mapKeyword": "深圳湾体育中心（滨海大道3001号）"
+    "mapKeyword": "深圳湾体育中心（滨海大道3001号）",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "dbay-outdoor-stones",
@@ -6393,7 +6955,13 @@
       "dbay-night-2025"
     ],
     "photoReference": false,
-    "mapKeyword": "深圳湾文化广场（科苑南路2516号）"
+    "mapKeyword": "深圳湾文化广场（科苑南路2516号）",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "hexiangning-one-gallery",
@@ -6455,7 +7023,13 @@
       "he-xiangning"
     ],
     "photoReference": false,
-    "mapKeyword": "何香凝美术馆（深南大道9013号）"
+    "mapKeyword": "何香凝美术馆（深南大道9013号）",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "nanshan-library-browse",
@@ -6518,7 +7092,13 @@
       "nslib-exterior-2024"
     ],
     "photoReference": false,
-    "mapKeyword": "南山区图书馆总馆（常兴路176号）"
+    "mapKeyword": "南山区图书馆总馆（常兴路176号）",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "nanguang-simple-supper",
@@ -6576,7 +7156,13 @@
     "sourceEvidence": "按中文吃货实访筛选街段；店铺与价格仍会变化，未逐店确认现时营业。推荐按现场菜单选一家，不强制任何网红店。",
     "photoIds": [],
     "photoReference": false,
-    "mapKeyword": "南光路75号"
+    "mapKeyword": "南光路75号",
+    "curation": {
+      "commerce": "mixed",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "居民日常街巷或市场，吃饭购物按需选择，不以连吃打卡为目标。"
+    }
   },
   {
     "id": "ole-mixc-small-basket",
@@ -6640,7 +7226,13 @@
     "sourceEvidence": "已核名称与门址，缺独立近期逛店实访；商品、价签与营业时间出发前再看。万象天地原诚品已关闭，本条不推荐它。",
     "photoIds": [],
     "photoReference": false,
-    "mapKeyword": "Olé精品超市（深圳万象天地店）"
+    "mapKeyword": "Olé精品超市（深圳万象天地店）",
+    "curation": {
+      "commerce": "high",
+      "discovery": false,
+      "reviewed": "2026-10-23",
+      "note": "商场内精品超市，消费导向较强。"
+    }
   },
   {
     "id": "oldheaven-books-records",
@@ -6729,6 +7321,12 @@
         "terrain": "街巷与室内台阶，注意园区车辆。"
       },
       "nearby": []
+    },
+    "curation": {
+      "commerce": "mixed",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "公共空间与店铺并存，挑开放园路或公共街巷，消费自选。"
     }
   },
   {
@@ -6746,7 +7344,7 @@
       "sea",
       "art"
     ],
-    "lead": "先在建筑外吹海风，想看展再决定，不必整天待馆里。",
+    "lead": "沿公共滨海园路吹风，展览和商业街都可以不去。",
     "travel": [
       40,
       60
@@ -6797,7 +7395,13 @@
       "swcac-building-2024"
     ],
     "photoReference": false,
-    "mapKeyword": "海上世界文化艺术中心（望海路1187号）"
+    "mapKeyword": "海上世界文化艺术中心（望海路1187号）",
+    "curation": {
+      "commerce": "mixed",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "只选公共滨海园路；展览、餐饮和购物不是必需项。"
+    }
   },
   {
     "id": "super-bay-new-green",
@@ -6858,7 +7462,13 @@
     "sourceEvidence": "2026新开放官方原始消息，尚缺独立近期实走交叉资料。入口和通行范围可能因施工调整；按现场已开放范围使用。",
     "photoIds": [],
     "photoReference": false,
-    "mapKeyword": "招银环球金融中心"
+    "mapKeyword": "招银环球金融中心",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "pingyuan-reading-hour",
@@ -6925,7 +7535,13 @@
     "sourceEvidence": "采用图书馆现行介绍与2026官方概览；未读到可独立核验的本轮小红书原帖。实际名额以预约小程序为准。",
     "photoIds": [],
     "photoReference": false,
-    "mapKeyword": "南山书房·平原轩（百度国际大厦西塔一楼）"
+    "mapKeyword": "南山书房·平原轩（百度国际大厦西塔一楼）",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   },
   {
     "id": "xili-366-small-meal",
@@ -6989,7 +7605,13 @@
     "sourceEvidence": "环境线索与官方地点信息分开核对，未亲自实走。短段、停留和通勤为编辑选择；旧记录不代表当前店铺、座位或人流。",
     "photoIds": [],
     "photoReference": false,
-    "mapKeyword": "西丽366大街"
+    "mapKeyword": "西丽366大街",
+    "curation": {
+      "commerce": "mixed",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "居民日常街巷或市场，吃饭购物按需选择，不以连吃打卡为目标。"
+    }
   },
   {
     "id": "xuefu-street-after-class",
@@ -7062,7 +7684,13 @@
     "sourceEvidence": "B站旧街头记录、2026公开餐饮文案与官方地理工程资料交叉；未逐店实地确认。短段为编辑选择，不承诺持续安静或特定摊位营业。",
     "photoIds": [],
     "photoReference": false,
-    "mapKeyword": "学府路 南海大道"
+    "mapKeyword": "学府路 南海大道",
+    "curation": {
+      "commerce": "mixed",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "居民日常街巷或市场，吃饭购物按需选择，不以连吃打卡为目标。"
+    }
   },
   {
     "id": "dafen-gallery-lanes",
@@ -7079,7 +7707,7 @@
       "art",
       "food"
     ],
-    "lead": "挑两条画廊巷子看画，不赶打卡；通勤较远，要留足半天。",
+    "lead": "选两条画廊巷子看画，售画店不少，不必消费。",
     "travel": [
       75,
       105
@@ -7111,7 +7739,8 @@
     "availability": "open",
     "tips": [
       "拍画、拍画师先询问；商业工作室不是随意进入的公共展厅。",
-      "不采用旧攻略“¥30起画画”作现价，不默认含材料、画框或指导。"
+      "不采用旧攻略“¥30起画画”作现价，不默认含材料、画框或指导。",
+      "这里是仍在经营的艺术街区，不是纯自然放空的地方；不喜欢售画和培训店氛围时换公园。"
     ],
     "sources": [
       {
@@ -7150,6 +7779,442 @@
       "dafen-entry-2026"
     ],
     "photoReference": false,
-    "mapKeyword": "大芬油画村"
+    "mapKeyword": "大芬油画村",
+    "curation": {
+      "commerce": "mixed",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "画廊售画和培训店较多；只看巷子与公开展陈，消费完全自选。"
+    }
+  },
+  {
+    "id": "qianhai-stone-dusk",
+    "areaId": "qianhai-stone-dusk",
+    "name": "前海石公园",
+    "officialName": "前海石公园",
+    "playTitle": "沿海边走一小段，等天色慢慢暖起来。",
+    "nameStatus": "正式地点",
+    "nameChecked": "2026-10-23",
+    "activity": "walk",
+    "type": "nature",
+    "band": "half",
+    "moods": [
+      "sea",
+      "green"
+    ],
+    "lead": "沿海边走一小段，等天色慢慢暖起来。",
+    "travel": [
+      35,
+      60
+    ],
+    "stay": [
+      60,
+      100
+    ],
+    "cost": [
+      6,
+      14
+    ],
+    "costPending": false,
+    "costNote": "人均往返公共交通估算，公共园路免票；可选餐饮、购物和付费场馆另计。",
+    "access": {
+      "kind": "open",
+      "text": "官方常规开放6:00–23:00。步行游园与停车预约分开；只走已开放公共园路。",
+      "url": "https://cgj.sz.gov.cn/xsmh/gysz/twf/bhxx/content/post_10841315.html"
+    },
+    "schedule": {
+      "closedDays": [],
+      "weekendsOnly": false,
+      "start": null,
+      "end": null,
+      "deadline": null,
+      "note": "只走现场开放园路，临时养护与天气管制以当天公告为准。"
+    },
+    "checked": "2026-10-23",
+    "availability": "open",
+    "tips": [
+      "不把欢乐港湾商业街作为必经点；看够了直接原路返程。",
+      "只在岸上观景，不下滩、不采纳视频中的钓鱼玩法。"
+    ],
+    "sources": [
+      {
+        "title": "深圳城管：前海石公园",
+        "url": "https://cgj.sz.gov.cn/xsmh/gysz/twf/bhxx/content/post_10841315.html",
+        "kind": "官方 / 运营方",
+        "evidence": "核对前湾二路、6:00–23:00及滨海草坪；不是荷兰花卉小镇，也不把规划中的大铲湾段算作已开放。",
+        "checked": "2026-10-23"
+      },
+      {
+        "title": "深圳文旅：前海石公园追落日",
+        "url": "https://wtl.sz.gov.cn/lyfw/lyxw/content/post_12301141.html",
+        "kind": "官方 / 运营方",
+        "evidence": "报道明确记录滨海观景平台和亲水步道的落日、人群；不据此承诺安静或每天都有晚霞。",
+        "checked": "2026-10-23"
+      },
+      {
+        "title": "B站：前海石公园实访（2023）",
+        "url": "https://www.bilibili.com/video/BV1AP411k7To/",
+        "kind": "B站公开索引",
+        "evidence": "仅核公开检索标题、日期与简介，完整页返回412，未观看视频；作为落日环境线索，不采纳钓鱼、入口及现行规则。",
+        "checked": "2026-10-23"
+      }
+    ],
+    "sourceEvidence": "中文本地内容提供体验灵感，官方资料核对地点与开放条件；未亲自实走。交通、停留及具体短段为编辑选择，不是实时路况。",
+    "photoIds": [
+      "qianhai-stone-blue-2024"
+    ],
+    "photoReference": false,
+    "mapKeyword": "前海石公园（前湾二路入口）",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    },
+    "sunset": {
+      "kind": "sunset",
+      "spot": "滨海观景平台开放处",
+      "note": "看前海湾夕照；太阳位置随季节变化，热门落日时段人多。",
+      "leave": "看够后沿原路回前湾二路入口，不沿未开放岸段找机位。",
+      "checked": "2026-10-23"
+    },
+    "photoNote": "前海石公园滨海长廊夜景（2024年，非当日晚霞）"
+  },
+  {
+    "id": "xiwan-mangrove-dusk",
+    "areaId": "xiwan-mangrove-dusk",
+    "name": "西湾红树林湿地公园",
+    "officialName": "西湾红树林湿地公园",
+    "playTitle": "带一瓶水，到海堤边等一场不必消费的黄昏。",
+    "nameStatus": "正式地点",
+    "nameChecked": "2026-10-23",
+    "activity": "walk",
+    "type": "nature",
+    "band": "half",
+    "moods": [
+      "sea",
+      "green"
+    ],
+    "lead": "带一瓶水，到海堤边等一场不必消费的黄昏。",
+    "travel": [
+      60,
+      95
+    ],
+    "stay": [
+      75,
+      120
+    ],
+    "cost": [
+      10,
+      22
+    ],
+    "costPending": false,
+    "costNote": "人均往返公共交通估算，公共园路免票；可选餐饮、购物和付费场馆另计。",
+    "access": {
+      "kind": "open",
+      "text": "官方常规开放6:00–23:00。只选已开放步道和观景平台；受台风、风浪及养护影响时以现场为准。",
+      "url": "https://cgj.sz.gov.cn/xsmh/gysz/twf/bhxx/content/post_10841319.html"
+    },
+    "schedule": {
+      "closedDays": [],
+      "weekendsOnly": false,
+      "start": null,
+      "end": null,
+      "deadline": null,
+      "note": "只走现场开放园路，临时养护与天气管制以当天公告为准。"
+    },
+    "checked": "2026-10-23",
+    "availability": "open",
+    "tips": [
+      "它适合看天，不是无人的秘境，也不是安静听海的保证。",
+      "不要进红树林、翻护栏或下滩，日落后从来路返回接驳点。"
+    ],
+    "sources": [
+      {
+        "title": "深圳城管：西湾红树林湿地公园",
+        "url": "https://cgj.sz.gov.cn/xsmh/gysz/twf/bhxx/content/post_10841319.html",
+        "kind": "官方 / 运营方",
+        "evidence": "核对正式名称、金湾大道与西海交会处、6:00–23:00、镜湖与观景栈道；未把旧设施清单视为全部现行可用。",
+        "checked": "2026-10-23"
+      },
+      {
+        "title": "抖音：西湾红树林晚霞记录（2026-08-29）",
+        "url": "https://www.douyin.com/video/7679409388666962534",
+        "kind": "抖音公开文字",
+        "evidence": "读取公开标题、发布时间及评论文字，未观看完整视频；不把一次晚霞当作每日天气保证。",
+        "checked": "2026-10-23"
+      },
+      {
+        "title": "B站：西湾红树林公园日落实拍（2022）",
+        "url": "https://www.bilibili.com/video/BV1CY4y1H7Pd/",
+        "kind": "B站公开索引",
+        "evidence": "公开索引的标题与简介支持散步看日落的环境线索；未观看完整视频，旧记录不证明现时人流与开放状态。",
+        "checked": "2026-10-23"
+      },
+      {
+        "title": "深圳新闻网IN视频：西湾红树林夕阳与晚霞",
+        "url": "https://www.sznews.com/news/content/2021-05/26/content_24246135.htm",
+        "kind": "中文现场报道",
+        "evidence": "读取报道文字确认夕阳、海面及晚霞的取景环境，未声称观看视频。",
+        "checked": "2026-10-23"
+      }
+    ],
+    "sourceEvidence": "中文本地内容提供体验灵感，官方资料核对地点与开放条件；未亲自实走。交通、停留及具体短段为编辑选择，不是实时路况。",
+    "photoIds": [
+      "xiwan-shore-2019"
+    ],
+    "photoReference": false,
+    "mapKeyword": "西湾红树林湿地公园（红树林主广场）",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    },
+    "sunset": {
+      "kind": "sunset",
+      "spot": "主广场外侧滨海步道",
+      "note": "看海堤、海面与落日余晖；飞机、高速噪声和人流会影响安静感。",
+      "leave": "日落后按来路回公交接驳点；不下滩、不走无灯岸段。",
+      "checked": "2026-10-23"
+    },
+    "photoNote": "西湾红树林湿地公园海堤与栈道（2019年历史实景）"
+  },
+  {
+    "id": "garden-expo-courtyards",
+    "areaId": "garden-expo-courtyards",
+    "name": "深圳国际园林花卉博览园（园博园）",
+    "officialName": "深圳国际园林花卉博览园（园博园）",
+    "playTitle": "挑两座小园子，在廊下和树影里慢慢待。",
+    "nameStatus": "正式地点",
+    "nameChecked": "2026-10-23",
+    "activity": "walk",
+    "type": "nature",
+    "band": "half",
+    "moods": [
+      "green"
+    ],
+    "lead": "挑两座小园子，在廊下和树影里慢慢待。",
+    "travel": [
+      30,
+      50
+    ],
+    "stay": [
+      75,
+      150
+    ],
+    "cost": [
+      6,
+      14
+    ],
+    "costPending": false,
+    "costNote": "人均往返公共交通估算，公共园路免票；可选餐饮、购物和付费场馆另计。",
+    "access": {
+      "kind": "open",
+      "text": "官方常规开放6:00–23:00，市政公园公共区域免票。展园、塔楼及活动可能另有开放条件，不含在本条承诺内。",
+      "url": "https://www.sz.gov.cn/szzt2010/gysz/csgy/content/mpost_10788307.html"
+    },
+    "schedule": {
+      "closedDays": [],
+      "weekendsOnly": false,
+      "start": null,
+      "end": null,
+      "deadline": null,
+      "note": "只走现场开放园路，临时养护与天气管制以当天公告为准。"
+    },
+    "checked": "2026-10-23",
+    "availability": "open",
+    "tips": [
+      "花期随季节变化，不把春季三角梅当全年景观。",
+      "本条选白天的园林与树荫，不以闭园时间推定所有小路都有夜间照明。"
+    ],
+    "sources": [
+      {
+        "title": "深圳政府在线：深圳国际园林花卉博览园",
+        "url": "https://www.sz.gov.cn/szzt2010/gysz/csgy/content/mpost_10788307.html",
+        "kind": "官方 / 运营方",
+        "evidence": "核对正式名称、6:00–23:00、侨城东A口步行约7分钟、水墨江南园与东坡园；不以季节性三角梅作全年卖点。",
+        "checked": "2026-10-23"
+      }
+    ],
+    "sourceEvidence": "中文本地内容提供体验灵感，官方资料核对地点与开放条件；未亲自实走。交通、停留及具体短段为编辑选择，不是实时路况。",
+    "photoIds": [
+      "garden-expo-water-2016"
+    ],
+    "photoReference": false,
+    "mapKeyword": "深圳国际园林花卉博览园（南门）",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    },
+    "photoNote": "深圳园博园鸣翠湖一带绿荫与水景（2016年历史实景）"
+  },
+  {
+    "id": "qiaochengbei-forest",
+    "areaId": "qiaochengbei-forest",
+    "name": "侨城北公园",
+    "officialName": "侨城北公园",
+    "playTitle": "在保留下来的树林间走走，看树冠和一点城市。",
+    "nameStatus": "正式地点",
+    "nameChecked": "2026-10-23",
+    "activity": "walk",
+    "type": "nature",
+    "band": "half",
+    "moods": [
+      "green"
+    ],
+    "lead": "在保留下来的树林间走走，看树冠和一点城市。",
+    "travel": [
+      35,
+      55
+    ],
+    "stay": [
+      45,
+      90
+    ],
+    "cost": [
+      6,
+      14
+    ],
+    "costPending": false,
+    "costNote": "人均往返公共交通估算，公共园路免票；可选餐饮、购物和付费场馆另计。",
+    "access": {
+      "kind": "open",
+      "text": "已建成开放的公共公园，选择日间现场开放园路。文体中心室内场馆和球场预约不包含在散步权限内；临时开放安排查官方公园地图。",
+      "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/mpost_11107917.html"
+    },
+    "schedule": {
+      "closedDays": [],
+      "weekendsOnly": false,
+      "start": null,
+      "end": null,
+      "deadline": null,
+      "note": "只走现场开放园路，临时养护与天气管制以当天公告为准。"
+    },
+    "checked": "2026-10-23",
+    "availability": "open",
+    "tips": [
+      "这里是小山地公园，不能当全程平坦的无障碍路线。",
+      "不把栈桥当晚霞点，避免摸黑走林中台阶。"
+    ],
+    "sources": [
+      {
+        "title": "深圳政府在线：侨城北公园建成开放",
+        "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/mpost_11107917.html",
+        "kind": "官方 / 运营方",
+        "evidence": "实地报道确认已建成、原生树林、雨水花园与云端栈桥；与燕晗山郊野公园及需预约的文体中心分开。",
+        "checked": "2026-10-23"
+      },
+      {
+        "title": "一树建筑工作室：侨城北公园游客中心",
+        "url": "https://www.archiposition.com/items/20240829092432",
+        "kind": "设计方资料",
+        "evidence": "设计方授权发布资料确认两座服务建筑保留原生树木、项目已建成；图片不擅自转载。",
+        "checked": "2026-10-23"
+      },
+      {
+        "title": "深圳官方公园地图与临时公告",
+        "url": "https://smartum.sz.gov.cn/upip/m/parkonline/citypark/home",
+        "kind": "官方 / 运营方",
+        "evidence": "出发前查看当日公园与步道开放状态。",
+        "checked": "2026-10-23"
+      }
+    ],
+    "sourceEvidence": "中文本地内容提供体验灵感，官方资料核对地点与开放条件；未亲自实走。交通、停留及具体短段为编辑选择，不是实时路况。",
+    "photoIds": [],
+    "photoReference": false,
+    "mapKeyword": "侨城北公园（侨香路228号）",
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
+  },
+  {
+    "id": "dashahe-lower-pause",
+    "areaId": "dashahe-lower",
+    "name": "南山大沙河生态长廊绿道（下游段）",
+    "officialName": "南山大沙河生态长廊绿道（下游段）",
+    "playTitle": "从高新园接入河岸，走累就折返，不用一路到海边。",
+    "nameStatus": "正式地点",
+    "nameChecked": "2026-10-23",
+    "activity": "walk",
+    "type": "nature",
+    "band": "daily",
+    "moods": [
+      "green",
+      "water"
+    ],
+    "lead": "从高新园接入河岸，走累就折返，不用一路到海边。",
+    "travel": [
+      20,
+      40
+    ],
+    "stay": [
+      35,
+      75
+    ],
+    "cost": [
+      2,
+      8
+    ],
+    "costPending": false,
+    "costNote": "人均往返公共交通估算，公共园路免票；可选餐饮、购物和付费场馆另计。",
+    "access": {
+      "kind": "open",
+      "text": "公共开放人行步道，遵守跑行和骑行分区；围挡、养护与临时公告优先。",
+      "url": "https://cgj.sz.gov.cn/xsmh/szlh/jpld/content/post_10576002.html"
+    },
+    "schedule": {
+      "closedDays": [],
+      "weekendsOnly": false,
+      "start": null,
+      "end": null,
+      "deadline": null,
+      "note": "只走现场开放园路，临时养护与天气管制以当天公告为准。"
+    },
+    "checked": "2026-10-23",
+    "availability": "open",
+    "tips": [
+      "与大冲公园和慢跑条目属于同一长廊的不同玩法，不用一天串完。"
+    ],
+    "sources": [
+      {
+        "title": "深圳城管：南山大沙河生态长廊绿道",
+        "url": "https://cgj.sz.gov.cn/xsmh/szlh/jpld/content/post_10576002.html",
+        "kind": "官方 / 运营方",
+        "evidence": "核对下游高新园A/D口入口、人行步道与沿河眺望平台；短段折返为编辑选择，不要求走完全程。",
+        "checked": "2026-10-23"
+      }
+    ],
+    "sourceEvidence": "中文本地内容提供体验灵感，官方资料核对地点与开放条件；未亲自实走。交通、停留及具体短段为编辑选择，不是实时路况。",
+    "photoIds": [
+      "dasha"
+    ],
+    "photoReference": false,
+    "mapKeyword": "大沙河生态长廊下游段",
+    "placeOverrides": {
+      "transport": "地铁1号线高新园站A/D口步行接入下游人行步道；也可按所在校门选公交。从粤海校门到入口，含候车、换乘与步行，为编辑估算，非实时导航。",
+      "entrance": "大沙河生态长廊下游段（高新园地铁站A/D口接入）",
+      "spots": [
+        {
+          "name": "同岸滨河人行道",
+          "text": "选30–60分钟能折返的一段。"
+        },
+        {
+          "name": "沿河眺望平台开放处",
+          "text": "让出通道，停一会儿看水。"
+        }
+      ]
+    },
+    "curation": {
+      "commerce": "low",
+      "discovery": true,
+      "reviewed": "2026-10-23",
+      "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    }
   }
 ]

@@ -7,8 +7,8 @@
   <meta name="description" content="从深大粤海出发，发现散步、慢跑和生活里的好去处。搜索、轻松筛选，收藏后随时出门。">
   <title>深大出走 · 今天想去哪里</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261018-flow">
-  <script src="app.js?v=20261018-flow" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261023-sunset">
+  <script src="app.js?v=20261023-sunset" defer></script>
 </head>
 <body>
   <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
@@ -27,6 +27,7 @@
     <symbol id="i-food" viewBox="0 0 24 24"><path d="M5 3v7m4-7v7M3 3v5a4 4 0 0 0 8 0V3M7 12v9M20 3c-5 3-5 10 0 10V3Zm0 10v8"/></symbol>
     <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5v16M3 3c5 0 7 1 9 3 2-2 4-3 9-3v15c-5 0-7 1-9 3-2-2-4-3-9-3V3Z"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 12-7 12S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-sunset" viewBox="0 0 24 24"><path d="M3 17h18M5 21h14M7 17a5 5 0 0 1 10 0M12 3v4M4 9l2 2m14-2-2 2M12 10V6m-2 2 2 2 2-2"/></symbol>
   </defs></svg>
   <a class="skip-link" href="#main">跳到内容</a>
   <header class="app-header">
@@ -44,21 +45,21 @@
         <button type="button" data-preset="sea"><span class="quick-icon"><svg class="icon"><use href="#i-sea"/></svg></span><span>海边吹风</span></button>
         <button type="button" data-preset="green"><span class="quick-icon"><svg class="icon"><use href="#i-leaf"/></svg></span><span>树下放空</span></button>
         <button type="button" data-preset="food"><span class="quick-icon"><svg class="icon"><use href="#i-food"/></svg></span><span>逛吃小店</span></button>
-        <button type="button" data-preset="culture"><span class="quick-icon"><svg class="icon"><use href="#i-book"/></svg></span><span>文化生活</span></button>
+        <button type="button" data-preset="sunset" class="sunset-entry"><span class="quick-icon"><svg class="icon"><use href="#i-sunset"/></svg></span><span>看晚霞</span></button>
         <button type="button" data-preset="run"><span class="quick-icon"><svg class="icon"><use href="#i-run"/></svg></span><span>轻松慢跑</span></button>
       </div>
       <div class="section-title"><div><p class="eyebrow">留一点惊喜给今天</p><h2>给你挑了三处</h2></div><button class="shuffle" id="shuffle" type="button"><svg class="icon" aria-hidden="true"><use href="#i-refresh"/></svg>换一组</button></div>
       <div class="card-grid" id="recommend-grid" aria-live="polite"><p class="loading">正在找一处好风景…</p></div>
-      <a href="#explore" data-nav="explore" data-browse-all class="browse-all">慢慢挑，看看全部 <span id="library-count">95</span> 处<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      <p class="small-note">时间从粤海校门算起；交通与花费均为估算。</p>
+      <a href="#explore" data-nav="explore" data-browse-all class="browse-all">慢慢挑，探索 <span id="library-count">100</span> 项路线<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <p class="small-note">优先公共空间与日常生活，首页不推荐强商业去处。</p>
     </section>
 
     <section id="explore-view" class="view" aria-labelledby="explore-title" hidden>
-      <div class="view-heading"><div><p class="eyebrow">总有一处适合此刻</p><h1 id="explore-title" tabindex="-1">探索去处</h1></div><span class="library-note" id="explore-library-count">95处精选</span></div>
+      <div class="view-heading"><div><p class="eyebrow">总有一处适合此刻</p><h1 id="explore-title" tabindex="-1">探索去处</h1></div><span class="library-note" id="explore-library-count">100项收录</span></div>
       <div class="explore-tools">
         <form class="search-box" id="search-form" role="search"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><input type="search" id="search" autocomplete="off" enterkeyhint="search" placeholder="搜学府路、大芬、看海…" aria-label="搜索地点或玩法"><button type="button" id="clear-search" class="icon-button" aria-label="清除搜索" hidden><svg class="icon"><use href="#i-close"/></svg></button></form>
         <div class="category-scroll" role="group" aria-label="探索分类" id="categories">
-          <button type="button" data-category="all" aria-pressed="true">全部</button><button type="button" data-category="walk" aria-pressed="false">散步</button><button type="button" data-category="run" aria-pressed="false">慢跑</button><button type="button" data-category="sea" aria-pressed="false">海边</button><button type="button" data-category="green" aria-pressed="false">绿地</button><button type="button" data-category="food" aria-pressed="false">逛吃</button><button type="button" data-category="culture" aria-pressed="false">文化</button><button type="button" data-category="campus" aria-pressed="false">校园</button>
+          <button type="button" data-category="all" aria-pressed="true">全部</button><button type="button" data-category="sunset" aria-pressed="false">看晚霞</button><button type="button" data-category="walk" aria-pressed="false">散步</button><button type="button" data-category="run" aria-pressed="false">慢跑</button><button type="button" data-category="sea" aria-pressed="false">海边</button><button type="button" data-category="green" aria-pressed="false">绿地</button><button type="button" data-category="food" aria-pressed="false">逛吃</button><button type="button" data-category="culture" aria-pressed="false">文化</button><button type="button" data-category="campus" aria-pressed="false">校园</button>
         </div>
         <div class="results-toolbar"><button type="button" class="filter-trigger" id="open-filters"><svg class="icon" aria-hidden="true"><use href="#i-filter"/></svg>筛选<span id="filter-count" hidden>0</span></button><span id="result-count" class="result-count" role="status"></span><label class="sort-control"><span class="sr-only">结果排序</span><select id="sort" aria-label="结果排序"><option value="recommended">推荐排序</option><option value="near">离校更近</option><option value="cheap">花费更少</option></select></label></div>
       </div>
@@ -85,6 +86,7 @@
   <dialog id="filter-dialog" class="filter-dialog" aria-labelledby="filter-title">
     <div class="sheet-header"><h2 id="filter-title">筛选去处</h2><button class="icon-button" type="button" data-close-overlay aria-label="关闭筛选"><svg class="icon"><use href="#i-close"/></svg></button></div>
     <form id="filter-form" class="filter-form">
+      <fieldset class="participation"><legend>想慢慢待着</legend><label class="check-row"><span>避开强商业去处<small>先略过商场超市、消费密集街区；居民市场与街头小店仍保留。</small></span><input type="checkbox" id="low-commerce" data-draft="lowCommerce"></label></fieldset>
       <fieldset><legend>单程交通</legend><p>从粤海校门到入口，按估算上限。</p><div class="option-grid">
         <label><input type="radio" name="commute" data-draft="commute" value="any"><span>不限</span></label><label><input type="radio" name="commute" data-draft="commute" value="30"><span>30分钟内</span></label><label><input type="radio" name="commute" data-draft="commute" value="45"><span>45分钟内</span></label><label><input type="radio" name="commute" data-draft="commute" value="60"><span>60分钟内</span></label><label><input type="radio" name="commute" data-draft="commute" value="90"><span>90分钟内</span></label><label><input type="radio" name="commute" data-draft="commute" value="120"><span>120分钟内</span></label>
       </div></fieldset>
@@ -94,11 +96,11 @@
       <fieldset><legend>哪天出发</legend><label class="date-field"><span class="sr-only">出发日期</span><input type="date" id="trip-date" data-draft="date" aria-label="出发日期"></label><p>用于参考开放日与活动排期，仍请留意当天公告。</p></fieldset>
       <fieldset class="participation"><legend>参与条件</legend><label class="check-row"><span>只看无需预约的去处</span><input type="checkbox" id="no-reserve" data-draft="noReserve"></label><label class="check-row"><span>隐藏当日不开放、已结束及待核实项目</span><input type="checkbox" id="ready-only" data-draft="readyOnly"></label></fieldset>
     </form>
-    <div class="sheet-footer"><button type="button" id="reset-filter-draft" class="text-button">清空筛选</button><button type="submit" form="filter-form" class="primary-button" id="apply-filters">查看去处</button></div>
+    <div class="sheet-footer"><button type="button" id="reset-filter-draft" class="text-button">恢复默认</button><button type="submit" form="filter-form" class="primary-button" id="apply-filters">查看去处</button></div>
   </dialog>
 
   <dialog id="guide-dialog" class="guide-dialog" aria-labelledby="guide-title"><div id="guide-content"></div></dialog>
-  <dialog id="about-dialog" class="about-dialog" aria-labelledby="about-title"><div class="sheet-header"><h2 id="about-title">关于深大出走</h2><button type="button" class="icon-button" data-close-overlay aria-label="关闭说明"><svg class="icon"><use href="#i-close"/></svg></button></div><div class="about-content"><p>从深大粤海出发，找一处能慢慢待的地方。</p><p>交通从校门到入口，含候车、换乘和步行；人均费用按往返公共交通＋必要门票／主要体验估算，逛吃含一份简单餐食。可选购物和额外消费另计。</p><p>各项保留资料来源与核验日期。开放、名额和临时管制以当天公告为准；活动到期后退出“发现”推荐，仍可在探索和想去中查看。</p><p>收藏、熟悉与体验记录只存在当前浏览器。没有登录、统计或业务追踪。</p><p>实景照片逐项保留作者和许可；同片区参考图明确注明，缺图时用文字封面。</p><details class="source-details"><summary>全部照片与授权</summary><div id="photo-credits"></div></details></div></dialog>
+  <dialog id="about-dialog" class="about-dialog" aria-labelledby="about-title"><div class="sheet-header"><h2 id="about-title">关于深大出走</h2><button type="button" class="icon-button" data-close-overlay aria-label="关闭说明"><svg class="icon"><use href="#i-close"/></svg></button></div><div class="about-content"><p>从深大粤海出发，找一处能慢慢待的地方。</p><p>交通从校门到入口，含候车、换乘和步行；人均费用按往返公共交通＋必要门票／主要体验估算，逛吃含一份简单餐食。可选购物和额外消费另计。</p><p>默认避开商场超市和消费密集街区，可在探索中移除“避开强商业”筛选；居民市场、小店与公共文化空间仍保留。首页随机推荐始终避开强商业去处。商业程度为本条玩法的编辑判断，免费也不代表安静。</p><p>晚霞条目区分夕照与天色余晖，按季节日落时间安排；天气、遮挡和现场开放条件会影响体验。</p><p>各项保留资料来源与核验日期。开放、名额和临时管制以当天公告为准；活动到期后退出“发现”推荐，仍可在探索和想去中查看。</p><p>收藏、熟悉与体验记录只存在当前浏览器。没有登录、统计或业务追踪。</p><p>实景照片逐项保留作者和许可；同片区参考图明确注明，缺图时用文字封面。</p><details class="source-details"><summary>全部照片与授权</summary><div id="photo-credits"></div></details></div></dialog>
   <div id="toast" class="toast" role="status" aria-live="polite" hidden><span id="toast-text"></span><button type="button" id="undo-save" hidden>撤销</button></div>
   <noscript><p class="noscript">请开启JavaScript以使用搜索、筛选和收藏。</p></noscript>
 </body>
