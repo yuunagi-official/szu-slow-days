@@ -15,7 +15,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 469
+    "height": 469,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/bay-panorama-320.jpg",
+        "width": 320,
+        "height": 94
+      },
+      {
+        "file": "assets/photos/thumbs/bay-panorama-640.jpg",
+        "width": 640,
+        "height": 188
+      }
+    ]
   },
   {
     "id": "bay-park",
@@ -32,7 +44,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 1200
+    "height": 1200,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/bay-park-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/bay-park-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "id": "bay-theatre",
@@ -49,7 +73,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 1068
+    "height": 1068,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/bay-theatre-320.jpg",
+        "width": 320,
+        "height": 214
+      },
+      {
+        "file": "assets/photos/thumbs/bay-theatre-640.jpg",
+        "width": 640,
+        "height": 427
+      }
+    ]
   },
   {
     "id": "lixiang",
@@ -65,7 +101,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 1200
+    "height": 1200,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/lixiang-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/lixiang-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "id": "lixiang-center",
@@ -81,7 +129,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 1200
+    "height": 1200,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/lixiang-center-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/lixiang-center-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "id": "dasha",
@@ -97,7 +157,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 900
+    "height": 900,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/dasha-320.jpg",
+        "width": 320,
+        "height": 180
+      },
+      {
+        "file": "assets/photos/thumbs/dasha-640.jpg",
+        "width": 640,
+        "height": 360
+      }
+    ]
   },
   {
     "id": "tanglang",
@@ -114,7 +186,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 1118
+    "height": 1118,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/tanglang-320.jpg",
+        "width": 320,
+        "height": 224
+      },
+      {
+        "file": "assets/photos/thumbs/tanglang-640.jpg",
+        "width": 640,
+        "height": 447
+      }
+    ]
   },
   {
     "id": "tanglang-view",
@@ -130,7 +214,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 1068
+    "height": 1068,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/tanglang-view-320.jpg",
+        "width": 320,
+        "height": 214
+      },
+      {
+        "file": "assets/photos/thumbs/tanglang-view-640.jpg",
+        "width": 640,
+        "height": 427
+      }
+    ]
   },
   {
     "id": "meilin",
@@ -146,7 +242,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 809
+    "height": 809,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/meilin-320.jpg",
+        "width": 320,
+        "height": 162
+      },
+      {
+        "file": "assets/photos/thumbs/meilin-640.jpg",
+        "width": 640,
+        "height": 324
+      }
+    ]
   },
   {
     "id": "sihai",
@@ -162,7 +270,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 1393
+    "height": 1393,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/sihai-320.jpg",
+        "width": 320,
+        "height": 279
+      },
+      {
+        "file": "assets/photos/thumbs/sihai-640.jpg",
+        "width": 640,
+        "height": 557
+      }
+    ]
   },
   {
     "id": "sihai-night",
@@ -178,7 +298,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 1200
+    "height": 1200,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/sihai-night-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/sihai-night-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "id": "nantou",
@@ -194,7 +326,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 1067
+    "height": 1067,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/nantou-320.jpg",
+        "width": 320,
+        "height": 213
+      },
+      {
+        "file": "assets/photos/thumbs/nantou-640.jpg",
+        "width": 640,
+        "height": 427
+      }
+    ]
   },
   {
     "id": "shekou",
@@ -211,7 +355,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 900
+    "height": 900,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/shekou-320.jpg",
+        "width": 320,
+        "height": 180
+      },
+      {
+        "file": "assets/photos/thumbs/shekou-640.jpg",
+        "width": 640,
+        "height": 360
+      }
+    ]
   },
   {
     "id": "chiwan",
@@ -227,7 +383,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 1067
+    "height": 1067,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/chiwan-320.jpg",
+        "width": 320,
+        "height": 213
+      },
+      {
+        "file": "assets/photos/thumbs/chiwan-640.jpg",
+        "width": 640,
+        "height": 427
+      }
+    ]
   },
   {
     "id": "oct-loft",
@@ -245,7 +413,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 972
+    "height": 972,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/oct-loft-320.jpg",
+        "width": 320,
+        "height": 194
+      },
+      {
+        "file": "assets/photos/thumbs/oct-loft-640.jpg",
+        "width": 640,
+        "height": 389
+      }
+    ]
   },
   {
     "id": "guanlan",
@@ -261,7 +441,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 1200
+    "height": 1200,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/guanlan-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/guanlan-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "id": "sustech",
@@ -280,7 +472,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 1068
+    "height": 1068,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/sustech-320.jpg",
+        "width": 320,
+        "height": 214
+      },
+      {
+        "file": "assets/photos/thumbs/sustech-640.jpg",
+        "width": 640,
+        "height": 427
+      }
+    ]
   },
   {
     "id": "university-town",
@@ -299,7 +503,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 522
+    "height": 522,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/university-town-320.jpg",
+        "width": 320,
+        "height": 104
+      },
+      {
+        "file": "assets/photos/thumbs/university-town-640.jpg",
+        "width": 640,
+        "height": 209
+      }
+    ]
   },
   {
     "id": "lixiang-garden",
@@ -315,7 +531,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 1200
+    "height": 1200,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/lixiang-garden-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/lixiang-garden-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "id": "cuhk-shenzhen",
@@ -334,7 +562,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 1089
+    "height": 1089,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/cuhk-shenzhen-320.jpg",
+        "width": 320,
+        "height": 218
+      },
+      {
+        "file": "assets/photos/thumbs/cuhk-shenzhen-640.jpg",
+        "width": 640,
+        "height": 436
+      }
+    ]
   },
   {
     "id": "sysu-shenzhen",
@@ -352,7 +592,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 900
+    "height": 900,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/sysu-shenzhen-320.jpg",
+        "width": 320,
+        "height": 180
+      },
+      {
+        "file": "assets/photos/thumbs/sysu-shenzhen-640.jpg",
+        "width": 640,
+        "height": 360
+      }
+    ]
   },
   {
     "id": "msu-bit",
@@ -371,7 +623,19 @@
     ],
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "width": 1600,
-    "height": 413
+    "height": 413,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/msu-bit-320.jpg",
+        "width": 320,
+        "height": 83
+      },
+      {
+        "file": "assets/photos/thumbs/msu-bit-640.jpg",
+        "width": 640,
+        "height": 165
+      }
+    ]
   },
   {
     "id": "meilin-lake",
@@ -388,7 +652,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "",
     "width": 1280,
-    "height": 853
+    "height": 853,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/meilin-lake-320.jpg",
+        "width": 320,
+        "height": 213
+      },
+      {
+        "file": "assets/photos/thumbs/meilin-lake-640.jpg",
+        "width": 640,
+        "height": 426
+      }
+    ]
   },
   {
     "id": "concert-hall",
@@ -407,7 +683,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "2016-10-01 15:11:57",
     "width": 1600,
-    "height": 1067
+    "height": 1067,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/concert-hall-320.jpg",
+        "width": 320,
+        "height": 213
+      },
+      {
+        "file": "assets/photos/thumbs/concert-hall-640.jpg",
+        "width": 640,
+        "height": 427
+      }
+    ]
   },
   {
     "id": "lianhuashan",
@@ -424,7 +712,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "2010-12-31 14:42:34",
     "width": 1600,
-    "height": 1186
+    "height": 1186,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/lianhuashan-320.jpg",
+        "width": 320,
+        "height": 237
+      },
+      {
+        "file": "assets/photos/thumbs/lianhuashan-640.jpg",
+        "width": 640,
+        "height": 474
+      }
+    ]
   },
   {
     "id": "ikea-food",
@@ -444,7 +744,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "2020-10-25 11:22:43",
     "width": 1600,
-    "height": 1067
+    "height": 1067,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/ikea-food-320.jpg",
+        "width": 320,
+        "height": 213
+      },
+      {
+        "file": "assets/photos/thumbs/ikea-food-640.jpg",
+        "width": 640,
+        "height": 427
+      }
+    ]
   },
   {
     "id": "shenzhen-museum",
@@ -463,7 +775,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "2024-12-24 11:32:35",
     "width": 1600,
-    "height": 1200
+    "height": 1200,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/shenzhen-museum-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/shenzhen-museum-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "id": "he-xiangning",
@@ -481,7 +805,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "2016-10-02 16:05:16",
     "width": 1600,
-    "height": 1067
+    "height": 1067,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/he-xiangning-320.jpg",
+        "width": 320,
+        "height": 213
+      },
+      {
+        "file": "assets/photos/thumbs/he-xiangning-640.jpg",
+        "width": 640,
+        "height": 427
+      }
+    ]
   },
   {
     "id": "talents",
@@ -499,7 +835,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "2024-12-01 13:26:37",
     "width": 1600,
-    "height": 1068
+    "height": 1068,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/talents-320.jpg",
+        "width": 320,
+        "height": 214
+      },
+      {
+        "file": "assets/photos/thumbs/talents-640.jpg",
+        "width": 640,
+        "height": 427
+      }
+    ]
   },
   {
     "id": "lixinhu",
@@ -516,7 +864,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "2025-12-14 14:57:45",
     "width": 1600,
-    "height": 1067
+    "height": 1067,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/lixinhu-320.jpg",
+        "width": 320,
+        "height": 213
+      },
+      {
+        "file": "assets/photos/thumbs/lixinhu-640.jpg",
+        "width": 640,
+        "height": 427
+      }
+    ]
   },
   {
     "id": "xili",
@@ -535,7 +895,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "2021-02-02 10:11:41",
     "width": 1600,
-    "height": 900
+    "height": 900,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/xili-320.jpg",
+        "width": 320,
+        "height": 180
+      },
+      {
+        "file": "assets/photos/thumbs/xili-640.jpg",
+        "width": 640,
+        "height": 360
+      }
+    ]
   },
   {
     "id": "polytechnic",
@@ -556,7 +928,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "2023-03-15",
     "width": 1600,
-    "height": 1200
+    "height": 1200,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/polytechnic-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/polytechnic-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "id": "nanshan-museum",
@@ -573,7 +957,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "2023-10-17 14:26:15",
     "width": 1600,
-    "height": 1200
+    "height": 1200,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/nanshan-museum-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/nanshan-museum-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "id": "fairylake-gate",
@@ -591,7 +987,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "2023-05-18 11:37:35",
     "width": 1600,
-    "height": 769
+    "height": 769,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/fairylake-gate-320.jpg",
+        "width": 320,
+        "height": 154
+      },
+      {
+        "file": "assets/photos/thumbs/fairylake-gate-640.jpg",
+        "width": 640,
+        "height": 308
+      }
+    ]
   },
   {
     "id": "fairylake-garden",
@@ -610,7 +1018,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "2023-05-18 11:58:35",
     "width": 1600,
-    "height": 1068
+    "height": 1068,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/fairylake-garden-320.jpg",
+        "width": 320,
+        "height": 214
+      },
+      {
+        "file": "assets/photos/thumbs/fairylake-garden-640.jpg",
+        "width": 640,
+        "height": 427
+      }
+    ]
   },
   {
     "id": "songping-lake",
@@ -629,7 +1049,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "",
     "width": 1280,
-    "height": 854
+    "height": 854,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/songping-lake-320.jpg",
+        "width": 320,
+        "height": 214
+      },
+      {
+        "file": "assets/photos/thumbs/songping-lake-640.jpg",
+        "width": 640,
+        "height": 427
+      }
+    ]
   },
   {
     "id": "hongqiao-walk",
@@ -647,7 +1079,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "",
     "width": 1280,
-    "height": 960
+    "height": 960,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/hongqiao-walk-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/hongqiao-walk-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "id": "qiankeng-tower",
@@ -666,7 +1110,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "",
     "width": 1200,
-    "height": 1600
+    "height": 1600,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/qiankeng-tower-320.jpg",
+        "width": 320,
+        "height": 427
+      },
+      {
+        "file": "assets/photos/thumbs/qiankeng-tower-640.jpg",
+        "width": 640,
+        "height": 853
+      }
+    ]
   },
   {
     "id": "shangwei-tower",
@@ -686,7 +1142,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "",
     "width": 1200,
-    "height": 1600
+    "height": 1600,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/shangwei-tower-320.jpg",
+        "width": 320,
+        "height": 427
+      },
+      {
+        "file": "assets/photos/thumbs/shangwei-tower-640.jpg",
+        "width": 640,
+        "height": 853
+      }
+    ]
   },
   {
     "id": "edixia-shrine",
@@ -706,7 +1174,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "",
     "width": 1280,
-    "height": 960
+    "height": 960,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/edixia-shrine-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/edixia-shrine-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "id": "shuiwei-street",
@@ -726,7 +1206,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "",
     "width": 1200,
-    "height": 1600
+    "height": 1600,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/shuiwei-street-320.jpg",
+        "width": 320,
+        "height": 427
+      },
+      {
+        "file": "assets/photos/thumbs/shuiwei-street-640.jpg",
+        "width": 640,
+        "height": 853
+      }
+    ]
   },
   {
     "id": "aeon-donghu",
@@ -746,7 +1238,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "",
     "width": 1280,
-    "height": 854
+    "height": 854,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/aeon-donghu-320.jpg",
+        "width": 320,
+        "height": 214
+      },
+      {
+        "file": "assets/photos/thumbs/aeon-donghu-640.jpg",
+        "width": 640,
+        "height": 427
+      }
+    ]
   },
   {
     "id": "qingshuihe-train",
@@ -766,7 +1270,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "",
     "width": 1280,
-    "height": 960
+    "height": 960,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/qingshuihe-train-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/qingshuihe-train-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "id": "shangbu-green",
@@ -786,7 +1302,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "",
     "width": 1280,
-    "height": 960
+    "height": 960,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/shangbu-green-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/shangbu-green-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "id": "qingshuihe-platform",
@@ -806,7 +1334,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "",
     "width": 1280,
-    "height": 960
+    "height": 960,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/qingshuihe-platform-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/qingshuihe-platform-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "id": "xili-yitian",
@@ -825,7 +1365,19 @@
     "changes": "缩放与JPEG压缩；展示时可能裁切",
     "taken": "",
     "width": 1280,
-    "height": 960
+    "height": 960,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/xili-yitian-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/xili-yitian-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "id": "xiangmi-waterfront",
@@ -860,7 +1412,19 @@
       "lon": 114.018219
     },
     "evidence": "Commons文件页中英文说明直接指向深圳香蜜公园，自有作品并明确CC0；坐标与园内水景一致。已打开本地实图检查。",
-    "limits": "旧照片用于认地点与氛围，不能证明2026跑道地面和开放状态。"
+    "limits": "旧照片用于认地点与氛围，不能证明2026跑道地面和开放状态。",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/xiangmi-trees-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/xiangmi-trees-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "id": "xiangmi-lake",
@@ -896,7 +1460,19 @@
       "lon": 114.018411
     },
     "evidence": "Commons文件页明确写深圳香蜜公园花香湖，自有作品并CC BY-SA 4.0，提供相机坐标。已打开本地实图检查。",
-    "limits": "可作园内氛围图，不能用照片亮灯推断整条跑道夜间照明。"
+    "limits": "可作园内氛围图，不能用照片亮灯推断整条跑道夜间照明。",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/xiangmi-lake-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/xiangmi-lake-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "id": "xinzhou-river",
@@ -933,7 +1509,19 @@
       "lon": 114.04425
     },
     "evidence": "Commons文件名/说明/分类明确为深圳新洲河，提供相机坐标，作者自有作品并明确CC BY-SA 4.0。实图为沿河硬质步行路和楼宇，已检查。",
-    "limits": "上架前按新洲河所选跑段范围核对坐标；若线路只选更南的红树碧道，标“新洲河沿岸参考”而非声称起点/全程同景。"
+    "limits": "上架前按新洲河所选跑段范围核对坐标；若线路只选更南的红树碧道，标“新洲河沿岸参考”而非声称起点/全程同景。",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/xinzhou-river-320.jpg",
+        "width": 320,
+        "height": 193
+      },
+      {
+        "file": "assets/photos/thumbs/xinzhou-river-640.jpg",
+        "width": 640,
+        "height": 386
+      }
+    ]
   },
   {
     "author": "Dinkun Chen",
@@ -946,7 +1534,19 @@
     "height": 907,
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:FUTIAN_MEILIN_GREENWAY.jpg",
     "license": "CC BY-SA 4.0",
-    "changes": "缩放与JPEG压缩；展示时可能裁切"
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/meilin-greenway-v3-320.jpg",
+        "width": 320,
+        "height": 181
+      },
+      {
+        "file": "assets/photos/thumbs/meilin-greenway-v3-640.jpg",
+        "width": 640,
+        "height": 363
+      }
+    ]
   },
   {
     "author": "Mx. Granger",
@@ -959,7 +1559,19 @@
     "height": 1200,
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%A1%98%E6%9C%97%E5%B1%B1_01.jpg",
     "license": "CC0",
-    "changes": "缩放与JPEG压缩；展示时可能裁切"
+    "changes": "缩放与JPEG压缩；展示时可能裁切",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/tanglang-path-one-v3-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/tanglang-path-one-v3-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "author": "LIman TADU Foo RUBB",
@@ -975,7 +1587,19 @@
     "height": 960,
     "taken": "2025-11-11",
     "evidence": "已核对Commons文件页的自有作品声明、作者与图片许可；已逐张打开本地实图检查地点标识/场景。",
-    "limits": "门面照片含拍摄时商家价签/营业时间及手机水印，不用照片推断当前价格与营业时间；没有新增修图。"
+    "limits": "门面照片含拍摄时商家价签/营业时间及手机水印，不用照片推断当前价格与营业时间；没有新增修图。",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/ninejin-shop-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/ninejin-shop-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "author": "Sparktour",
@@ -991,7 +1615,19 @@
     "height": 853,
     "taken": "2018-09-05",
     "evidence": "已核对Commons文件页的自有作品声明、作者与图片许可；已逐张打开本地实图检查地点标识/场景。",
-    "limits": "历史实景用于认地点与氛围；不证明当前开放、设施、商品、菜单或价格。"
+    "limits": "历史实景用于认地点与氛围；不证明当前开放、设施、商品、菜单或价格。",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/sustech-dusk-320.jpg",
+        "width": 320,
+        "height": 213
+      },
+      {
+        "file": "assets/photos/thumbs/sustech-dusk-640.jpg",
+        "width": 640,
+        "height": 426
+      }
+    ]
   },
   {
     "author": "Huangdan2060",
@@ -1007,7 +1643,19 @@
     "height": 853,
     "taken": "2016-10-03",
     "evidence": "已核对Commons文件页的自有作品声明、作者与图片许可；已逐张打开本地实图检查地点标识/场景。",
-    "limits": "历史实景用于认地点与氛围；不证明当前开放、设施、商品、菜单或价格。"
+    "limits": "历史实景用于认地点与氛围；不证明当前开放、设施、商品、菜单或价格。",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/university-library-320.jpg",
+        "width": 320,
+        "height": 213
+      },
+      {
+        "file": "assets/photos/thumbs/university-library-640.jpg",
+        "width": 640,
+        "height": 426
+      }
+    ]
   },
   {
     "author": "鹿苑",
@@ -1023,7 +1671,19 @@
     "height": 960,
     "taken": "2023-09-26",
     "evidence": "已核对Commons文件页的自有作品声明、作者与图片许可；已逐张打开本地实图检查地点标识/场景。",
-    "limits": "历史实景用于认地点与氛围；不证明当前开放、设施、商品、菜单或价格。"
+    "limits": "历史实景用于认地点与氛围；不证明当前开放、设施、商品、菜单或价格。",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/cuhksz-mall-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/cuhksz-mall-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "author": "Dinkun Chen",
@@ -1039,7 +1699,19 @@
     "height": 854,
     "taken": "2023-02-27",
     "evidence": "已核对Commons文件页的自有作品声明、作者与图片许可；已逐张打开本地实图检查地点标识/场景。",
-    "limits": "历史实景用于认地点与氛围；不证明当前开放、设施、商品、菜单或价格。"
+    "limits": "历史实景用于认地点与氛围；不证明当前开放、设施、商品、菜单或价格。",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/ikea-interior-2023-320.jpg",
+        "width": 320,
+        "height": 214
+      },
+      {
+        "file": "assets/photos/thumbs/ikea-interior-2023-640.jpg",
+        "width": 640,
+        "height": 427
+      }
+    ]
   },
   {
     "author": "Dinkun Chen",
@@ -1055,7 +1727,19 @@
     "height": 854,
     "taken": "2025-01-02",
     "evidence": "已核对Commons文件页的自有作品声明、作者与图片许可；已逐张打开本地实图检查地点标识/场景。",
-    "limits": "历史实景用于认地点与氛围；不证明当前开放、设施、商品、菜单或价格。"
+    "limits": "历史实景用于认地点与氛围；不证明当前开放、设施、商品、菜单或价格。",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/ikea-2025-320.jpg",
+        "width": 320,
+        "height": 214
+      },
+      {
+        "file": "assets/photos/thumbs/ikea-2025-640.jpg",
+        "width": 640,
+        "height": 427
+      }
+    ]
   },
   {
     "author": "WhisperToMe",
@@ -1071,7 +1755,19 @@
     "height": 720,
     "taken": "2017-04-29",
     "evidence": "已核对Commons文件页的自有作品声明、作者与图片许可；已逐张打开本地实图检查地点标识/场景。",
-    "limits": "历史实景用于认地点与氛围；不证明当前开放、设施、商品、菜单或价格。"
+    "limits": "历史实景用于认地点与氛围；不证明当前开放、设施、商品、菜单或价格。",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/university-gate-320.jpg",
+        "width": 320,
+        "height": 180
+      },
+      {
+        "file": "assets/photos/thumbs/university-gate-640.jpg",
+        "width": 640,
+        "height": 360
+      }
+    ]
   },
   {
     "id": "shuiwei-01",
@@ -1087,7 +1783,19 @@
     "height": 960,
     "taken": "2023-07-04",
     "evidence": "已核对Commons文件页的自有作品声明、作者与图片许可；已逐张打开本地实图检查地点标识/场景。",
-    "limits": "历史实景用于认地点与氛围；不证明当前开放、设施、商品、菜单或价格。"
+    "limits": "历史实景用于认地点与氛围；不证明当前开放、设施、商品、菜单或价格。",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/shuiwei-01-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/shuiwei-01-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "id": "zhongshan-trees-2025",
@@ -1103,7 +1811,19 @@
     "width": 1280,
     "height": 853,
     "taken": "2025-11-15 14:37:58",
-    "checked": "2026-10-18"
+    "checked": "2026-10-18",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/zhongshan-trees-2025-320.jpg",
+        "width": 320,
+        "height": 213
+      },
+      {
+        "file": "assets/photos/thumbs/zhongshan-trees-2025-640.jpg",
+        "width": 640,
+        "height": 426
+      }
+    ]
   },
   {
     "id": "zhongshan-lawn-2025",
@@ -1119,7 +1839,19 @@
     "width": 1280,
     "height": 854,
     "taken": "2025-11-15 14:07:51",
-    "checked": "2026-10-18"
+    "checked": "2026-10-18",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/zhongshan-lawn-2025-320.jpg",
+        "width": 320,
+        "height": 214
+      },
+      {
+        "file": "assets/photos/thumbs/zhongshan-lawn-2025-640.jpg",
+        "width": 640,
+        "height": 427
+      }
+    ]
   },
   {
     "id": "nslib-exterior-2024",
@@ -1135,7 +1867,19 @@
     "width": 1280,
     "height": 853,
     "taken": "2024-07-23 16:05:15",
-    "checked": "2026-10-18"
+    "checked": "2026-10-18",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/nslib-exterior-2024-320.jpg",
+        "width": 320,
+        "height": 213
+      },
+      {
+        "file": "assets/photos/thumbs/nslib-exterior-2024-640.jpg",
+        "width": 640,
+        "height": 426
+      }
+    ]
   },
   {
     "id": "nslib-reading-2024",
@@ -1151,7 +1895,19 @@
     "width": 1280,
     "height": 853,
     "taken": "2024-07-23 16:07:40",
-    "checked": "2026-10-18"
+    "checked": "2026-10-18",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/nslib-reading-2024-320.jpg",
+        "width": 320,
+        "height": 213
+      },
+      {
+        "file": "assets/photos/thumbs/nslib-reading-2024-640.jpg",
+        "width": 640,
+        "height": 426
+      }
+    ]
   },
   {
     "id": "swcac-forecourt-2024",
@@ -1167,7 +1923,19 @@
     "width": 1280,
     "height": 672,
     "taken": "2024-03-17 13:17:34",
-    "checked": "2026-10-18"
+    "checked": "2026-10-18",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/swcac-forecourt-2024-320.jpg",
+        "width": 320,
+        "height": 168
+      },
+      {
+        "file": "assets/photos/thumbs/swcac-forecourt-2024-640.jpg",
+        "width": 640,
+        "height": 336
+      }
+    ]
   },
   {
     "id": "swcac-building-2024",
@@ -1183,7 +1951,19 @@
     "width": 1280,
     "height": 925,
     "taken": "2024-03-17 13:22:49",
-    "checked": "2026-10-18"
+    "checked": "2026-10-18",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/swcac-building-2024-320.jpg",
+        "width": 320,
+        "height": 231
+      },
+      {
+        "file": "assets/photos/thumbs/swcac-building-2024-640.jpg",
+        "width": 640,
+        "height": 462
+      }
+    ]
   },
   {
     "id": "dbay-night-2025",
@@ -1199,7 +1979,19 @@
     "width": 1280,
     "height": 960,
     "taken": "2025-10-04 21:21:56",
-    "checked": "2026-10-18"
+    "checked": "2026-10-18",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/dbay-night-2025-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/dbay-night-2025-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "id": "spring-cocoon-edge-2024",
@@ -1215,7 +2007,19 @@
     "width": 1280,
     "height": 854,
     "taken": "2024-12-01 13:08:36",
-    "checked": "2026-10-18"
+    "checked": "2026-10-18",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/spring-cocoon-edge-2024-320.jpg",
+        "width": 320,
+        "height": 214
+      },
+      {
+        "file": "assets/photos/thumbs/spring-cocoon-edge-2024-640.jpg",
+        "width": 640,
+        "height": 427
+      }
+    ]
   },
   {
     "id": "spring-cocoon-square-2024",
@@ -1231,7 +2035,19 @@
     "width": 1280,
     "height": 854,
     "taken": "2024-12-01 13:12:25",
-    "checked": "2026-10-18"
+    "checked": "2026-10-18",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/spring-cocoon-square-2024-320.jpg",
+        "width": 320,
+        "height": 214
+      },
+      {
+        "file": "assets/photos/thumbs/spring-cocoon-square-2024-640.jpg",
+        "width": 640,
+        "height": 427
+      }
+    ]
   },
   {
     "id": "dafen-entry-2026",
@@ -1247,7 +2063,19 @@
     "width": 1280,
     "height": 853,
     "taken": "2026-07-17 09:44:30",
-    "checked": "2026-10-18"
+    "checked": "2026-10-18",
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/dafen-entry-2026-320.jpg",
+        "width": 320,
+        "height": 213
+      },
+      {
+        "file": "assets/photos/thumbs/dafen-entry-2026-640.jpg",
+        "width": 640,
+        "height": 426
+      }
+    ]
   },
   {
     "id": "xiwan-shore-2019",
@@ -1263,7 +2091,19 @@
     "keywords": [],
     "changes": "维基共享资源生成的缩小JPEG；展示时可能裁切，未改色、未合成。",
     "width": 1280,
-    "height": 960
+    "height": 960,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/xiwan-shore-2019-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/xiwan-shore-2019-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   },
   {
     "id": "garden-expo-water-2016",
@@ -1279,7 +2119,19 @@
     "keywords": [],
     "changes": "维基共享资源生成的缩小JPEG；展示时可能裁切，未改色、未合成。",
     "width": 1280,
-    "height": 853
+    "height": 853,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/garden-expo-water-2016-320.jpg",
+        "width": 320,
+        "height": 213
+      },
+      {
+        "file": "assets/photos/thumbs/garden-expo-water-2016-640.jpg",
+        "width": 640,
+        "height": 426
+      }
+    ]
   },
   {
     "id": "qianhai-stone-blue-2024",
@@ -1295,6 +2147,18 @@
     "keywords": [],
     "changes": "维基共享资源生成的缩小JPEG；展示时可能裁切，未改色、未合成。",
     "width": 1280,
-    "height": 960
+    "height": 960,
+    "variants": [
+      {
+        "file": "assets/photos/thumbs/qianhai-stone-blue-2024-320.jpg",
+        "width": 320,
+        "height": 240
+      },
+      {
+        "file": "assets/photos/thumbs/qianhai-stone-blue-2024-640.jpg",
+        "width": 640,
+        "height": 480
+      }
+    ]
   }
 ]

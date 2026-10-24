@@ -166,7 +166,13 @@
       "discovery": true,
       "reviewed": "2026-10-23",
       "note": "本条以公共园路、自然环境或公共文化体验为主。"
-    }
+    },
+    "mapAlternatives": [
+      {
+        "name": "云之园",
+        "keyword": "云之园（白石路与科技南路路口）"
+      }
+    ]
   },
   {
     "type": "nature",
@@ -747,7 +753,8 @@
       "spot": "内湖沿岸开放步道",
       "note": "看晚霞、内湖倒影与楼群轮廓；是城市黄昏，不是海上落日机位。",
       "leave": "留在环湖主园路，散场或活动人多时避开聚集处。",
-      "checked": "2026-10-23"
+      "checked": "2026-10-23",
+      "region": "yuehai"
     }
   },
   {
@@ -1126,7 +1133,13 @@
       "discovery": true,
       "reviewed": "2026-10-23",
       "note": "本条以公共园路、自然环境或公共文化体验为主。"
-    }
+    },
+    "mapAlternatives": [
+      {
+        "name": "桂湾公园",
+        "keyword": "桂湾公园"
+      }
+    ]
   },
   {
     "type": "nature",
@@ -1331,7 +1344,8 @@
       "spot": "立新北路接入的沿湖开放步道",
       "note": "等湖面天色变暖即可，不为追太阳绕完整圈，也不进临水封闭处。",
       "leave": "常规6:00–22:00；选入口附近短段，天暗就按来路回返。",
-      "checked": "2026-10-23"
+      "checked": "2026-10-23",
+      "region": "lixin"
     }
   },
   {
@@ -2169,7 +2183,8 @@
       "spot": "陌上花公园附近已开放湖岸",
       "note": "看开阔湖面的黄昏天色；不把远处山坡观景亭当必到点。",
       "leave": "本条只选近入口湖岸，天暗前折返，不夜走长环线。",
-      "checked": "2026-10-23"
+      "checked": "2026-10-23",
+      "region": "shiyan"
     }
   },
   {
@@ -3974,7 +3989,8 @@
       "discovery": true,
       "reviewed": "2026-10-23",
       "note": "居民日常街巷或市场，吃饭购物按需选择，不以连吃打卡为目标。"
-    }
+    },
+    "mapKeyword": "高三姐豆花（上梅林新村）"
   },
   {
     "checked": "2026-10-17",
@@ -4422,6 +4438,11 @@
       "discovery": true,
       "reviewed": "2026-10-23",
       "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    },
+    "navigation": {
+      "kind": "verify",
+      "label": "先确认集合点",
+      "url": "https://mobile.shenzhenmuseum.com/activeDetail?clazzName=CmsActive&resId=989584d4f70c4a6abea9568e3a19d9db&type=0"
     }
   },
   {
@@ -4527,6 +4548,11 @@
       "discovery": true,
       "reviewed": "2026-10-23",
       "note": "本条以公共园路、自然环境或公共文化体验为主。"
+    },
+    "navigation": {
+      "kind": "verify",
+      "label": "先确认上车点",
+      "url": "https://qh.sz.gov.cn/sygnan/qhzx/dtzx/content/post_11881965.html"
     }
   },
   {
@@ -4801,7 +4827,8 @@
       "discovery": true,
       "reviewed": "2026-10-23",
       "note": "本条以公共园路、自然环境或公共文化体验为主。"
-    }
+    },
+    "discoveryGroup": "dashahe-lower"
   },
   {
     "id": "jog-zhongxinhe",
@@ -6216,7 +6243,8 @@
       "discovery": true,
       "reviewed": "2026-10-23",
       "note": "本条以公共园路、自然环境或公共文化体验为主。"
-    }
+    },
+    "discoveryGroup": "dashahe-lower"
   },
   {
     "id": "dashahe-park-lawn",
@@ -6733,7 +6761,8 @@
       "spot": "日出剧场草坪与海岸步道",
       "note": "这里选开阔天色和海面余晖，不保证看到太阳落入海面。",
       "leave": "留在有照明的主步道，回深圳湾公园站；遇管制改走现场出口。",
-      "checked": "2026-10-23"
+      "checked": "2026-10-23",
+      "region": "yuehai"
     }
   },
   {
@@ -7876,7 +7905,8 @@
       "spot": "滨海观景平台开放处",
       "note": "看前海湾夕照；太阳位置随季节变化，热门落日时段人多。",
       "leave": "看够后沿原路回前湾二路入口，不沿未开放岸段找机位。",
-      "checked": "2026-10-23"
+      "checked": "2026-10-23",
+      "region": "qianhai"
     },
     "photoNote": "前海石公园滨海长廊夜景（2024年，非当日晚霞）"
   },
@@ -7976,7 +8006,8 @@
       "spot": "主广场外侧滨海步道",
       "note": "看海堤、海面与落日余晖；飞机、高速噪声和人流会影响安静感。",
       "leave": "日落后按来路回公交接驳点；不下滩、不走无灯岸段。",
-      "checked": "2026-10-23"
+      "checked": "2026-10-23",
+      "region": "xiwan"
     },
     "photoNote": "西湾红树林湿地公园海堤与栈道（2019年历史实景）"
   },
@@ -8194,7 +8225,7 @@
     "photoIds": [
       "dasha"
     ],
-    "photoReference": false,
+    "photoReference": true,
     "mapKeyword": "大沙河生态长廊下游段",
     "placeOverrides": {
       "transport": "地铁1号线高新园站A/D口步行接入下游人行步道；也可按所在校门选公交。从粤海校门到入口，含候车、换乘与步行，为编辑估算，非实时导航。",
@@ -8215,6 +8246,8 @@
       "discovery": true,
       "reviewed": "2026-10-23",
       "note": "本条以公共园路、自然环境或公共文化体验为主。"
-    }
+    },
+    "discoveryGroup": "dashahe-lower",
+    "photoNote": "南山大沙河沿岸参考图，非本短段具体起点。"
   }
 ]
